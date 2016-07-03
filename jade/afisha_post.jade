@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+    include ./includes/head.jade
+    body
+        main.wrap
+            header.head.head_post
+                include ./includes/header_top.jade
+                .row
+                    p.small-12.column.head_h1
+                        i.fa.icon-icons-set-01
+                        |  Афиша
+                    p.small-12.column.align-self-bottom.head_h3
+                        a(href='#')
+                            i.fa.icon-icons-set-01
+                            |  Заголовок предыдущей
+                            br
+                            | новости может быть в две строки
+            article.row.content.tiles
+                .grid
+                    .tile.post
+                        h1
+                            | Заголовок может быть в одну
+                            br
+                            | или к примеру в две строки
+                        p.post_date
+                            | 12:55 18 МАРТА | Прочитали 19 103 раз | 
+                            a(href='#')
+                                | ССЫЛКА
+                                i.fa.icon-icons-set-03
+                        img(src='/img/big_bread.jpg', alt='Big bread')
+                        .post_desc
+                            | Удивительная история — Кремль извинился. Даже не важно, за что именно, важен сам факт — Кремль извинился. Да такое за карьеру новостников с десятилетним стажем было всего пару раз. Впрочем, нет — за что тоже важно. По словам пресс-секретаря Путина Дмитрия Пескова, президенту дали неправильную информацию — и поэтому он на «Прямой линии» ошибочно сказал, что газета Süddeutsche Zeitung принадлежит американцам. Удивительная история — Кремль извинился. Даже не важно, за что именно, важен сам факт — Кремль извинился. Да такое за карьеру новостников с десятилетним стажем было всего пару раз. Впрочем, нет — за что тоже важно.
+                        table.post_details
+                            tr
+                                td Где:
+                                td
+                                    | Empire Blackyard, на выходе в сторону ТРЦ
+                                    br
+                                    | «Афимолл-Сити», Пресненская наб., 6, стр. 2
+                            tr
+                                td Когда:
+                                td с 15 по 22 марта
+                            tr
+                                td Цена:
+                                td 1500 рублей
+                        .post_social
+                            img(src='/img/post_social.jpg', alt='')
+                    .large-6.column
+                        .tile.tile_min.tile_facebook
+                            .tile_icon
+                                i.fa.fa-facebook
+                            a(href='#')
+                                | Наша группа facebook
+                                i.fa.icon-icons-set-03
+                    .large-6.column
+                        .tile.tile_min.tile_subs
+                            .tile_icon
+                                i.fa.icon-icons-set-47
+                            a(href='#')
+                                | Подписаться на новости
+                                i.fa.icon-icons-set-03
+                    .tile.tile_square.more
+                        p Читайте также
+                        .more_news
+                            .more_new
+                                p.more_header
+                                    | В Сити открылся подземный переход между Эволюцией и Империей 
+                                    i.fa.icon-icons-set-03
+                                .more_date 18 МАРТА
+                            .more_new
+                                p
+                                    | 19 марта, в субботу, впервые 
+                                    | в    истории российского «Часа 
+                                    | Земли»    в акции примут участие 
+                                    | все здания в «Москва-Сити». 
+                                    i.fa.icon-icons-set-03
+                                .more_date 18 МАРТА
+                            .more_new
+                                p
+                                    | 19 марта, в субботу, впервые 
+                                    | в    истории российского «Часа 
+                                    | Земли»    в акции примут участие 
+                                    | все здания в «Москва-Сити». 
+                                    i.fa.icon-icons-set-03
+                                .more_date 18 МАРТА
+                            .more_new
+                                p
+                                    | 19 марта, в субботу, впервые 
+                                    | в    истории российского «Часа 
+                                    | Земли»    в акции примут
+                                    i.fa.icon-icons-set-03
+                                .more_date 18 МАРТА
+                            .more_new
+                                p
+                                    | 19 марта, в субботу, впервые 
+                                    | в    истории российского «Часа 
+                                    | Земли»    в акции примут участие 
+                                    | все здания в «Москва-Сити» 
+                                    | Земли»    в акции примут участие 
+                                    | все здания в «Москва-Сити».
+                                    i.fa.icon-icons-set-03
+                                .more_date 18 МАРТА
+                p.small-12.column.related_header Related
+                .grid
+                    .tile.tile_square.tile_white.wo_img.w_blackout.text_bottom(style="background-image:url('/img/tiles/flowers.jpg')")
+                        p Квадратный банер с фоновой картинкой
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.fa.icon-icons-set-03
+                    .tile.tile_square.tile_white.tile_dark
+                        img(src='/img/tiles/bread.jpg', alt='Bread')
+                        p Квадратный банер с черным фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.fa.icon-icons-set-03
+                    .tile.tile_square
+                        img(src='/img/tiles/news.jpg', alt='')
+                        p Квадратный банер с белым фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.fa.icon-icons-set-03
+            include ./includes/footer.jade

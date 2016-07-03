@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'CitySans_Black';
+    src:    url('CitySans-Black_web.eot');
+    src:    url('CitySans-Black_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Black_web.woff') format('woff'),
+            url('CitySans-Black_web.woff2') format('woff2'),
+            url('CitySans-Black_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_Bold';
+    src:    url('CitySans-Bold_web.eot');
+    src:    url('CitySans-Bold_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Bold_web.woff') format('woff'),
+            url('CitySans-Bold_web.woff2') format('woff2'),
+            url('CitySans-Bold_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_ExtraLight';
+    src:    url('CitySans-ExtraLight_web.eot');
+    src:    url('CitySans-ExtraLight_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-ExtraLight_web.woff') format('woff'),
+            url('CitySans-ExtraLight_web.woff2') format('woff2'),
+            url('CitySans-ExtraLight_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_Light';
+    src:    url('CitySans-Light_web.eot');
+    src:    url('CitySans-Light_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Light_web.woff') format('woff'),
+            url('CitySans-Light_web.woff2') format('woff2'),
+            url('CitySans-Light_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_Medium';
+    src:    url('CitySans-Medium_web.eot');
+    src:    url('CitySans-Medium_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Medium_web.woff') format('woff'),
+            url('CitySans-Medium_web.woff2') format('woff2'),
+            url('CitySans-Medium_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_Regular';
+    src:    url('CitySans-Regular_web.eot');
+    src:    url('CitySans-Regular_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Regular_web.woff') format('woff'),
+            url('CitySans-Regular_web.woff2') format('woff2'),
+            url('CitySans-Regular_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CitySans_Thin';
+    src:    url('CitySans-Thin_web.eot');
+    src:    url('CitySans-Thin_web.eot?#iefix') format('embedded-opentype'),
+            url('CitySans-Thin_web.woff') format('woff'),
+            url('CitySans-Thin_web.woff2') format('woff2'),
+            url('CitySans-Thin_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

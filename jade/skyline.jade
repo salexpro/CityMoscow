@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+    include ./includes/head.jade
+    body
+        main.wrap
+            header.head.head_post
+                include ./includes/header_top.jade
+                .row
+                    p.small-12.column.head_h1
+                        | Skyline
+                    include ./includes/towers.jade
+            article.row.content.skyline
+                h1.small-12.column.skyline_header Многофункциональный центр Renaissance Moscow Towers
+                .tiles.grid_half
+                    .tile.tile_half.tile_slider
+                        // ul
+                        //     li
+                        //         img(src="/img/tiles/skyline.jpg", alt="Skyline")
+                        //     li
+                        //         img(src="/img/tiles/skyline.jpg", alt="Skyline")
+                        img(src="/img/tiles/skyline.jpg", alt="Skyline")
+                    .tile.tile_half.tile_info
+                        span Девелопер
+                        | LLC Liedel Investments Limited
+                        span Архитектор
+                        | Михаил Посохин, Фрэнк Уильямс  (США) , Г. Л. Сирота
+                        span Проектировщик
+                        | Проектное бюро Thornton&Tomasetti, ООО «Проектное бюро «Римакс»
+                        span Застройщик
+                        | РАСЭН
+                        span Инженерные работы   
+                        | ЗАО «АРМО-ГРУПП»
+                        span Управление и экспуатация
+                        | Bilfinger HSG Facility Management
+                    .tile.tile_quarter.tile_digit
+                        span 373,7
+                        | Высота
+                    .tile.tile_quarter.tile_digit
+                        span 95
+                        | Этажей
+                    .tile.tile_quarter.tile_digit
+                        span 2004
+                        | Начало
+                        br
+                        | строительства
+                    .tile.tile_quarter.tile_digit
+                        span 2016
+                        | Окончание строительства
+                    .tile.tile_half.tile_info.tile_half_square
+                        | Участок № 16а: офисно-административное здание и здание с апартаментами
+                        table
+                            tr
+                                td Участок
+                                td 16а
+                            tr
+                                td Общая площадь
+                                td 249610 м²
+                            tr
+                                td Количество лифтов
+                                td 55
+                            tr
+                                td Офисные помещения
+                                td 110000 м²
+                            tr
+                                td Апартаменты
+                                td 120240 м²
+                            tr
+                                td Инфраструктура
+                                td 4675 м²
+                            tr
+                                td Количество машино-мест
+                                td 172
+                    .tile.tile_half.tile_half_square.tile_slider
+                        img(src="/img/tiles/map.jpg", alt="Map")
+                    .tile.tile_half.tile_clear
+                        .tile.tile_min.tile_shops
+                            .tile_icon
+                                i.fa.icon-icons-set-42
+                            a(href='#')
+                                | Магазины в Сити
+                                i.fa.icon-icons-set-03
+                        .tile.tile_min.tile_cafe
+                            .tile_icon(style="background-color: #009058")
+                                i.fa.icon-icons-set-44
+                            a(href='#',style="color: #009058")
+                                | Рестораны и кафе
+                                i.fa.icon-icons-set-03
+                        .tile.tile_min.tile_transport
+                            .tile_icon
+                                i.fa.icon-icons-set-50
+                            a(href='#')
+                                | Карта
+                                br
+                                | проезда
+                                i.icon-icons-set-03
+                    .tile.tile_half.tile_half_min.tile_info.icon_right
+                        .tile_icon
+                            i.fa.
+                        table
+                            tr
+                                td Адрес
+                                td Пресненская набережная, 6 стр.2
+                            tr
+                                td телефон
+                                td +7 495 123 45 67
+                            tr
+                                td mail
+                                td info@empire.ru
+                            tr
+                                td САЙТ
+                                td empire.ru         
+                h2.small-12.column Реклама
+                .small-12.column.tiles
+                    .tile.tile_big.tile_white.tile_dark
+                        img(src='/img/tiles/property.jpg', alt='Property')
+                        p Офисы с видом и виды на офисы
+                        a(href='#')
+                            | Лучшие предложения по покупке
+                            br
+                            | и аренде от Solvers Estate
+                            i.icon-icons-set-03
+            include ./includes/footer.jade
