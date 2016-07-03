@@ -4691,6 +4691,21 @@ h2 {
       margin-top: 0; }
     .head_post .towers {
       margin: 0; }
+  .head_map {
+    height: auto;
+    max-height: 880px;
+    overflow: hidden; }
+    .head_map .nav_menu.is_open::before {
+      box-shadow: -160px -160px 0px 153px #7bafd2; }
+    .head_map .nav_menu.is_open::after {
+      box-shadow: -132px 137px 0px 133px #7bafd2; }
+    .head_map .nav_menu::before {
+      box-shadow: -40px -50px 0px 43px #7bafd2; }
+    .head_map .nav_menu::after {
+      box-shadow: -52px 47px 0px 43px #7bafd2; }
+    .head_map > img {
+      width: 100%;
+      margin-top: -90px; }
   .head_h1 {
     color: white;
     font-size: 1.8rem;
@@ -4762,6 +4777,10 @@ h2 {
       @media screen and (max-width: 27.1875em) {
         .nav_menu.is_open {
           width: calc(100% - 15px); } }
+      .nav_menu.is_open::before {
+        box-shadow: -160px -160px 0px 153px #00afec; }
+      .nav_menu.is_open::after {
+        box-shadow: -132px 137px 0px 133px #00afec; }
       .nav_menu.is_open .nav_hamb {
         background: #fff;
         transition-delay: 0s; }
@@ -4784,14 +4803,16 @@ h2 {
       background: #000;
       transform: rotate(45deg);
       bottom: 215px;
-      left: -542px; }
+      left: -542px;
+      box-shadow: -40px -50px 0px 43px #00afec;
+      z-index: -1;
+      transition: 500ms; }
     .nav_menu:after {
       width: 40px;
       top: -22px;
       left: auto;
       right: -10px;
-      box-shadow: -132px 137px 0px 133px #00afec;
-      z-index: -1; }
+      box-shadow: -52px 47px 0px 43px #00afec; }
   .nav_hamb {
     height: 23px;
     background-color: #000;
@@ -5245,7 +5266,8 @@ h2 {
       .tile_info span:first-child {
         margin: 0; }
     .tile_info .tile_icon {
-      float: right;
+      display: inline-table;
+      vertical-align: bottom;
       background-color: #303030; }
   .tile_clear {
     padding: 0;
@@ -5274,6 +5296,7 @@ h2 {
   .tile_dark {
     background-color: #303030; }
   .tile_icon {
+    display: table;
     width: 94px;
     height: 94px;
     border-radius: 50%;
@@ -5286,7 +5309,8 @@ h2 {
       .tile_icon {
         transform: scale(0.7); } }
     .tile_icon i {
-      vertical-align: top; }
+      display: table-cell;
+      vertical-align: middle; }
       .tile_icon i:before, .tile_icon i.nav_menu:after, .tile_icon i.nav_hamb:after, .tile_icon i.logo_inner:after, .tile_icon i.social_inner:after {
         vertical-align: top; }
   .tile_parking .tile_icon {
@@ -5384,6 +5408,10 @@ h2 {
     .text_bottom {
       padding-top: 160px;
       padding-right: 20px; } }
+
+.icon_right .tile_icon {
+  display: table;
+  float: right; }
 
 .stripe {
   height: 195px;

@@ -1,13 +1,3 @@
-// @font-face {
-//     font-family: 'CitySans_Black';
-//     src:    url('/fonts/CitySans/CitySans-Black_web.eot');
-//     src:    url('/fonts/CitySans/CitySans-Black_web.eot?#iefix') format('embedded-opentype'),
-//             url('/fonts/CitySans/CitySans-Black_web.woff') format('woff'),
-//             url('/fonts/CitySans/CitySans-Black_web.woff2') format('woff2'),
-//             url('/fonts/CitySans/CitySans-Black_web.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
 @font-face {
     font-family: 'CitySans';
     src: url('/fonts/CitySans/CitySans-Bold_web.eot');
@@ -179,6 +169,33 @@ h2{
             margin: 0;
         }
     }
+    &_map{
+        height: auto;
+        max-height: 880px;
+        overflow: hidden;
+        .nav{
+            &_menu{
+                &.is_open{
+                    &::before{
+                        box-shadow: -160px -160px 0px 153px #7bafd2;
+                    }
+                    &::after{
+                        box-shadow: -132px 137px 0px 133px #7bafd2;
+                    }
+                }
+                &::before{
+                    box-shadow: -40px -50px 0px 43px #7bafd2;
+                }
+                &::after{
+                    box-shadow: -52px 47px 0px 43px #7bafd2;
+                }
+            }
+        }
+        &>img{
+            width: 100%;
+            margin-top: -90px;
+        }
+    }
     &_h1 {
         color: white;
         font-size: 1.8rem;
@@ -261,6 +278,12 @@ h2{
             @include breakpoint(435px down) {
                 width: calc(100% - 15px);
             }
+            &::before{
+                box-shadow: -160px -160px 0px 153px #00afec;
+            }
+            &::after{
+                box-shadow: -132px 137px 0px 133px #00afec;
+            }
             .nav_hamb {
                 background: #fff;
                 transition-delay: 0s;
@@ -291,6 +314,9 @@ h2{
             transform: rotate(45deg);
             bottom: 215px;
             left: -542px;
+            box-shadow: -40px -50px 0px 43px #00afec;
+            z-index: -1;
+            transition: 500ms;
         }
         &:after {
             @extend :before;
@@ -298,8 +324,7 @@ h2{
             top: -22px;
             left: auto;
             right: -10px;
-            box-shadow: -132px 137px 0px 133px #00afec;
-            z-index: -1;
+            box-shadow: -52px 47px 0px 43px #00afec;
         }
     }
     &_hamb {
@@ -861,7 +886,8 @@ h2{
             }
         }
         .tile_icon{
-            float: right;
+            display: inline-table;
+            vertical-align: bottom;
             background-color: #303030;
         }
     }
@@ -901,6 +927,7 @@ h2{
         background-color: #303030;
     }
     &_icon {
+        display: table;
         width: 94px;
         height: 94px;
         border-radius: 50%;
@@ -913,7 +940,8 @@ h2{
             transform: scale(0.7)
         }
         i {
-            vertical-align: top;
+            display: table-cell;
+            vertical-align: middle;
             &:before{
                 vertical-align: top;
             }
@@ -1049,7 +1077,6 @@ h2{
         margin-top: 11px;
     }
 }
-
 .text_bottom {
     padding-top: 210px;
     padding-left: 0 !important;
@@ -1058,7 +1085,12 @@ h2{
         padding-right: 20px;
     }
 }
-
+.icon_right{
+    .tile_icon{
+        display: table;
+        float: right;
+    }
+}
 .stripe {
     height: 195px;
     background-color: #006cff;
