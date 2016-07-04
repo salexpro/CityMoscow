@@ -46,144 +46,127 @@ html(lang='en')
                                         i.icon-icons-set-03
                     include ./includes/towers.jade
             article.row.content.tiles.grid
-                // <div class="large-8 column">
-                .tile.tile_event
-                    img(src='/img/tiles/coldplay.jpg', alt='Coldplay')
-                    p Концерт группы Coldplay
-                    a(href='#')
-                        | Все мероприятия
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_parking
-                    .tile_icon
-                        i.icon-icons-set-32
-                    a(href='#')
-                        | Парковка в Сити
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_transport
-                    .tile_icon
-                        i.icon-icons-set-50
-                    a(href='#')
-                        | Карта
-                        br
-                        | проезда
-                        i.icon-icons-set-03
-                    // </div>
-                // <div class="large-8 column">
-                .tile.tile_food.tile_white.wo_img.w_blackout(style="background-image:url('/img/tiles/food.jpg')")
-                    p 10 лучших бизнес-ланчей на любой кошелек
-                    a(href='#')
-                        | Все рестораны
-                        i.icon-icons-set-03
-                .tile.tile_square.w_blackout.tile_tours
-                    p
-                        | Экскурсия на смотровую
-                        br
-                        | площадку
-                    a(href='#')
-                        | Все услуги
-                        i.icon-icons-set-03
-                    button.button.hollow Заказать
-                .tile.tile_faq
-                    i.icon-icons-set-29
-                    p Где в «Москва-Сити» можно выгуливать собак?
-                    a(href='#')
-                        | Ответы на все вопросы в разделе FAQ
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-4 column">
-                // </div>
-                // <div class="large-12 column">
-                .tile.tile_big.tile_white.tile_dark
-                    img(src='/img/tiles/property.jpg', alt='Property')
-                    p Офисы с видом и виды на офисы
-                    a(href='#')
-                        | Лучшие предложения по покупке
-                        br
-                        | и аренде от Solvers Estate
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-12 column">
-                .tile.tile_press.tile_expanded.img_right
-                    img(src='/img/tiles/moscow24.jpg', alt='Moscow24')
-                    p
-                        | О том, как строились небоскребы «Москва-Сити» и как они функционируют в программе «Дело техника».
-                    a(href='#')
-                        | Пресс-кит
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_shops
-                    .tile_icon
-                        i.icon-icons-set-42
-                    a(href='#')
-                        | Магазины в Сити
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_cafe
-                    .tile_icon
-                        i.icon-icons-set-44
-                    a(href='#')
-                        | Рестораны и кафе
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-8 column">
-                .tile.tile_infrastructure
-                    img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAYAAAA/f6WqAAAE/UlEQVR4Xu3XMQ7CQBQD0c39Dw1F0iBFaHo/ajce/xHZ65zzOX4IIHAuMrgCBG4CZHAJCDwEyOAUECCDG0Dgl4B/BheBgH8GN4CAfwY3gMArAZ9JDgMBn0luAAGfSW4AAZ9JbgCBfwS8GdwHAt4MbgABbwY3gIA3gxtAwJvBDSAQCHhAB0giGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgcAXELrDAWpf+joAAAAASUVORK5CYII=', alt='Malevich')
-                    p Резерв
-                    a(href='#')
-                        | ???
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-4 column">
-                .tile.tile_square.tile_souvenirs
-                    p На память!
-                    a(href='#')
-                        | Кружка с термо-
-                        br
-                        | рисунком
-                    .button.hollow 400 Р
-                // </div>
-                // <div class="large-8 column">
-                .tile.tile_white.tile_dark
-                    img(src='/img/tiles/official.jpg', alt='Official')
-                    p Официальная информация от компании ОАО «Сити»
-                    span Уставы, отчеты, реквизиты
-                .tile.tile_branding
-                    img(src='/img/tiles/branding.jpg', alt='Branding')
-                    p
-                        | Новый брендинг
-                        br
-                        | ММДЦ    «Москва-Сити»
-                    a(href='#')
-                        | Официальный отчет
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-8 column">
-                .tile.tile_white.tile_black.wo_img.w_blackout(style='background-image: url(/img/tiles/celebrate.jpg);')
-                    p Аренда помещений для проведения мероприятий
-                    a(href='#')
-                        | Все услуги
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_taxi
-                    .tile_icon
-                        i.icon-icons-set-56
-                    a(href='#')
-                        | За 149 рублей до метро
-                        i.icon-icons-set-03
-                // </div>
-                // <div class="large-2 column">
-                .tile.tile_min.tile_services
-                    .tile_icon
-                        i.icon-icons-set-49
-                    a(href='#')
-                        | Разрешение на съемки
-                        i.icon-icons-set-03
-                // </div>
+                .small-12.large-8.column
+                    .tile.tile_event
+                        img(src='/img/tiles/coldplay.jpg', alt='Coldplay')
+                        p Концерт группы Coldplay
+                        a(href='#')
+                            | Все мероприятия
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_parking
+                        .tile_icon
+                            i.icon-icons-set-32
+                        a(href='#')
+                            | Парковка в Сити
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_transport
+                        .tile_icon
+                            i.icon-icons-set-50
+                        a(href='#')
+                            | Карта проезда
+                            i.icon-icons-set-03
+                .small-12.large-8.column
+                    .tile.tile_food.tile_white.wo_img.w_blackout(style="background-image:url('/img/tiles/food.jpg')")
+                        p 10 лучших бизнес-ланчей на любой кошелек
+                        a(href='#')
+                            | Все рестораны
+                            i.icon-icons-set-03
+                    .tile.tile_faq
+                        i.icon-icons-set-29
+                        p Где в «Москва-Сити» можно выгуливать собак?
+                        a(href='#')
+                            | Ответы на все вопросы в разделе FAQ
+                            i.icon-icons-set-03
+                .small-12.large-4.column
+                    .tile.tile_square.w_blackout.tile_tours
+                        p
+                            | Экскурсия на смотровую
+                            br
+                            | площадку
+                        a(href='#')
+                            | Все услуги
+                            i.icon-icons-set-03
+                        button.button.hollow Заказать
+                .small-12.column
+                    .tile.tile_big.tile_white.tile_dark
+                        img(src='/img/tiles/property.jpg', alt='Property')
+                        p Офисы с видом и виды на офисы
+                        a(href='#')
+                            | Лучшие предложения по покупке
+                            br
+                            | и аренде от Solvers Estate
+                            i.icon-icons-set-03
+                .small-12.column
+                    .tile.tile_press.tile_expanded.img_right
+                        img(src='/img/tiles/moscow24.jpg', alt='Moscow24')
+                        p
+                            | О том, как строились небоскребы «Москва-Сити» и как они функционируют в программе «Дело техника».
+                        a(href='#')
+                            | Пресс-кит
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_shops
+                        .tile_icon
+                            i.icon-icons-set-42
+                        a(href='#')
+                            | Магазины в Сити
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_cafe
+                        .tile_icon
+                            i.icon-icons-set-44
+                        a(href='#')
+                            | Рестораны и кафе
+                            i.icon-icons-set-03
+                .small-12.large-8.column
+                    .tile.tile_infrastructure
+                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAYAAAA/f6WqAAAE/UlEQVR4Xu3XMQ7CQBQD0c39Dw1F0iBFaHo/ajce/xHZ65zzOX4IIHAuMrgCBG4CZHAJCDwEyOAUECCDG0Dgl4B/BheBgH8GN4CAfwY3gMArAZ9JDgMBn0luAAGfSW4AAZ9JbgCBfwS8GdwHAt4MbgABbwY3gIA3gxtAwJvBDSAQCHhAB0giGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgQAZAiSRDQJk2NhZy0CADAGSyAYBMmzsrGUgQIYASWSDABk2dtYyECBDgCSyQYAMGztrGQiQIUAS2SBAho2dtQwEyBAgiWwQIMPGzloGAmQIkEQ2CJBhY2ctAwEyBEgiGwTIsLGzloEAGQIkkQ0CZNjYWctAgAwBksgGATJs7KxlIECGAElkgwAZNnbWMhAgQ4AkskGADBs7axkIkCFAEtkgQIaNnbUMBMgQIIlsECDDxs5aBgJkCJBENgiQYWNnLQMBMgRIIhsEyLCxs5aBABkCJJENAmTY2FnLQIAMAZLIBgEybOysZSBAhgBJZIMAGTZ21jIQIEOAJLJBgAwbO2sZCJAhQBLZIECGjZ21DATIECCJbBAgw8bOWgYCZAiQRDYIkGFjZy0DATIESCIbBMiwsbOWgcAXELrDAWpf+joAAAAASUVORK5CYII=', alt='Malevich')
+                        p Резерв
+                        a(href='#')
+                            | ???
+                            i.icon-icons-set-03
+                .small-12.large-4.column
+                    .tile.tile_square.tile_souvenirs
+                        p На память!
+                        a(href='#')
+                            | Кружка с термо-
+                            br
+                            | рисунком
+                        .button.hollow 400 Р
+                .small-12.large-8.column
+                    .tile.tile_white.tile_dark
+                        img(src='/img/tiles/official.jpg', alt='Official')
+                        p Официальная информация от компании ОАО «Сити»
+                        a(href="") Уставы, отчеты, реквизиты
+                    .tile.tile_branding
+                        img(src='/img/tiles/branding.jpg', alt='Branding')
+                        p
+                            | Новый брендинг
+                            br
+                            | ММДЦ    «Москва-Сити»
+                        a(href='#')
+                            | Официальный отчет
+                            i.icon-icons-set-03
+                .small-12.large-8.column
+                    .tile.tile_white.tile_black.wo_img.w_blackout(style='background-image: url(/img/tiles/celebrate.jpg);')
+                        p Аренда помещений для проведения мероприятий
+                        a(href='#')
+                            | Все услуги
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_taxi
+                        .tile_icon
+                            i.icon-icons-set-56
+                        a(href='#')
+                            | За 149 рублей до метро
+                            i.icon-icons-set-03
+                .small-6.large-2.column
+                    .tile.tile_min.tile_services
+                        .tile_icon
+                            i.icon-icons-set-49
+                        a(href='#')
+                            | Разрешение на съемки
+                            i.icon-icons-set-03
             include ./includes/footer.jade

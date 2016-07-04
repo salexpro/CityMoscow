@@ -153,6 +153,9 @@ h2{
     height: 880px;
     background-color: #00afec;
     padding-top: 16px;
+    @include breakpoint(435px down) {
+        height: auto;
+    }
     &>.row:nth-child(2) {
         height: calc(100% - 74px);
     }
@@ -240,11 +243,6 @@ h2{
     padding-right: 0;
     z-index: 2;
     width: 74px + 7.5px;
-    @include breakpoint(435px down) {
-        position: absolute;
-        top: 110px;
-        width: 100%;
-    }
     &:before {
         content: '';
         position: absolute;
@@ -266,17 +264,18 @@ h2{
         }
     }
     &_menu {
-        display: table;
         background-color: white;
         border: 7px solid black;
         position: absolute;
         transition: 500ms;
         width: 74px;
-        height: 74px;
+        // max-height: 74px;
         &.is_open {
             width: 391px;
+            // max-height: 400px;
             @include breakpoint(435px down) {
-                width: calc(100% - 15px);
+                // width: calc(100% - 15px);
+                width: 305px;
             }
             &::before{
                 box-shadow: -160px -160px 0px 153px #00afec;
@@ -328,11 +327,9 @@ h2{
         }
     }
     &_hamb {
-        //@include hamburger(#000, #000, 24px, 23px, 5px, 3);
         height: 23px;
         background-color: #000;
         box-shadow: inset 0 9px 0 0 #fff, inset 0 -9px 0 0 #fff;
-        // border-bottom: 5px solid #000;
         margin: 18px;
         outline: none;
         position: relative;
@@ -384,8 +381,9 @@ h2{
     float: left;
     margin-left: 17px;
     @include breakpoint(435px down) {
-        z-index: 3;
-        margin: 0;
+        // z-index: 3;
+        margin-left: 7px;
+        // margin: 0;
         width: 100%;
     }
     &:before {
@@ -408,7 +406,8 @@ h2{
         line-height: 53px;
         z-index: 1;
         @include breakpoint(435px down) {
-            width: 100%;
+            width: calc(100% - 7px);
+            padding: 0 10px;
         }
         &:before {
             content: '';
@@ -508,7 +507,7 @@ h2{
     &_box {
         padding-top: 45px;
         @include breakpoint(435px down) {
-            padding-top: 100px
+            padding-top: 10px
         }
     }
     &_input {
@@ -630,28 +629,32 @@ h2{
 }
 
 .grid {
-    margin: auto;
-    &_half{
-        margin: auto;
-    }
+    // margin: auto;
+    // &_half{
+    //     margin: auto;
+    // }
 }
 
 .tile {
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 15px;
-    width: 825px;
+    width: 100% !important;
     min-height: 195px;
+    transition:500ms;
+    // height: calc(100% - 15px);
     padding-right: 20px;
-    float: left;
+    // float: left;
+    background-size: cover;
+    &:hover{
+        background-color: #f7f7f7;
+    }
     @include breakpoint(840px down) {
         width: 100% !important;
         font-size: 16px;
     }
     @include breakpoint(435px down) {
-        width: 305px !important;
         min-height: 150px;
-        margin-bottom: 7.5px;
         font-size: 14px;
         padding-right: 10px;
     }
@@ -676,7 +679,7 @@ h2{
         &::before{
             vertical-align: top;
         }
-        @include breakpoint(small down) {
+        @include breakpoint(435px down) {
             transform: scale(0.4);
             width: 162px;
             height: 215px;
@@ -688,6 +691,9 @@ h2{
         font-weight: 500;
         line-height: 36px;
         margin-top: 43px;
+        @include breakpoint(1035px down) {
+            margin-top: 15px;
+        }
         @include breakpoint(840px down) {
             font-size: 20px !important;
             margin-top: 38px;
@@ -696,11 +702,16 @@ h2{
         @include breakpoint(435px down) {
             margin-top: 9px;
             font-size: 18px;
-            margin-bottom: 0;
+            margin-bottom: 7px;
+        }
+        @include breakpoint(350px down) {
+            font-size: 17px !important;
         }
     }
     a {
+        display: table;
         color: #000;
+        padding-bottom: 10px;
         i {
             font-size: 1.25rem;
             vertical-align: top;
@@ -716,13 +727,10 @@ h2{
     &_min {
         padding: 19px 23px;
         padding-bottom: 20px;
-        width: 195px;
-        @include breakpoint(840px down) {
-            width: 195px !important;
-        }
+        // width: 195px;
         @include breakpoint(435px down) {
-            width: 150px !important;
-            height: 150px;
+            // width: 150px !important;
+            // height: 150px;
             padding: 3px 20px;
         }
     }
@@ -738,7 +746,7 @@ h2{
             padding-bottom: 25px;
         }
         img {
-            @include breakpoint(1049px down) {
+            @include breakpoint(medium down) {
                 width: 100%;
                 float: none;
                 margin: 0;
@@ -750,14 +758,14 @@ h2{
             @include breakpoint(large down) {
                 margin-top: 20px;
             }
-            @include breakpoint(1049 down) {
-                font-size: 20px;
+            @include breakpoint(medium down) {
+                font-size: 28px;
                 line-height: 36px;
                 margin-left: 40px;
             }
         }
         a {
-            @include breakpoint(1049px down) {
+            @include breakpoint(medium down) {
                 display: block;
                 margin-left: 40px;
             }
@@ -770,16 +778,11 @@ h2{
         }
     }
     &_square {
-        width: 405px;
-        height: 405px;
+        height: calc(100% - 15px);
+        min-height: 405px;
         padding: 0;
-        background-size: cover;
-        @include breakpoint(840px down) {
-            width: 405px !important;
-        }
         @include breakpoint(435px down) {
-            width: 305px !important;
-            height: 305px;
+            min-height: 305px;
         }
         img {
             float: none;
@@ -937,9 +940,15 @@ h2{
     }
     &_black {
         background-color: #000;
+        &:hover{
+            background-color: #000;
+        }
     }
     &_dark {
         background-color: #303030;
+        &:hover{
+            background-color: #303030;
+        }
     }
     &_icon {
         display: table;
@@ -1009,6 +1018,7 @@ h2{
         background-position: 50% 100%;
         background-repeat: no-repeat;
         padding-left: 45px;
+        min-height: 405px;
         a {
             position: absolute;
             bottom: 42px;
@@ -1288,19 +1298,34 @@ h2{
     margin-top: 115px;
     overflow: hidden;
     padding-top: 27px;
+    @include breakpoint(medium down) {
+        margin-top: 40px;
+    }
+    .logo{
+        @include breakpoint(small down) {
+            width: auto;
+        }
+    }
     .powered_by {
         line-height: 66px;
         text-align: right;
+        padding-left: 25px;
     }
     &_menu {
         margin-top: 40px;
         h5 {
             margin-bottom: 25px;
+            @include breakpoint(small down) {
+                padding-left: 20px;
+            }
         }
         ul {
             list-style: none;
             margin: 0;
             margin-bottom: 45px;
+            @include breakpoint(small down) {
+                padding-left: 20px;
+            }
             a {
                 color: #454545;
                 &:hover {
@@ -1312,5 +1337,6 @@ h2{
     .copyright {
         margin-bottom: 45px;
         font-weight: 300;
+        text-align: center;
     }
 }
