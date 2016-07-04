@@ -177,6 +177,9 @@ h2{
         height: auto;
         max-height: 880px;
         overflow: hidden;
+        @include breakpoint(medium down) {
+            overflow: visible;
+        }
         .nav{
             &_menu{
                 &.is_open{
@@ -890,6 +893,9 @@ h2{
         position: relative;
         &_header{
             display: block;
+        }
+        img{
+            width: auto;
         }
         b{
             font-weight: 500;

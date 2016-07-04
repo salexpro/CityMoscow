@@ -4699,6 +4699,9 @@ h2 {
     height: auto;
     max-height: 880px;
     overflow: hidden; }
+    @media screen and (max-width: 63.9375em) {
+      .head_map {
+        overflow: visible; } }
     .head_map .nav_menu.is_open::before {
       box-shadow: -160px -160px 0px 153px #7bafd2; }
     .head_map .nav_menu.is_open::after {
@@ -5263,6 +5266,8 @@ h2 {
     position: relative; }
     .tile_info_header {
       display: block; }
+    .tile_info img {
+      width: auto; }
     .tile_info b {
       font-weight: 500;
       margin-top: 18px;
