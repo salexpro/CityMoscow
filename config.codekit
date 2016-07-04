@@ -3762,6 +3762,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/basket_map.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97000,
+		"inputAbbreviatedPath": "\/img\/basket_map.jpg",
+		"outputAbbreviatedPath": "\/img\/basket_map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/big_bread.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3772,6 +3783,50 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
+		},
+	"\/img\/items\/backpack.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37213,
+		"inputAbbreviatedPath": "\/img\/items\/backpack.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/backpack.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/cup.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18001,
+		"inputAbbreviatedPath": "\/img\/items\/cup.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/cup.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/sticker.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13755,
+		"inputAbbreviatedPath": "\/img\/items\/sticker.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/sticker.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/t-shirt.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13159,
+		"inputAbbreviatedPath": "\/img\/items\/t-shirt.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/t-shirt.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/img\/logo.png": {
 		"fileType": 32768,

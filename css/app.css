@@ -4689,11 +4689,11 @@ h2 {
   .head_free {
     min-height: 460px;
     height: auto; }
-  .head_post {
+  .head_fix {
     height: 460px; }
-    .head_post .head_h2 {
+    .head_fix .head_h2 {
       margin-top: 0; }
-    .head_post .towers {
+    .head_fix .towers {
       margin: 0; }
   .head_map {
     height: auto;
