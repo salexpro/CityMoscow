@@ -31,7 +31,9 @@
             <div class="logo">
               <div class="logo_inner"><a href="/html"><img src="/img/logo.png" alt="Logo"></a></div>
             </div>
-            <div class="login"></div>
+            <div class="login">
+              <div class="login_inner"><a href="#">ВХОД</a><a href="#">РЕГИСТРАЦИЯ</a></div>
+            </div>
             <div class="social">
               <div class="social_inner">
                 <ul>
@@ -53,7 +55,7 @@
         <div class="small-12 column basket_items">
           <div class="row basket_item">
             <div class="large-2 column basket_item_img"><img src="/img/items/cup.jpg" alt="Cup"></div>
-            <div class="large-6 column">
+            <div class="large-6 column basket_item_content">
               <p>
                  
                 Кружка с терморисунком
@@ -61,24 +63,25 @@
               </p>Кружка-хамелеон, меняет цвет при нагревании
             </div>
             <div class="large-3 column basket_item_options">
-              <div class="select basket_item_amount">
+              <div class="basket_item_amount">
                 <button>-</button>
-                <input type="number" value="2">
+                <input type="text" value="2" readonly>
                 <button>+</button>
               </div>
             </div>
+            <div class="large-1 column basket_item_price">399 ₽</div>
           </div>
           <div class="row basket_item">
             <div class="large-2 column basket_item_img"><img src="/img/items/sticker.jpg" alt="Sticker"></div>
-            <div class="large-6 column">
+            <div class="large-6 column basket_item_content">
               <p>Наклейка
                 <button class="basket_item_close">х</button>
               </p>Сердце-наклейка, эпоксидная основа
             </div>
             <div class="large-3 column basket_item_options">
-              <div class="select basket_item_amount">
+              <div class="basket_item_amount">
                 <button>-</button>
-                <input type="number" value="15">
+                <input type="text" value="15" readonly>
                 <button>+</button>
               </div>
             </div>
@@ -86,7 +89,7 @@
           </div>
           <div class="row basket_item">
             <div class="large-2 column basket_item_img"><img src="/img/items/t-shirt.jpg" alt="T-shirt"></div>
-            <div class="large-6 column">
+            <div class="large-6 column basket_item_content">
               <p>
                  
                 Футболка
@@ -94,14 +97,16 @@
               </p>Серая хлопковая футболка
             </div>
             <div class="large-3 column basket_item_options">
-              <select class="select basket_item_size">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-              </select>
-              <div class="select basket_item_amount">
+              <div class="basket_item_size">
+                <select>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+              </div>
+              <div class="basket_item_amount">
                 <button>-</button>
-                <input type="number" value="2">
+                <input type="text" value="2" readonly>
                 <button>+</button>
               </div>
             </div>
@@ -109,7 +114,7 @@
           </div>
           <div class="row basket_item">
             <div class="large-2 column basket_item_img"><img src="/img/items/t-shirt.jpg" alt="T-shirt"></div>
-            <div class="large-6 column">
+            <div class="large-6 column basket_item_content">
               <p>
                  
                 Футболка
@@ -117,14 +122,16 @@
               </p>Серая хлопковая футболка
             </div>
             <div class="large-3 column basket_item_options">
-              <select class="select basket_item_size">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L" selected>L</option>
-              </select>
-              <div class="select basket_item_amount">
+              <div class="basket_item_size">
+                <select>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L" selected>L</option>
+                </select>
+              </div>
+              <div class="basket_item_amount">
                 <button>-</button>
-                <input type="number" value="1">
+                <input type="text" value="1" readonly>
                 <button>+</button>
               </div>
             </div>
@@ -132,15 +139,15 @@
           </div>
           <div class="row basket_item">
             <div class="large-2 column basket_item_img"><img src="/img/items/backpack.jpg" alt="Backpack"></div>
-            <div class="large-6 column">
+            <div class="large-6 column basket_item_content">
               <p>Рюкзак
                 <button class="basket_item_close">х</button>
               </p>Холщёвый рюкзак для пикников и учёбы
             </div>
             <div class="large-3 column basket_item_options">
-              <div class="select basket_item_amount">
+              <div class="basket_item_amount">
                 <button>-</button>
-                <input type="number" value="2">
+                <input type="text" value="2" readonly>
                 <button>+</button>
               </div>
             </div>
@@ -149,7 +156,7 @@
         </div>
         <div class="small-12 row column basket_delivery">
           <div class="large-2 column basket_header">Доставка</div>
-          <div class="large-10 column row">
+          <div class="large-10 column row basket_delivery_content">
             <div class="large-6 column">
               <input type="text" value="Константин Константинопольский">
               <input type="text" value="konstantinopolsky@konstantin.ru">
@@ -159,26 +166,23 @@
               <p>Опции</p>
               <table>
                 <tr>
-                  <td> 
-                    <label>
-                      <input type="radio" name="delivery_type">Самовывоз (Москва, м.Выставочная, Пресненская набережная д.6, к.2)
-                    </label>
+                  <td>
+                    <input type="radio" id="delivery_type1" name="delivery_type" checked>
+                    <label for="delivery_type1">Самовывоз (Москва, м.Выставочная, Пресненская набережная д.6, к.2)</label>
                   </td>
                   <td>0₽</td>
                 </tr>
                 <tr>
                   <td>
-                    <label>
-                      <input type="radio" name="delivery_type">Курьером в пределах МКАД
-                    </label>
+                    <input type="radio" id="delivery_type2" name="delivery_type">
+                    <label for="delivery_type2">Курьером в пределах МКАД</label>
                   </td>
                   <td>100₽</td>
                 </tr>
                 <tr>
                   <td>
-                    <label>
-                      <input type="radio" name="delivery_type">Почтой России
-                    </label>
+                    <input type="radio" id="delivery_type3" name="delivery_type">
+                    <label for="delivery_type3">Почтой России</label>
                   </td>
                   <td>200₽</td>
                 </tr>
@@ -190,27 +194,22 @@
             </div>
           </div>
         </div>
-        <div class="small-12 column basket_payment">
+        <div class="small-12 row column basket_payment">
           <div class="large-2 column basket_header">Оплата</div>
-          <div class="large-10 column row align-spaced">
+          <div class="large-10 column row align-justify">
             <div class="large-6 column basket_payment_method">
-              <label>
-                <input type="radio">Наличными курьеру
-              </label>
-              <label>
-                <input type="radio">Картой Visa/MasterCard
-              </label>
-              <label>
-                <input type="radio">WebMoney
-              </label>
-              <label>
-                <input type="radio">PayPal
-              </label>
-              <label>
-                <input type="radio">Яндекс.Деньгами
-              </label>
+              <input type="radio" id="payment_method1" name="payment_method" checked>
+              <label for="payment_method1">Наличными курьеру</label>
+              <input type="radio" id="payment_method2" name="payment_method">
+              <label for="payment_method2">Картой Visa/MasterCard</label>
+              <input type="radio" id="payment_method3" name="payment_method">
+              <label for="payment_method3">WebMoney</label>
+              <input type="radio" id="payment_method4" name="payment_method">
+              <label for="payment_method4">PayPal</label>
+              <input type="radio" id="payment_method5" name="payment_method">
+              <label for="payment_method5">Яндекс.Деньгами</label>
             </div>
-            <div class="column shrink basket_payment_price">4272 ₽
+            <div class="column shrink basket_payment_price"><span>4272 ₽</span>
               <button class="button hollow blue filled">Заказать</button>
             </div>
           </div>

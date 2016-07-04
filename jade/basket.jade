@@ -4,6 +4,7 @@ html(lang='en')
     body
         main.wrap
             header.head.head_fix
+                - var login = true;
                 include ./includes/header_top.jade
                 .row
                     p.small-12.column.head_h1
@@ -16,87 +17,91 @@ html(lang='en')
                     .row.basket_item
                         .large-2.column.basket_item_img
                             img(src="/img/items/cup.jpg", alt="Cup")
-                        .large-6.column
+                        .large-6.column.basket_item_content
                             p 
                                 | Кружка с терморисунком
                                 button.basket_item_close х
                             | Кружка-хамелеон, меняет цвет при нагревании
                         .large-3.column.basket_item_options
-                            .select.basket_item_amount
+                            .basket_item_amount
                                 button -
-                                input(type="number",value="2")
+                                input(type="text",value="2",readonly)
                                 button +
+                        .large-1.column.basket_item_price
+                            | 399 ₽
                     .row.basket_item
                         .large-2.column.basket_item_img
                             img(src="/img/items/sticker.jpg", alt="Sticker")
-                        .large-6.column
+                        .large-6.column.basket_item_content
                             p
                                 | Наклейка
                                 button.basket_item_close х
                             | Сердце-наклейка, эпоксидная основа
                         .large-3.column.basket_item_options
-                            .select.basket_item_amount
+                            .basket_item_amount
                                 button -
-                                input(type="number",value="15")
+                                input(type="text",value="15",readonly)
                                 button +
                         .large-1.column.basket_item_price
                             | 199 ₽
                     .row.basket_item
                         .large-2.column.basket_item_img
                             img(src="/img/items/t-shirt.jpg", alt="T-shirt")
-                        .large-6.column
+                        .large-6.column.basket_item_content
                             p 
                                 | Футболка
                                 button.basket_item_close х
                             | Серая хлопковая футболка
                         .large-3.column.basket_item_options
-                            select.select.basket_item_size
-                                option(value="S") S
-                                option(value="M") M
-                                option(value="L") L
-                            .select.basket_item_amount
+                            .basket_item_size
+                                select
+                                    option(value="S") S
+                                    option(value="M") M
+                                    option(value="L") L
+                            .basket_item_amount
                                 button -
-                                input(type="number",value="2")
+                                input(type="text",value="2",readonly)
                                 button +
                         .large-1.column.basket_item_price
                             | 1199 ₽
                     .row.basket_item
                         .large-2.column.basket_item_img
                             img(src="/img/items/t-shirt.jpg", alt="T-shirt")
-                        .large-6.column
+                        .large-6.column.basket_item_content
                             p 
                                 | Футболка
                                 button.basket_item_close х
                             | Серая хлопковая футболка
                         .large-3.column.basket_item_options
-                            select.select.basket_item_size
-                                option(value="S") S
-                                option(value="M") M
-                                option(value="L",selected) L
-                            .select.basket_item_amount
+                            .basket_item_size
+                                select
+                                    option(value="S") S
+                                    option(value="M") M
+                                    option(value="L",selected) L
+                            .basket_item_amount
                                 button -
-                                input(type="number",value="1")
+                                input(type="text",value="1",readonly)
                                 button +
                         .large-1.column.basket_item_price
                             | 599 ₽
                     .row.basket_item
                         .large-2.column.basket_item_img
                             img(src="/img/items/backpack.jpg", alt="Backpack")
-                        .large-6.column
+                        .large-6.column.basket_item_content
                             p
                                 | Рюкзак
                                 button.basket_item_close х
                             | Холщёвый рюкзак для пикников и учёбы
                         .large-3.column.basket_item_options
-                            .select.basket_item_amount
+                            .basket_item_amount
                                 button -
-                                input(type="number",value="2")
+                                input(type="text",value="2",readonly)
                                 button +
                         .large-1.column.basket_item_price
                             | 1599 ₽
                 .small-12.row.column.basket_delivery
                     .large-2.column.basket_header Доставка
-                    .large-10.column.row
+                    .large-10.column.row.basket_delivery_content
                         .large-6.column
                             input(type="text",value="Константин Константинопольский")
                             input(type="text",value="konstantinopolsky@konstantin.ru")
@@ -105,47 +110,43 @@ html(lang='en')
                             p Опции
                             table
                                 tr
-                                    td 
-                                        label
-                                            input(type="radio",name="delivery_type")
-                                            | Самовывоз (Москва, м.Выставочная, Пресненская набережная д.6, к.2)
+                                    td
+                                        input(type="radio",id="delivery_type1",name="delivery_type",checked)
+                                        label(for="delivery_type1") Самовывоз (Москва, м.Выставочная, Пресненская набережная д.6, к.2)
                                     td 0₽
                                 tr
                                     td
-                                        label
-                                            input(type="radio",name="delivery_type")
-                                            | Курьером в пределах МКАД
+                                        input(type="radio",id="delivery_type2",name="delivery_type")
+                                        label(for="delivery_type2") Курьером в пределах МКАД
                                     td 100₽
                                 tr
                                     td
-                                        label
-                                            input(type="radio",name="delivery_type")
-                                            | Почтой России
+                                        input(type="radio",id="delivery_type3",name="delivery_type")
+                                        label(for="delivery_type3") Почтой России
                                     td 200₽
                         .large-12.column
                             input(type="text",value="г. Москва, Бульвар Петра Алексеева 23к2")
                             .basket_delivery_map
                                 img(src="/img/basket_map.jpg", alt="Map")
-                .small-12.column.basket_payment
+                .small-12.row.column.basket_payment
                     .large-2.column.basket_header Оплата
-                    .large-10.column.row.align-spaced
+                    .large-10.column.row.align-justify
                         .large-6.column.basket_payment_method
-                            label
-                                input(type="radio")
-                                | Наличными курьеру
-                            label
-                                input(type="radio")
-                                | Картой Visa/MasterCard
-                            label
-                                input(type="radio")
-                                | WebMoney
-                            label
-                                input(type="radio")
-                                | PayPal
-                            label
-                                input(type="radio")
-                                | Яндекс.Деньгами
+                            input(type="radio",id="payment_method1",name="payment_method",checked)
+                            label(for="payment_method1") Наличными курьеру
+                            
+                            input(type="radio",id="payment_method2",name="payment_method")
+                            label(for="payment_method2") Картой Visa/MasterCard
+                            
+                            input(type="radio",id="payment_method3",name="payment_method")
+                            label(for="payment_method3") WebMoney
+                            
+                            input(type="radio",id="payment_method4",name="payment_method")
+                            label(for="payment_method4") PayPal
+                            
+                            input(type="radio",id="payment_method5",name="payment_method")
+                            label(for="payment_method5") Яндекс.Деньгами
                         .column.shrink.basket_payment_price
-                            | 4272 ₽
+                            span 4272 ₽
                             button.button.hollow.blue.filled Заказать
             include ./includes/footer.jade
