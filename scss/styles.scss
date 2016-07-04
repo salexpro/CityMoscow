@@ -1546,10 +1546,11 @@ label{
                 text-align: center;
                 padding: 0px 25px;
                 margin: 0;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 700;
                 height: 100%;
                 letter-spacing: 1px;
+                // line-height: normal;
             }
             button {
                 position: absolute;
@@ -1582,13 +1583,15 @@ label{
                 outline: none;
                 background: none;
                 position: relative;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 700;
                 width: auto;
                 margin: 0;
+                padding: 0;
                 padding-left: 20px;
                 padding-right: 50px;
                 z-index: 2;
+                // line-height: 28px;
             }
         }
         &_price {
