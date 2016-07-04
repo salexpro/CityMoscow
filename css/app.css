@@ -4722,9 +4722,13 @@ h2 {
     font-weight: 500;
     line-height: 73px;
     color: white;
-    margin-top: 77px; }
+    margin-top: 5px;
+    margin-bottom: 40px; }
     .head_h2 a {
-      color: #006cff; }
+      color: #fff;
+      box-shadow: inset 0 -2px 0 #fff; }
+      .head_h2 a.is_active {
+        color: #006cff; }
     @media screen and (max-width: 39.9375em) {
       .head_h2 {
         font-size: 1.8rem;
@@ -5045,7 +5049,7 @@ h2 {
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 15px;
-  width: 100% !important;
+  width: 100%;
   min-height: 195px;
   transition: 500ms;
   padding-right: 20px;
@@ -5056,7 +5060,6 @@ h2 {
     height: calc(100% - 15px); }
   @media screen and (max-width: 52.5em) {
     .tile {
-      width: 100% !important;
       font-size: 16px; } }
   @media screen and (max-width: 27.1875em) {
     .tile {
@@ -5225,7 +5228,7 @@ h2 {
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px; }
+      letter-spacing: 1px; }
       .tile_half table td {
         padding-right: 20px; }
     .tile_half_min {
@@ -5240,15 +5243,15 @@ h2 {
           font-size: 20px;
           font-weight: 300;
           text-transform: initial; }
-  .tile_quarter {
-    width: 300px; }
   .tile_slider {
     padding: 0; }
     .tile_slider img {
-      width: 100% !important;
       float: none;
       margin: 0;
       height: 100%; }
+      @media screen and (max-width: 39.9375em) {
+        .tile_slider img {
+          width: 100% !important; } }
   .tile_info {
     font-weight: 300;
     line-height: 26px;
@@ -5259,7 +5262,8 @@ h2 {
       font-size: 13px;
       font-weight: 700;
       line-height: normal;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 1px; }
       .tile_info span:first-child {
         margin: 0; }
     .tile_info .tile_icon {
@@ -5557,6 +5561,7 @@ h2 {
   font-weight: 300; }
 
 .official_target .button {
+  display: table;
   margin-top: 33px; }
 
 .official_employee {

@@ -9,57 +9,57 @@ html(lang='en')
                     p.small-12.column.head_h1
                         | Официальная информация от ОАО «Сити»
                     p.small-12.column.align-bottom.head_h2
-                        u Устав
+                        a(href="#") Устав
                         | , 
-                        u годовые отчеты
+                        a(href="#") годовые отчеты
                         | , 
-                        u распоряжения
+                        a(href="#") распоряжения
                         |  и 
-                        a(href="#") постановления
+                        a(href="#").is_active постановления
                         |  для 
-                        u акционеров
+                        a(href="#") акционеров
                         |  и 
-                        u не только
+                        a(href="#") не только
             article.row.official
                 h1.small-12.column.official_header
                     | Управляющая компания ОАО «СИТИ» создана весной 1992 года. Уже в течение 20 лет ОАО «СИТИ» является представителем Правительства Москвы в отношениях с третьими лицами по вопросам управления,  создания и развития ММДЦ «Москва-Сити».
                 .small-12.column.row.align-justify.official_blocks
-                    .large-4.column.official_target
+                    .medium-6.large-4.column.official_target
                         h2 Цель
                         | Наша деятельность направлена на то, чтобы преобразить облик ММДЦ «Москва-Сити», превратить его в место городского притяжения, в пространство, которое бы стало эталоном для деловых кварталов международного уровня с точки зрения удобства, функциональности и жизненной энергии.
                         br
                         br
                         | Наша цель — стать такой управляющей компанией, которая бы не только профессионально выполняла задачи технического характера, но и которая заботилась бы о том, как люди, по разным причинам оказавшиеся в «Москва-Сити», чувствуют себя в этом квартале. «Москва-Сити», как и любой полноценныий город, предназначен и для работы, и для жизни — здесь уже есть все необходимое, мы же стараемся добавить сюда жизнь. Мы с большим трепетом относимся ко всем жителям и посетителям «Москва-Сити», поэтому уже сейчас мы разрабатываем комплекс дополнительных услуг и сервисов, чтобы в «Москва-Сити» было еще приятнее, еще удобнее и еще интереснее проводить время.
                         a.button.hollow.blue(href="#") PRESS-KIT
-                    .large-6.column.row.align-top.official_team
+                    .small-12.medium-6.column.row.align-top.official_team
                         h2.small-12.column Команда
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
-                        .large-6.column.official_employee
+                        .small-6.column.official_employee
                             img(src="/img/tiles/official.jpg", alt="Employee")
                             p Татьяна Вольцингер
                             | Директор департамента по управлению территорией
                 .small-12.column.official_shareholders
                     h2 Акционерам
-                    ul.accordion(data-accordion)
+                    ul.accordion(data-accordion,data-allow-all-closed="true")
                         li.accordion-item(data-accordion-item='')
                             a.accordion-title(href='#') 
                                 span Устав внутренние документы
@@ -112,7 +112,7 @@ html(lang='en')
                                 | Контакты для акционеров
                 .small-12.column.official_legislation
                     h2 Законодательство
-                    ul.accordion(data-accordion)
+                    ul.accordion(data-accordion,data-allow-all-closed="true")
                         li.accordion-item(data-accordion-item='')
                             a.accordion-title(href='#')
                                 span Распоряжение Правительства Москвы от 28 августа 2009 г. N 1950-РП
