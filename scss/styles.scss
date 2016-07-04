@@ -728,6 +728,9 @@ h2{
         padding: 19px 23px;
         padding-bottom: 20px;
         // width: 195px;
+        a{
+            padding: 0;
+        }
         @include breakpoint(435px down) {
             // width: 150px !important;
             // height: 150px;

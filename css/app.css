@@ -5126,6 +5126,8 @@ h2 {
   .tile_min {
     padding: 19px 23px;
     padding-bottom: 20px; }
+    .tile_min a {
+      padding: 0; }
     @media screen and (max-width: 27.1875em) {
       .tile_min {
         padding: 3px 20px; } }
