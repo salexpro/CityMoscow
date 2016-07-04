@@ -14,45 +14,45 @@ html(lang='en')
                         | Заказ №97023
             article.row.content.basket
                 .small-12.column.basket_items
-                    .row.basket_item
-                        .large-2.column.basket_item_img
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
                             img(src="/img/items/cup.jpg", alt="Cup")
-                        .large-6.column.basket_item_content
+                        .small-12.medium-6.column.basket_item_content
                             p 
                                 | Кружка с терморисунком
                                 button.basket_item_close х
                             | Кружка-хамелеон, меняет цвет при нагревании
-                        .large-3.column.basket_item_options
+                        .column.basket_item_options
                             .basket_item_amount
                                 button -
                                 input(type="text",value="2",readonly)
                                 button +
-                        .large-1.column.basket_item_price
+                        .shrink.column.basket_item_price
                             | 399 ₽
-                    .row.basket_item
-                        .large-2.column.basket_item_img
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
                             img(src="/img/items/sticker.jpg", alt="Sticker")
-                        .large-6.column.basket_item_content
+                        .small-12.medium-6.column.basket_item_content
                             p
                                 | Наклейка
                                 button.basket_item_close х
                             | Сердце-наклейка, эпоксидная основа
-                        .large-3.column.basket_item_options
+                        .column.basket_item_options
                             .basket_item_amount
                                 button -
                                 input(type="text",value="15",readonly)
                                 button +
-                        .large-1.column.basket_item_price
+                        .shrink.column.basket_item_price
                             | 199 ₽
-                    .row.basket_item
-                        .large-2.column.basket_item_img
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
                             img(src="/img/items/t-shirt.jpg", alt="T-shirt")
-                        .large-6.column.basket_item_content
+                        .small-12.medium-4.column.basket_item_content
                             p 
                                 | Футболка
                                 button.basket_item_close х
                             | Серая хлопковая футболка
-                        .large-3.column.basket_item_options
+                        .column.basket_item_options
                             .basket_item_size
                                 select
                                     option(value="S") S
@@ -62,17 +62,17 @@ html(lang='en')
                                 button -
                                 input(type="text",value="2",readonly)
                                 button +
-                        .large-1.column.basket_item_price
+                        .shrink.column.basket_item_price
                             | 1199 ₽
-                    .row.basket_item
-                        .large-2.column.basket_item_img
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
                             img(src="/img/items/t-shirt.jpg", alt="T-shirt")
-                        .large-6.column.basket_item_content
+                        .small-12.medium-4.column.basket_item_content
                             p 
                                 | Футболка
                                 button.basket_item_close х
                             | Серая хлопковая футболка
-                        .large-3.column.basket_item_options
+                        .column.basket_item_options
                             .basket_item_size
                                 select
                                     option(value="S") S
@@ -82,31 +82,31 @@ html(lang='en')
                                 button -
                                 input(type="text",value="1",readonly)
                                 button +
-                        .large-1.column.basket_item_price
+                        .shrink.column.basket_item_price
                             | 599 ₽
-                    .row.basket_item
-                        .large-2.column.basket_item_img
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
                             img(src="/img/items/backpack.jpg", alt="Backpack")
-                        .large-6.column.basket_item_content
+                        .small-12.medium-6.column.basket_item_content
                             p
                                 | Рюкзак
                                 button.basket_item_close х
                             | Холщёвый рюкзак для пикников и учёбы
-                        .large-3.column.basket_item_options
+                        .column.basket_item_options
                             .basket_item_amount
                                 button -
                                 input(type="text",value="2",readonly)
                                 button +
-                        .large-1.column.basket_item_price
+                        .shrink.column.basket_item_price
                             | 1599 ₽
                 .small-12.row.column.basket_delivery
-                    .large-2.column.basket_header Доставка
-                    .large-10.column.row.basket_delivery_content
-                        .large-6.column
+                    .small-12.medium-3.large-2.column.basket_header Доставка
+                    .small-12.medium-9.large-10.column.row.basket_delivery_content
+                        .small-12.medium-6.column
                             input(type="text",value="Константин Константинопольский")
                             input(type="text",value="konstantinopolsky@konstantin.ru")
                             input(type="text",value="+7 ххх ххх хх хх")
-                        .large-6.column.basket_delivery_options
+                        .small-12.medium-6.column.basket_delivery_options
                             p Опции
                             table
                                 tr
@@ -124,14 +124,14 @@ html(lang='en')
                                         input(type="radio",id="delivery_type3",name="delivery_type")
                                         label(for="delivery_type3") Почтой России
                                     td 200₽
-                        .large-12.column
+                        .small-12.column
                             input(type="text",value="г. Москва, Бульвар Петра Алексеева 23к2")
                             .basket_delivery_map
                                 img(src="/img/basket_map.jpg", alt="Map")
                 .small-12.row.column.basket_payment
-                    .large-2.column.basket_header Оплата
-                    .large-10.column.row.align-justify
-                        .large-6.column.basket_payment_method
+                    .small-12.medium-3.large-2.column.basket_header Оплата
+                    .small-12.medium-9.large-10.column.row.align-justify
+                        .medium-6.column.basket_payment_method
                             input(type="radio",id="payment_method1",name="payment_method",checked)
                             label(for="payment_method1") Наличными курьеру
                             

@@ -1482,7 +1482,10 @@ label{
         &_img {
             background: #fff;
             text-align: center;
-            line-height: 195px;
+            // line-height: 195px;
+            @include breakpoint(small down) {
+                // display: none;
+            }
         }
         &_content {
             padding-left: 55px;
@@ -1491,10 +1494,20 @@ label{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include breakpoint(medium down) {
+                padding-left: 30px;
+                font-size: 16px;
+            }
+            @include breakpoint(small down) {
+                padding-left: inherit;
+            }
             p {
                 font-size: 36px;
                 line-height: 36px;
                 margin-bottom: 10px;
+                @include breakpoint(medium down) {
+                    font-size: 26px;
+                }
             }
         }
         &_close {
@@ -1503,12 +1516,23 @@ label{
             vertical-align: middle;
             margin-top: -10px;
             outline: none;
+            &:hover{
+                color: #ec5840;
+            }
         }
         &_options {
             display: flex;
             align-self: center;
             justify-content: flex-end;
             padding-right: 45px;
+            @include breakpoint(medium down) {
+                padding-right: 20px;
+            }
+            @include breakpoint(small down) {
+                padding-top: 5px;
+                padding-left: 0;
+                padding-right: 15px;
+            }
         }
         &_amount {
             position: relative;
@@ -1574,8 +1598,11 @@ label{
             font-size: 32px;
             font-weight: 500;
             line-height: 24px;
-            padding: 0;
+            padding-left: 0;
             white-space: nowrap;
+            @include breakpoint(medium down) {
+                font-size: 22px;
+            }
         }
     }
     &_header {
@@ -1591,21 +1618,20 @@ label{
             padding-top: 22px;
             &>.column:first-child{
                 padding-right: 60px;
+                @include breakpoint(medium down) {
+                    padding-right: 7.5px;
+                }
             }
         }
         &_options{
             padding-left: 60px;
+            @include breakpoint(medium down) {
+                padding-left: 7.5px;
+            }
             p{
                 color: #aeaeae;
                 line-height: 20px;
                 margin-top: -5px;
-            }
-            tr{
-                &:last-child{
-                    label{
-                        margin: 0 !important;
-                    }
-                }
             }
             td{
                 &:last-child{
@@ -1622,6 +1648,11 @@ label{
         margin-top: 20px;
         &_method{
              padding-top: 13px;
+             label{
+                @include breakpoint(small down) {
+                    display: block;
+                }
+             }
         }
         &_price{
             span{
