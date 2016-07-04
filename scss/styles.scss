@@ -829,9 +829,8 @@ h2{
         }
     }
     &_half{
-        width: 615px;
         padding: 38px;
-        min-height: 508px;
+        // min-height: 508px;
         @include breakpoint(medium down) {
             min-height: auto !important;
         }
@@ -871,12 +870,16 @@ h2{
     &_slider{
         padding: 0;
         img{
+            width: 100% !important;
+            float: none;
             margin: 0;
+            height: 100%;
         }
     }
     &_info{
         font-weight: 300;
-        line-height: 26px;  
+        line-height: 26px;
+        position: relative;
         span{
             display: block;
             margin-top: 12px;
@@ -900,7 +903,7 @@ h2{
                 width: 50px;
                 height: 50px;
                 font-size: 30px !important;
-            }
+            }     
         }
     }
     &_clear{
@@ -919,6 +922,7 @@ h2{
         padding-left: 40px;
         font-weight: 500;
         line-height: 24px;
+        padding-bottom: 20px;
         span{
             display: block;
             margin-bottom: 10px;
@@ -1108,6 +1112,9 @@ h2{
     .tile_icon{
         display: table;
         float: right;
+        @include breakpoint(435px down) {
+            display: none;
+        }
     }
 }
 .stripe {

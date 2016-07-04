@@ -5214,9 +5214,7 @@ h2 {
         overflow: hidden;
         word-break: break-all; } }
   .tile_half {
-    width: 615px;
-    padding: 38px;
-    min-height: 508px; }
+    padding: 38px; }
     @media screen and (max-width: 63.9375em) {
       .tile_half {
         min-height: auto !important; } }
@@ -5247,10 +5245,14 @@ h2 {
   .tile_slider {
     padding: 0; }
     .tile_slider img {
-      margin: 0; }
+      width: 100% !important;
+      float: none;
+      margin: 0;
+      height: 100%; }
   .tile_info {
     font-weight: 300;
-    line-height: 26px; }
+    line-height: 26px;
+    position: relative; }
     .tile_info span {
       display: block;
       margin-top: 12px;
@@ -5285,7 +5287,8 @@ h2 {
     padding-top: 27px;
     padding-left: 40px;
     font-weight: 500;
-    line-height: 24px; }
+    line-height: 24px;
+    padding-bottom: 20px; }
     .tile_digit span {
       display: block;
       margin-bottom: 10px;
@@ -5421,6 +5424,9 @@ h2 {
 .icon_right .tile_icon {
   display: table;
   float: right; }
+  @media screen and (max-width: 27.1875em) {
+    .icon_right .tile_icon {
+      display: none; } }
 
 .stripe {
   height: 195px;

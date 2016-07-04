@@ -9,16 +9,12 @@ html(lang='en')
                     p.small-12.column.head_h1
                         | Skyline
                     include ./includes/towers.jade
-            article.row.content.skyline
+            article.row.content.tiles.skyline
                 h1.small-12.column.skyline_header Многофункциональный центр Renaissance Moscow Towers
-                .tiles.grid_half
+                .small-12.medium-6.column
                     .tile.tile_half.tile_slider
-                        // ul
-                        //     li
-                        //         img(src="/img/tiles/skyline.jpg", alt="Skyline")
-                        //     li
-                        //         img(src="/img/tiles/skyline.jpg", alt="Skyline")
                         img(src="/img/tiles/skyline.jpg", alt="Skyline")
+                .small-12.medium-6.column
                     .tile.tile_half.tile_info
                         span Девелопер
                         | LLC Liedel Investments Limited
@@ -32,22 +28,27 @@ html(lang='en')
                         | ЗАО «АРМО-ГРУПП»
                         span Управление и экспуатация
                         | Bilfinger HSG Facility Management
+                .small-12.medium-6.large-3.column
                     .tile.tile_quarter.tile_digit
                         span 373,7
                         | Высота
+                .small-12.medium-6.large-3.column
                     .tile.tile_quarter.tile_digit
                         span 95
                         | Этажей
+                .small-12.medium-6.large-3.column
                     .tile.tile_quarter.tile_digit
                         span 2004
                         | Начало
                         br
                         | строительства
+                .small-12.medium-6.large-3.column
                     .tile.tile_quarter.tile_digit
                         span 2016
                         | Окончание строительства
+                .small-12.medium-6.column
                     .tile.tile_half.tile_info.tile_half_square
-                        | Участок № 16а: офисно-административное здание и здание с апартаментами
+                        | Участок № 16а: офисно-административное здание и здание с апартаментами
                         table
                             tr
                                 td Участок
@@ -70,32 +71,34 @@ html(lang='en')
                             tr
                                 td Количество машино-мест
                                 td 172
+                .small-12.medium-6.column
                     .tile.tile_half.tile_half_square.tile_slider
                         img(src="/img/tiles/map.jpg", alt="Map")
-                    .tile.tile_half.tile_clear
-                        .tile.tile_min.tile_shops
-                            .tile_icon
-                                i.icon-icons-set-42
-                            a(href='#')
-                                | Магазины в Сити
-                                i.icon-icons-set-03
-                        .tile.tile_min.tile_cafe
-                            .tile_icon(style="background-color: #009058")
-                                i.icon-icons-set-44
-                            a(href='#',style="color: #009058")
-                                | Рестораны и кафе
-                                i.icon-icons-set-03
-                        .tile.tile_min.tile_transport
-                            .tile_icon
-                                i.icon-icons-set-50
-                            a(href='#')
-                                | Карта
-                                br
-                                | проезда
-                                i.icon-icons-set-03
+                .meduim-4.large-2.column
+                    .tile.tile_min.tile_shops
+                        .tile_icon
+                            i.icon-icons-set-42
+                        a(href='#')
+                            | Магазины в Сити
+                            i.icon-icons-set-03
+                .meduim-4.large-2.column
+                    .tile.tile_min.tile_cafe
+                        .tile_icon(style="background-color: #009058")
+                            i.icon-icons-set-44
+                        a(href='#',style="color: #009058")
+                            | Рестораны и кафе
+                            i.icon-icons-set-03
+                .meduim-4.large-2.column
+                    .tile.tile_min.tile_transport
+                        .tile_icon
+                            i.icon-icons-set-50
+                        a(href='#')
+                            | Карта проезда
+                            i.icon-icons-set-03
+                .small-12.large-6.column
                     .tile.tile_half.tile_half_min.tile_info.icon_right
                         .tile_icon
-                            i.icon-icons-set-102
+                            i.fa.icon-icons-set-102
                         table
                             tr
                                 td Адрес
@@ -118,5 +121,5 @@ html(lang='en')
                             | Лучшие предложения по покупке
                             br
                             | и аренде от Solvers Estate
-                            i.icon-icons-set-03
+                            iicon-icons-set-03
             include ./includes/footer.jade
