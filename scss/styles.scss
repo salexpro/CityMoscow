@@ -205,9 +205,6 @@ h2{
         font-weight: 500;
         line-height: 55px;
         margin-top: 27px;
-        @include breakpoint(435px down) {
-            margin-top: 110px;
-        }
         i {
             font-size: 2rem;
         }
@@ -649,6 +646,9 @@ h2{
     &:hover{
         background-color: #f7f7f7;
     }
+    &:only-child{
+        height: calc(100% - 15px);
+    }
     @include breakpoint(840px down) {
         width: 100% !important;
         font-size: 16px;
@@ -740,7 +740,7 @@ h2{
     &_big {
         width: 100%;
         min-height: 405px;
-        @include breakpoint(1049 down) {
+        @include breakpoint(medium down) {
             padding-bottom: 60px;
             padding-right: 0;
         }
@@ -774,14 +774,13 @@ h2{
             }
         }
         &.wo_img {
-            padding-left: 30%;
+            padding-left: 50%;
             @include breakpoint(435px down) {
                 padding-left: 10%;
             }
         }
     }
     &_square {
-        height: calc(100% - 15px);
         min-height: 405px;
         padding: 0;
         @include breakpoint(435px down) {
@@ -790,6 +789,7 @@ h2{
         img {
             float: none;
             margin: 0;
+            width: 100%;
             @include breakpoint(435px down) {
                 width: 100%;
             }
@@ -1081,7 +1081,7 @@ h2{
 .wo_img {
     padding-left: 250px;
     background-repeat: no-repeat;
-    @include breakpoint(small down) {
+    @include breakpoint(medium down) {
         padding-left: 120px;
     }
 }

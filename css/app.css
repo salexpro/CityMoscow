@@ -4715,9 +4715,6 @@ h2 {
     font-weight: 500;
     line-height: 55px;
     margin-top: 27px; }
-    @media screen and (max-width: 27.1875em) {
-      .head_h1 {
-        margin-top: 110px; } }
     .head_h1 i {
       font-size: 2rem; }
   .head_h2 {
@@ -5055,6 +5052,8 @@ h2 {
   background-size: cover; }
   .tile:hover {
     background-color: #f7f7f7; }
+  .tile:only-child {
+    height: calc(100% - 15px); }
   @media screen and (max-width: 52.5em) {
     .tile {
       width: 100% !important;
@@ -5134,7 +5133,7 @@ h2 {
   .tile_big {
     width: 100%;
     min-height: 405px; }
-    @media screen and (max-width: 65.5625em) {
+    @media screen and (max-width: 63.9375em) {
       .tile_big {
         padding-bottom: 60px;
         padding-right: 0; } }
@@ -5163,12 +5162,11 @@ h2 {
         display: block;
         margin-left: 40px; } }
     .tile_big.wo_img {
-      padding-left: 30%; }
+      padding-left: 50%; }
       @media screen and (max-width: 27.1875em) {
         .tile_big.wo_img {
           padding-left: 10%; } }
   .tile_square {
-    height: calc(100% - 15px);
     min-height: 405px;
     padding: 0; }
     @media screen and (max-width: 27.1875em) {
@@ -5176,7 +5174,8 @@ h2 {
         min-height: 305px; } }
     .tile_square img {
       float: none;
-      margin: 0; }
+      margin: 0;
+      width: 100%; }
       @media screen and (max-width: 27.1875em) {
         .tile_square img {
           width: 100%; } }
@@ -5391,7 +5390,7 @@ h2 {
 .wo_img {
   padding-left: 250px;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 39.9375em) {
+  @media screen and (max-width: 63.9375em) {
     .wo_img {
       padding-left: 120px; } }
 

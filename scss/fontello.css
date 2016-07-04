@@ -36,7 +36,7 @@
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+  vertical-align: middle;
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
  
@@ -45,7 +45,7 @@
   /*margin-left: .2em;*/
  
   /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+   /*font-size: 120%; */
  
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
