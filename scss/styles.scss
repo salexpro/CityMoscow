@@ -625,13 +625,6 @@ h2{
     padding-top: 14px;
 }
 
-.grid {
-    // margin: auto;
-    // &_half{
-    //     margin: auto;
-    // }
-}
-
 .tile {
     background-color: #fff;
     overflow: hidden;
@@ -639,9 +632,7 @@ h2{
     width: 100% !important;
     min-height: 195px;
     transition:500ms;
-    // height: calc(100% - 15px);
     padding-right: 20px;
-    // float: left;
     background-size: cover;
     &:hover{
         background-color: #f7f7f7;
@@ -1147,12 +1138,18 @@ h2{
     &_arrow {
         i {
             display: block;
-            font-size: 4rem;
+            font-size: 100px;
             margin-left: -15px;
+            &::before{
+                vertical-align: top;
+            }
         }
         a {
             color: #fff;
             font-weight: 500;
+            display: inline-block;
+            line-height: 25px;
+            margin-top: -5px;
             @include breakpoint(small down) {
                 display: none;
             }
@@ -1175,6 +1172,7 @@ h2{
         margin-top: 20px;
         margin-bottom: 25px;
         a{
+            display: inline;
             color: #aeaeae;
         }
     }
@@ -1216,6 +1214,9 @@ h2{
         line-height: 36px;
         padding: 0;
         margin: 0;
+        a{
+            padding: 0;
+        }
     }
     &_new{
         padding-top: 24px;
@@ -1232,7 +1233,13 @@ h2{
                 font-size: 1.6rem;
                 font-weight: 300;
                 line-height: 36px;
+                i{
+                    font-size: 2rem;
+                }
             }
+        }
+        i{
+            font-size: 25px;
         }
     }
     &_date{
