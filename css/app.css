@@ -4601,7 +4601,8 @@ h2 {
 .button {
   outline: none;
   transition: all 0.25s ease-out, color 0.25s ease-out;
-  color: #fefefe; }
+  color: #fefefe;
+  text-decoration: none !important; }
   .button.hollow {
     color: #303030;
     border-width: 2px;
@@ -4627,7 +4628,7 @@ h2 {
     .button.hollow.blue {
       border-color: #006cff;
       color: #006cff; }
-      .button.hollow.blue:hover, .button.hollow.blue:focus {
+      .button.hollow.blue.filled, .button.hollow.blue:hover, .button.hollow.blue:focus {
         color: #fff;
         background-color: #006cff; }
 
@@ -5236,6 +5237,10 @@ h2 {
       padding-top: 23px;
       padding-left: 40px;
       padding-right: 26px; }
+      .tile_half_min p {
+        margin-top: 13px; }
+      .tile_half_min img {
+        margin-top: 20px; }
       .tile_half_min table {
         margin-top: 5px;
         letter-spacing: normal; }
@@ -5256,6 +5261,12 @@ h2 {
     font-weight: 300;
     line-height: 26px;
     position: relative; }
+    .tile_info_header {
+      display: block; }
+    .tile_info b {
+      font-weight: 500;
+      margin-top: 18px;
+      margin-bottom: 23px; }
     .tile_info span {
       display: block;
       margin-top: 12px;
@@ -5270,8 +5281,10 @@ h2 {
       display: inline-table;
       vertical-align: bottom;
       background-color: #303030; }
-      @media screen and (max-width: 41.25em) {
-        .tile_info .tile_icon {
+      .tile_info .tile_icon + .tile_icon {
+        margin-left: 10px; }
+      @media screen and (max-width: 63.9375em) {
+        .tile_info .tile_icon:only-of-type {
           position: absolute;
           margin: 0;
           right: 26px;
@@ -5279,6 +5292,8 @@ h2 {
           width: 50px;
           height: 50px;
           font-size: 30px !important; } }
+    .tile_info .button {
+      margin: 0; }
   .tile_clear {
     padding: 0;
     background: transparent;
@@ -5431,6 +5446,11 @@ h2 {
   @media screen and (max-width: 27.1875em) {
     .icon_right .tile_icon {
       display: none; } }
+
+.icon_bottom .tile_icon {
+  position: absolute;
+  right: 26px;
+  bottom: 28px; }
 
 .stripe {
   height: 195px;
