@@ -5089,6 +5089,8 @@ h2 {
     margin-top: -65px;
     margin-left: -39px;
     width: 289px; }
+    .tile > i::before {
+      vertical-align: top; }
     @media screen and (max-width: 39.9375em) {
       .tile > i {
         transform: scale(0.4);
@@ -5225,6 +5227,9 @@ h2 {
     width: 615px;
     padding: 38px;
     min-height: 508px; }
+    @media screen and (max-width: 63.9375em) {
+      .tile_half {
+        min-height: auto !important; } }
     .tile_half_square {
       min-height: 405px; }
     .tile_half table {
@@ -5269,6 +5274,15 @@ h2 {
       display: inline-table;
       vertical-align: bottom;
       background-color: #303030; }
+      @media screen and (max-width: 41.25em) {
+        .tile_info .tile_icon {
+          position: absolute;
+          margin: 0;
+          right: 26px;
+          bottom: 38px;
+          width: 50px;
+          height: 50px;
+          font-size: 30px !important; } }
   .tile_clear {
     padding: 0;
     background: transparent;
@@ -5549,6 +5563,10 @@ h2 {
   line-height: 73px;
   margin-top: 24px;
   margin-bottom: 36px; }
+  @media screen and (max-width: 63.9375em) {
+    .skyline_header {
+      font-size: 1.8rem;
+      line-height: 55px; } }
 
 .footer {
   background-color: #acacac;

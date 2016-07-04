@@ -673,6 +673,9 @@ h2{
         margin-top: -65px;
         margin-left: -39px;
         width: 289px;
+        &::before{
+            vertical-align: top;
+        }
         @include breakpoint(small down) {
             transform: scale(0.4);
             width: 162px;
@@ -832,6 +835,9 @@ h2{
         width: 615px;
         padding: 38px;
         min-height: 508px;
+        @include breakpoint(medium down) {
+            min-height: auto !important;
+        }
         &_square{
             min-height: 405px;
         }
@@ -889,6 +895,15 @@ h2{
             display: inline-table;
             vertical-align: bottom;
             background-color: #303030;
+            @include breakpoint(660px down) {
+                position: absolute;
+                margin: 0;
+                right: 26px;
+                bottom: 38px;
+                width: 50px;
+                height: 50px;
+                font-size: 30px !important;
+            }
         }
     }
     &_clear{
@@ -1262,6 +1277,10 @@ h2{
         line-height: 73px;
         margin-top: 24px;
         margin-bottom: 36px;
+        @include breakpoint(medium down) {
+            font-size: 1.8rem;
+            line-height: 55px;
+        }
     }
 }
 .footer {
