@@ -50,8 +50,8 @@
       </header>
       <article class="row content tiles">
         <div class="small-12 column">
-          <div class="tile row column delivery align-spaced wo_backlight">
-            <div class="large-3 column delivery_from">
+          <div class="tile row column delivery align-justify wo_backlight">
+            <div class="column delivery_from">
               <p class="delivery_header is_correct">От кого</p>
               <div class="input is_correct">
                 <input type="text" placeholder="ИМЯ" value="константин константинов">
@@ -59,7 +59,7 @@
               <div class="input is_correct">
                 <input type="text" placeholder="ТЕЛЕФОН" value="+7 987 654 3210">
               </div>
-              <div class="select is_correct">
+              <div class="select">
                 <select>
                   <option value="" disabled>Строение</option>
                   <option value="БАШНЯ НА НАБЕРЕЖНОЙ" selected>БАШНЯ НА НАБЕРЕЖНОЙ</option>
@@ -73,7 +73,7 @@
                 <input type="text" placeholder="ОФИС" value="1401 офис">
               </div>
             </div>
-            <div class="large-3 column delivery_whom">
+            <div class="column delivery_whom">
               <p class="delivery_header is_incorrect">Кому</p>
               <div class="input">
                 <input type="text" placeholder="ИМЯ">
@@ -95,7 +95,7 @@
                 <input type="text" placeholder="ОФИС">
               </div>
             </div>
-            <div class="large-3 column delivery_what">
+            <div class="column delivery_what">
               <p class="delivery_header is_correct">Что</p>
               <table class="delivery_options">
                 <tr>
@@ -107,7 +107,7 @@
                       </select>
                     </div>
                   </td>
-                  <td> 200р</td>
+                  <td>200р</td>
                 </tr>
                 <tr>
                   <td colspan="2">
@@ -124,7 +124,7 @@
                 <tr>
                   <td> 
                     <input type="checkbox" id="turbo">
-                    <label for="turbo"><i class="icon-icons-set"></i>Турбо-режим</label>
+                    <label for="turbo"><i class="icon-icons-set-50"></i>Турбо-режим</label>
                   </td>
                   <td>100р</td>
                 </tr>
@@ -135,13 +135,13 @@
               </table>
             </div>
             <div class="small-12 column">
-              <textarea placeholder="Оставьте комментарий к заказу, от этого будет зависеть скорость прибытия курьера"></textarea>
+              <textarea rows="3" placeholder="Оставьте комментарий к заказу, от этого будет зависеть скорость прибытия курьера"></textarea>
             </div>
-            <div class="small-12 column">
-              <div class="shrink column delivery_price row">
-                <div class="large-6">Доставка</div>
-                <div class="column">400 ₽</div>
-                <div class="small-12">
+            <div class="small-12 column row align-right delivery_price">
+              <div class="shrink row">
+                <div class="column delivery_price_header">Доставка</div>
+                <div class="column delivery_price_cost">400 ₽</div>
+                <div class="small-12 column">
                   <button class="button hollow blue filled">ЗАКАЗАТЬ</button>
                 </div>
               </div>

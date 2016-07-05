@@ -17,14 +17,14 @@ html(lang='en')
                         a(href="#") химчистки 
             article.row.content.tiles
                 .small-12.column
-                    .tile.row.column.delivery.align-spaced.wo_backlight
-                        .large-3.column.delivery_from
+                    .tile.row.column.delivery.align-justify.wo_backlight
+                        .column.delivery_from
                             p.delivery_header.is_correct От кого
                             .input.is_correct
                                 input(type="text",placeholder="ИМЯ",value="константин константинов")
                             .input.is_correct
                                 input(type="text",placeholder="ТЕЛЕФОН",value="+7 987 654 3210")
-                            .select.is_correct
+                            .select
                                 select
                                     option(value="",disabled) Строение
                                     option(value="БАШНЯ НА НАБЕРЕЖНОЙ",selected) БАШНЯ НА НАБЕРЕЖНОЙ
@@ -33,7 +33,7 @@ html(lang='en')
                                 input(type="text",placeholder="ЭТАЖ",value="51 этаж")
                             .input.is_correct
                                 input(type="text",placeholder="ОФИС",value="1401 офис")
-                        .large-3.column.delivery_whom
+                        .column.delivery_whom
                             p.delivery_header.is_incorrect Кому
                             .input
                                 input(type="text",placeholder="ИМЯ")
@@ -48,7 +48,7 @@ html(lang='en')
                                 input(type="text",placeholder="ЭТАЖ")
                             .input
                                 input(type="text",placeholder="ОФИС")
-                        .large-3.column.delivery_what
+                        .column.delivery_what
                             p.delivery_header.is_correct Что
                             table.delivery_options
                                 tr
@@ -57,7 +57,7 @@ html(lang='en')
                                             select
                                                 option(value="",disabled) Вес
                                                 option(value="",selected) ОТ 2,5 до 4,5 КГ
-                                    td  200р
+                                    td 200р
                                 tr
                                     td(colspan="2")
                                         p.delivery_options_header Опции
@@ -70,19 +70,20 @@ html(lang='en')
                                     td 
                                         input(type="checkbox",id="turbo")
                                         label(for="turbo")
-                                            i.icon-icons-set
+                                            i.icon-icons-set-50
                                             | Турбо-режим
                                     td 100р
                                 tr
                                     td Внутри одной башни
                                     td -100р
                         .small-12.column
-                            textarea(placeholder="Оставьте комментарий к заказу, от этого будет зависеть скорость прибытия курьера")
-                        .small-12.column
-                            .shrink.column.delivery_price.row
-                                .large-6
+                            textarea(rows="3",placeholder="Оставьте комментарий к заказу, от этого будет зависеть скорость прибытия курьера")
+                        .small-12.column.row.align-right.delivery_price
+                            .shrink.row
+                                .column.delivery_price_header
                                     | Доставка
-                                .column 400 ₽
-                                .small-12
+                                .column.delivery_price_cost
+                                    | 400 ₽
+                                .small-12.column
                                     button.button.hollow.blue.filled ЗАКАЗАТЬ
             include ./includes/footer.jade
