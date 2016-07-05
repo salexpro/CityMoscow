@@ -58,6 +58,8 @@ h2 {
         text-transform: uppercase;
         min-width: 195px;
         letter-spacing: 1px;
+        padding: 0;
+        line-height: 38px;
         &:hover {
             color: #fff;
             background-color: #303030;
@@ -343,6 +345,25 @@ label{
             &.is_active {
                 color: #006cff;
             }
+        }
+        input{
+            background: none;
+            font-size: 66px;
+            font-weight: 500;
+            padding: 0;
+            height: auto;
+            color: #fff;
+            @include breakpoint(small down) {
+                font-size: 1.8rem;
+                line-height: 55px;
+            }
+            &:hover,&:focus{
+                background: none;
+            }
+        }
+        .button{
+            line-height: normal;
+            margin: 0;
         }
         @include breakpoint(small down) {
             font-size: 1.8rem;
@@ -1166,6 +1187,18 @@ label{
         @include breakpoint(435px down) {
             transform: scale(0.7)
         }
+        &_brown{
+            background-color: #5f3817;
+        }
+        &_blue{
+            background-color: #00afec;
+        }
+        &_green{
+            background-color: #009058;
+        }
+        &_red{
+            background-color: #eb212e;
+        }
         i {
             display: table-cell;
             vertical-align: middle;
@@ -1173,6 +1206,9 @@ label{
                 vertical-align: top;
             }
         }
+    }
+    &_content{
+        overflow: hidden;
     }
     &_parking {
         .tile_icon {
@@ -1365,6 +1401,9 @@ label{
         position: absolute;
         right: 22px;
         top: calc(50% - 2px);
+        @include breakpoint(small down) {
+            top: calc(50% - 10px);
+        }
     }
 }
 
@@ -1383,7 +1422,10 @@ label{
         font-size: 20px;
         position: absolute;
         right: 22px;
-        top: calc(50% - 2px)
+        top: calc(50% - 2px);
+        @include breakpoint(small down) {
+            top: calc(50% - 10px);
+        }
     }
 }
 
@@ -1802,7 +1844,7 @@ label{
         line-height: 51px;
     }
     input{
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -1882,6 +1924,69 @@ label{
         .button{
             width: 100%;
             margin: 0;
+        }
+    }
+}
+.faq{
+    &_list{
+        @include breakpoint(medium down) {
+            padding: 20px;
+        }
+        li{
+            margin-bottom: 25px;
+        }
+        a{
+            display: block !important;
+            font-weight: 500;
+            overflow: hidden;
+            padding: 0 !important;
+            line-height: 24px !important;
+        }
+    }
+    &_icon_min{
+        float: left;
+        margin-top: 4px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 15px;
+        i{
+            display: block;
+            font-size: 25px;
+            vertical-align: top;
+            height: 25px;
+            &::before{
+                vertical-align: top;
+            }
+        }
+    }
+    &_quest{
+        .tile{
+            @include breakpoint(435px down) {
+                padding: 20px;
+            }
+            &_icon{
+                float: left;
+                margin-top: -25px;
+                margin-left: -15px;
+                margin-right: 37px;
+                @include breakpoint(435px down) {
+                    float: none;
+                    margin-top: -15px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        p{
+            margin-top: 0;
+        }
+        .button{
+            margin: 0;
+            margin-top: 20px;
+            @include breakpoint(435px down) {
+                min-width: 100%;
+            }
         }
     }
 }
