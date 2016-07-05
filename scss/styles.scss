@@ -47,6 +47,7 @@ h2 {
     transition: all 0.25s ease-out, color 0.25s ease-out;
     color: $white;
     text-decoration: none !important;
+    line-height: inherit;
     &.hollow {
         color: #303030;
         border-width: 2px;
@@ -191,6 +192,7 @@ label{
         z-index: 2;
         text-transform: uppercase;
         letter-spacing: 1px;
+        line-height: inherit;
         option:disabled{
             color: #aeaeae;
         }
@@ -1352,17 +1354,17 @@ label{
         }
     }
     &::after{
-        display: inline-block;  
+        display: block;  
         content: "\f00c";
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
+        font: normal normal normal 14px FontAwesome;
+        line-height: normal;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 20px;
         position: absolute;
         right: 22px;
-        top: calc(50% - 2px)
+        top: calc(50% - 2px);
     }
 }
 
@@ -1797,6 +1799,7 @@ label{
         font-size: 32px !important;
         font-weight: 300;
         line-height: normal;
+        line-height: 51px;
     }
     input{
         font-size: 13px;

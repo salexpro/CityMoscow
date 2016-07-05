@@ -4716,7 +4716,8 @@ h2 {
   outline: none;
   transition: all 0.25s ease-out, color 0.25s ease-out;
   color: #fefefe;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  line-height: inherit; }
   .button.hollow {
     color: #303030;
     border-width: 2px;
@@ -4839,7 +4840,8 @@ label {
     padding-right: 50px;
     z-index: 2;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    line-height: inherit; }
     .select select option:disabled {
       color: #aeaeae; }
 
@@ -5728,10 +5730,10 @@ label {
   .is_correct.input input {
     padding-right: 50px; }
   .is_correct::after {
-    display: inline-block;
+    display: block;
     content: "\f00c";
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
+    font: normal normal normal 14px FontAwesome;
+    line-height: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -6087,7 +6089,8 @@ label {
     margin-top: 0;
     font-size: 32px !important;
     font-weight: 300;
-    line-height: normal; }
+    line-height: normal;
+    line-height: 51px; }
   .delivery input {
     font-size: 13px;
     font-weight: 700;
