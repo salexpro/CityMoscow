@@ -6075,12 +6075,19 @@ label {
 
 .delivery {
   padding: 40px !important; }
+  @media screen and (max-width: 39.9375em) {
+    .delivery {
+      padding: 20px !important; } }
   .delivery > div {
     padding: 0; }
+    @media screen and (max-width: 39.9375em) {
+      .delivery > div {
+        flex: 0 0 100%; } }
   .tile .delivery_header {
     margin-top: 0;
-    font-size: 32px;
-    font-weight: 300; }
+    font-size: 32px !important;
+    font-weight: 300;
+    line-height: normal; }
   .delivery input {
     font-size: 13px;
     font-weight: 700;
@@ -6096,6 +6103,15 @@ label {
     .delivery_whom .select {
       width: 100%;
       margin-bottom: 10px; }
+    @media screen and (max-width: 63.9375em) {
+      .delivery_whom {
+        padding: 0 0 0 15px !important; } }
+    @media screen and (max-width: 39.9375em) {
+      .delivery_whom {
+        padding: 0 !important; } }
+  @media screen and (max-width: 63.9375em) {
+    .delivery_what {
+      flex: 0 0 100%; } }
   .delivery_options {
     width: 100%;
     font-weight: 300; }
@@ -6119,6 +6135,8 @@ label {
     margin-bottom: 32px; }
   .delivery_price {
     border-top: 3px solid black; }
+    .delivery_price_content {
+      max-width: 340px !important; }
     .delivery_price_header {
       font-size: 32px;
       font-weight: 300;

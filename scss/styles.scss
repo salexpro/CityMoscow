@@ -1783,13 +1783,20 @@ label{
 }
 .delivery{
     padding: 40px !important;
+    @include breakpoint(small down) {
+        padding: 20px !important;
+    }
     &>div{
         padding: 0;
+        @include breakpoint(small down) {
+            flex: 0 0 100%;
+        }
     }
     .tile &_header{
         margin-top: 0;
-        font-size: 32px;
+        font-size: 32px !important;
         font-weight: 300;
+        line-height: normal;
     }
     input{
         font-size: 13px;
@@ -1810,6 +1817,17 @@ label{
         .select{
             width: 100%;
             margin-bottom: 10px;
+        }
+        @include breakpoint(medium down) {
+            padding: 0 0 0 15px !important;
+        }
+        @include breakpoint(small down) {
+            padding: 0 !important;
+        }
+    }
+    &_what{
+        @include breakpoint(medium down) {
+            flex: 0 0 100%;
         }
     }
     &_options{
@@ -1841,6 +1859,9 @@ label{
     }
     &_price{
         border-top: 3px solid black;
+        &_content{
+            max-width: 340px !important;
+        }
         &_header{
             font-size: 32px;
             font-weight: 300;
