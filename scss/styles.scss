@@ -48,6 +48,9 @@ h2 {
     color: $white;
     text-decoration: none !important;
     line-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.hollow {
         color: #303030;
         border-width: 2px;
@@ -59,11 +62,13 @@ h2 {
         min-width: 195px;
         letter-spacing: 1px;
         padding: 0;
-        line-height: 38px;
-        &:hover {
+        &:hover, &:focus {
             color: #fff;
-            background-color: #303030;
+            background-color: #303030 !important;
             border-color: #303030;
+        }
+        &.filled{
+            background-color: #fff;
         }
         &.white {
             color: #fff;
@@ -372,6 +377,7 @@ label{
         }
     }
     &_h3 {
+        color: #fff;
         font-weight: 500;
         a {
             color: #fff;
@@ -1003,7 +1009,6 @@ label{
             padding-left: 37px;
         }
         .button {
-            display: block;
             margin-top: 23px;
             margin-left: 40px;
         }
@@ -1033,6 +1038,9 @@ label{
         @include breakpoint(medium down) {
             min-height: auto !important;
         }
+        @include breakpoint(435px down) {
+            padding: 20px !important;
+        }
         &_square {
             min-height: 405px;
         }
@@ -1044,6 +1052,9 @@ label{
             letter-spacing: 1px;
             td {
                 padding-right: 20px;
+                @include breakpoint(435px down) {
+                    padding-right: 10px;
+                }
             }
         }
         &_min {
@@ -1064,12 +1075,15 @@ label{
                     font-size: 20px;
                     font-weight: 300;
                     text-transform: initial;
+                    @include breakpoint(435px down) {
+                        font-size: 16px;
+                    }
                 }
             }
         }
     }
     &_slider {
-        padding: 0;
+        padding: 0 !important;
         img {
             float: none;
             margin: 0;
@@ -1129,7 +1143,6 @@ label{
         }
         .button {
             margin: 0;
-            // margin-top: 62px;
         }
     }
     &_clear {
@@ -1149,6 +1162,9 @@ label{
         font-weight: 500;
         line-height: 24px;
         padding-bottom: 20px;
+        @include breakpoint(435px down) {
+            padding: 20px;
+        }
         span {
             display: block;
             margin-bottom: 10px;
@@ -1209,6 +1225,226 @@ label{
     }
     &_content{
         overflow: hidden;
+    }
+    &_calendar{
+        position: relative;
+        padding: 36px;
+        @include breakpoint(small down) {
+            padding: 20px;
+        }
+        p{
+            padding: 0;
+            margin-top: 0;
+            a{
+                display: inline;
+            }
+            i{
+                font-size: 2rem;
+            }
+        }
+        a{
+            padding-left: 0;
+        }
+        .button{
+            margin-left: 0;
+        }
+        &_small{
+            font-size: 16px;
+            margin-left: 12px;
+            margin-top: 17px;
+        }
+        &_medium{
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 12px;
+            margin-top: 12px;
+        }
+        &_button{
+            position: absolute;
+            bottom: 36px;
+            left: 50px;
+            @include breakpoint(small down) {
+                left: 30px;
+            }
+            button{
+                margin: 0;
+            }
+        }
+        &_controls{
+            display: flex;
+            width: 70px;
+            justify-content: space-between;
+            margin-top: 20px;
+            a{
+                display: block;
+                padding: 0;
+                width: 9px;
+                height: 9px;
+                border: 3px solid #303030;
+                border-radius: 50%;
+                &.is_selected{
+                    background:#303030;
+                }
+            }
+        }
+        .calendar{
+            background-color: #fff;
+            border: 6px solid #303030;
+            margin-top: 20px;
+            letter-spacing: 1px;
+            padding: 15px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #303030;
+            text-transform: uppercase;
+            min-height: 200px;
+            &_header{  
+                text-align: center;
+                line-height: 20px;
+                margin-top: -1px;
+                a{
+                    display: inline;
+                }
+                i{
+                    font-size: 17px;
+                }
+                span{
+                    padding: 0;
+                    color: #d10000;
+                }
+            }
+            &_month{
+                margin-top: 9px;
+            }
+            &_week{
+                display: flex;
+                justify-content: space-around;
+            }
+            &_day{
+                width: 28px;
+                height: 26px;
+                text-align: center;
+                line-height: 25px;
+                margin: 0 6.8px;
+                cursor: pointer;   
+                &:hover{
+                    color: #fff;
+                    background-color: #303030;
+                }
+                &:nth-child(6), &:nth-child(7){
+                    color: #d10000;
+                    &:hover{
+                        color: #fff;
+                        background-color: #d10000;
+                    }
+                }
+                &.hidden{
+                    visibility: hidden;   
+                }
+            }
+            &_time{
+                margin-top: 15px;
+                overflow: hidden;
+                &_t{
+                    @extend .calendar_day;
+                    display: inline-block;
+                    width: 55px;
+                    margin: 0 19px;
+                    @include breakpoint(1274px down) {
+                        display: inline-block;
+                    }
+                    &:nth-child(6), &:nth-child(7){
+                        color: #303030;
+                        &:hover{
+                            background-color: #303030;
+                        }
+                    }      
+                }
+            }
+            &_amount{
+                width: 100%;
+                td{
+                    padding-bottom: 10px;
+                    &:first-child{
+                        width: 65px;
+                        padding-right: 10px;
+                    }
+                    &:last-child{
+                        text-align: right;
+                        padding-right: 13px;
+                    }
+                }
+                &_pers{
+                    @extend .basket_item_amount;
+                    border: 0 !important;
+                    height: 27px !important;
+                    width: 65px !important;
+                    input{
+                        min-height: 27px;
+                        padding: 0px 18px !important;
+                    }
+                    button{
+                        top: 5px !important;
+                        left: 14px !important;
+                        &:last-child {
+                            left: auto !important;
+                            right: 14px !important;
+                        }
+                    }
+                }
+            }
+            &_form{
+                .input{
+                    input{
+                        height: 27px;
+                        min-height: 27px;
+                        font-size: 13px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        margin-bottom: 9px;
+                        text-transform: uppercase;
+                        padding: 0 10px;
+                        background-color: #303030;
+                        &:focus{
+                            background: #fff;
+                        }
+                        &::-webkit-input-placeholder {color:#fff;}
+                        &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+                        &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+                        &:-ms-input-placeholder      {color:#fff;}
+                    }
+                    &.is_correct{
+                        &::after{
+                            color: #008b03;
+                            right: 10px;
+                        }
+                        input{
+                            background-color: #fff;
+                        }
+                    }
+                    &.is_incorrect{
+                        &::after{
+                            color: #d10000;
+                            right: 12px;
+                        }
+                        input{
+                            color: #d10000;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+            .is_inactive{
+                opacity: 0.5;
+            }
+            .is_selected{
+                color:#fff;
+                background-color: #303030;
+                input{
+                    color: #fff;
+                }
+            }
+        }
     }
     &_parking {
         .tile_icon {
@@ -1410,6 +1646,15 @@ label{
 .is_incorrect{
     color: #aeaeae;
     position: relative;
+    &.input{
+        &::after{
+            font-size: 16px;
+            top: calc(50% - 8px)
+        }
+        input{
+            padding-right: 50px;
+        }
+    }
     &::after{
         content: '';
         display: inline-block;  

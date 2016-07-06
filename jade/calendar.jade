@@ -1,0 +1,188 @@
+doctype html
+html(lang='en')
+    include ./includes/head.jade
+    body
+        main.wrap
+            header.head.head_fix
+                include ./includes/header_top.jade
+                .row
+                    p.small-12.column.head_h1
+                        | Календарь
+                    p.small-12.column.align-bottom.head_h2
+                        | Страница с календарем
+            article.row.content.tiles
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            | Экскурсия на смотровую
+                            br
+                            | площадку
+                        a(href='#')
+                            | Все услуги
+                            i.icon-icons-set-03
+                        button.button.hollow Заказать
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            a(href="#")
+                                i.icon-icons-set-01
+                            |  Выберите
+                            br
+                            | дату 
+                            a(href="#")
+                                i.icon-icons-set-03
+                        .tile_calendar_controls
+                            a.is_selected(href="#")
+                            a(href="#")
+                            a(href="#")
+                            a(href="#")
+                        .calendar
+                            .calendar_header
+                                a(href="#")
+                                    i.icon-icons-set-01
+                                |  СЕНТЯБРЬ 
+                                a(href="#")
+                                    i.icon-icons-set-03
+                            .calendar_month
+                                .calendar_week.is_inactive
+                                    .calendar_day 1
+                                    .calendar_day 2
+                                    .calendar_day 3
+                                    .calendar_day 4
+                                    .calendar_day 5
+                                    .calendar_day 6
+                                    .calendar_day 7
+                                .calendar_week.is_inactive
+                                    .calendar_day 8
+                                    .calendar_day 9
+                                    .calendar_day 10
+                                    .calendar_day 11
+                                    .calendar_day 12
+                                    .calendar_day 13
+                                    .calendar_day 14
+                                .calendar_week
+                                    .calendar_day.is_inactive 15
+                                    .calendar_day.is_inactive 16
+                                    .calendar_day.is_inactive 17
+                                    .calendar_day.is_inactive 18
+                                    .calendar_day.is_selected 19
+                                    .calendar_day 20
+                                    .calendar_day 21
+                                .calendar_week
+                                    .calendar_day 22
+                                    .calendar_day 23
+                                    .calendar_day 24
+                                    .calendar_day 25
+                                    .calendar_day 26
+                                    .calendar_day 27
+                                    .calendar_day 28
+                                .calendar_week
+                                    .calendar_day 29
+                                    .calendar_day 30
+                                    .calendar_day 31
+                                    .calendar_day.hidden
+                                    .calendar_day.hidden
+                                    .calendar_day.hidden
+                                    .calendar_day.hidden
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            a(href="#")
+                                i.icon-icons-set-01
+                            |  Выберите
+                            br
+                            | время 
+                            a(href="#")
+                                i.icon-icons-set-03
+                        .tile_calendar_controls
+                            a(href="#")
+                            a.is_selected(href="#")
+                            a(href="#")
+                            a(href="#")
+                        .calendar
+                            .calendar_header
+                                | ПО БУДНЯМ: 18:00 – 22:00
+                                span ПО ВЫХОДНЫМ 11:00 – 22:00
+                            .calendar_time
+                                .calendar_time_t.is_inactive 11:00
+                                .calendar_time_t.is_inactive 12:00
+                                .calendar_time_t.is_inactive 13:00
+                                .calendar_time_t.is_inactive 14:00
+                                .calendar_time_t.is_inactive 15:00
+                                .calendar_time_t.is_inactive 16:00
+                                .calendar_time_t.is_inactive 17:00
+                                .calendar_time_t.is_selected 18:00
+                                .calendar_time_t 19:00
+                                .calendar_time_t 20:00
+                                .calendar_time_t 21:00
+                                .calendar_time_t 22:00
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            a(href="#")
+                                i.icon-icons-set-01
+                            |  Сколько
+                            br
+                            | вас будет? 
+                            a(href="#")
+                                i.icon-icons-set-03
+                        .tile_calendar_controls
+                            a(href="#")
+                            a(href="#")
+                            a.is_selected(href="#")
+                            a(href="#")
+                        .calendar
+                            table.calendar_amount
+                                tr
+                                    td
+                                        .calendar_amount_pers.is_selected
+                                            button -
+                                            input(type="text",value="1",readonly)
+                                            button +
+                                    td Взрослых
+                                    td 900 ₽
+                                tr
+                                    td
+                                        .calendar_amount_pers
+                                            button -
+                                            input(type="text",value="0",readonly)
+                                            button +
+                                    td Детей
+                                    td 0 ₽
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            a(href="#")
+                                i.icon-icons-set-01
+                            |  Как с вами
+                            br
+                            | связатся? 
+                            a(href="#")
+                                i.icon-icons-set-03
+                        .tile_calendar_controls
+                            a(href="#")
+                            a(href="#")
+                            a(href="#")
+                            a.is_selected(href="#")
+                        .calendar
+                            .calendar_form
+                                .input.is_correct
+                                    input(type="text",placeholder="Имя",value="КОНСТАНТИН") 
+                                .input.is_correct
+                                    input(type="text",placeholder="Фамилия",value="КОНСТАНТИНОВ")
+                                .input.is_incorrect
+                                    input(type="text",placeholder="Телефон",value="+ 7 (963) 123 45 6")
+                                .input
+                                    input(type="text",placeholder="E-mail")
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_tours.tile_calendar
+                        p
+                            i.icon-icons-set-01
+                            |  Все верно?
+                        .tile_calendar_small
+                            | Light 16/20 tr+20
+                        .tile_calendar_medium
+                            | Medium 20/24 tr0
+                        .tile_calendar_button
+                            button.button.hollow.filled Оплатить
+            include ./includes/footer.jade

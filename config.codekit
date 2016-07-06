@@ -4141,6 +4141,17 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
+	"\/jade\/calendar.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/calendar.jade",
+		"outputAbbreviatedPath": "\/html\/calendar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0
+		},
 	"\/jade\/delivery_docs.jade": {
 		"compileDebug": 1,
 		"fileType": 512,

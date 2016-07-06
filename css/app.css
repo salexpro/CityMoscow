@@ -4522,7 +4522,10 @@ h2 {
   transition: all 0.25s ease-out, color 0.25s ease-out;
   color: #fefefe;
   text-decoration: none !important;
-  line-height: inherit; }
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .button.hollow {
     color: #303030;
     border-width: 2px;
@@ -4533,12 +4536,13 @@ h2 {
     text-transform: uppercase;
     min-width: 195px;
     letter-spacing: 1px;
-    padding: 0;
-    line-height: 38px; }
-    .button.hollow:hover {
+    padding: 0; }
+    .button.hollow:hover, .button.hollow:focus {
       color: #fff;
-      background-color: #303030;
+      background-color: #303030 !important;
       border-color: #303030; }
+    .button.hollow.filled {
+      background-color: #fff; }
     .button.hollow.white {
       color: #fff;
       border-color: #fff; }
@@ -4775,6 +4779,7 @@ label {
         line-height: 55px;
         margin-top: 40px; } }
   .head_h3 {
+    color: #fff;
     font-weight: 500; }
     .head_h3 a {
       color: #fff; }
@@ -5285,7 +5290,6 @@ label {
     .tile_square.wo_img {
       padding-left: 37px; }
     .tile_square .button {
-      display: block;
       margin-top: 23px;
       margin-left: 40px; }
     @media screen and (max-width: 52.5em) {
@@ -5308,6 +5312,9 @@ label {
     @media screen and (max-width: 63.9375em) {
       .tile_half {
         min-height: auto !important; } }
+    @media screen and (max-width: 27.1875em) {
+      .tile_half {
+        padding: 20px !important; } }
     .tile_half_square {
       min-height: 405px; }
     .tile_half table {
@@ -5318,6 +5325,9 @@ label {
       letter-spacing: 1px; }
       .tile_half table td {
         padding-right: 20px; }
+        @media screen and (max-width: 27.1875em) {
+          .tile_half table td {
+            padding-right: 10px; } }
     .tile_half_min {
       min-height: 195px;
       padding-top: 23px;
@@ -5334,8 +5344,11 @@ label {
           font-size: 20px;
           font-weight: 300;
           text-transform: initial; }
+          @media screen and (max-width: 27.1875em) {
+            .tile_half_min table td:last-child {
+              font-size: 16px; } }
   .tile_slider {
-    padding: 0; }
+    padding: 0 !important; }
     .tile_slider img {
       float: none;
       margin: 0;
@@ -5396,6 +5409,9 @@ label {
     font-weight: 500;
     line-height: 24px;
     padding-bottom: 20px; }
+    @media screen and (max-width: 27.1875em) {
+      .tile_digit {
+        padding: 20px; } }
     .tile_digit span {
       display: block;
       margin-bottom: 10px;
@@ -5441,6 +5457,176 @@ label {
         vertical-align: top; }
   .tile_content {
     overflow: hidden; }
+  .tile_calendar {
+    position: relative;
+    padding: 36px; }
+    @media screen and (max-width: 39.9375em) {
+      .tile_calendar {
+        padding: 20px; } }
+    .tile_calendar p {
+      padding: 0;
+      margin-top: 0; }
+      .tile_calendar p a {
+        display: inline; }
+      .tile_calendar p i {
+        font-size: 2rem; }
+    .tile_calendar a {
+      padding-left: 0; }
+    .tile_calendar .button {
+      margin-left: 0; }
+    .tile_calendar_small {
+      font-size: 16px;
+      margin-left: 12px;
+      margin-top: 17px; }
+    .tile_calendar_medium {
+      font-size: 20px;
+      font-weight: 500;
+      margin-left: 12px;
+      margin-top: 12px; }
+    .tile_calendar_button {
+      position: absolute;
+      bottom: 36px;
+      left: 50px; }
+      @media screen and (max-width: 39.9375em) {
+        .tile_calendar_button {
+          left: 30px; } }
+      .tile_calendar_button button {
+        margin: 0; }
+    .tile_calendar_controls {
+      display: flex;
+      width: 70px;
+      justify-content: space-between;
+      margin-top: 20px; }
+      .tile_calendar_controls a {
+        display: block;
+        padding: 0;
+        width: 9px;
+        height: 9px;
+        border: 3px solid #303030;
+        border-radius: 50%; }
+        .tile_calendar_controls a.is_selected {
+          background: #303030; }
+    .tile_calendar .calendar {
+      background-color: #fff;
+      border: 6px solid #303030;
+      margin-top: 20px;
+      letter-spacing: 1px;
+      padding: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #303030;
+      text-transform: uppercase;
+      min-height: 200px; }
+      .tile_calendar .calendar_header {
+        text-align: center;
+        line-height: 20px;
+        margin-top: -1px; }
+        .tile_calendar .calendar_header a {
+          display: inline; }
+        .tile_calendar .calendar_header i {
+          font-size: 17px; }
+        .tile_calendar .calendar_header span {
+          padding: 0;
+          color: #d10000; }
+      .tile_calendar .calendar_month {
+        margin-top: 9px; }
+      .tile_calendar .calendar_week {
+        display: flex;
+        justify-content: space-around; }
+      .tile_calendar .calendar_day, .tile_calendar .calendar_time_t {
+        width: 28px;
+        height: 26px;
+        text-align: center;
+        line-height: 25px;
+        margin: 0 6.8px;
+        cursor: pointer; }
+        .tile_calendar .calendar_day:hover, .tile_calendar .calendar_time_t:hover {
+          color: #fff;
+          background-color: #303030; }
+        .tile_calendar .calendar_day:nth-child(6), .tile_calendar .calendar_time_t:nth-child(6), .tile_calendar .calendar_day:nth-child(7), .tile_calendar .calendar_time_t:nth-child(7) {
+          color: #d10000; }
+          .tile_calendar .calendar_day:nth-child(6):hover, .tile_calendar .calendar_time_t:nth-child(6):hover, .tile_calendar .calendar_day:nth-child(7):hover, .tile_calendar .calendar_time_t:nth-child(7):hover {
+            color: #fff;
+            background-color: #d10000; }
+        .tile_calendar .calendar_day.hidden, .tile_calendar .hidden.calendar_time_t {
+          visibility: hidden; }
+      .tile_calendar .calendar_time {
+        margin-top: 15px;
+        overflow: hidden; }
+        .tile_calendar .calendar_time_t {
+          display: inline-block;
+          width: 55px;
+          margin: 0 19px; }
+          @media screen and (max-width: 79.625em) {
+            .tile_calendar .calendar_time_t {
+              display: inline-block; } }
+          .tile_calendar .calendar_time_t:nth-child(6), .tile_calendar .calendar_time_t:nth-child(7) {
+            color: #303030; }
+            .tile_calendar .calendar_time_t:nth-child(6):hover, .tile_calendar .calendar_time_t:nth-child(7):hover {
+              background-color: #303030; }
+      .tile_calendar .calendar_amount {
+        width: 100%; }
+        .tile_calendar .calendar_amount td {
+          padding-bottom: 10px; }
+          .tile_calendar .calendar_amount td:first-child {
+            width: 65px;
+            padding-right: 10px; }
+          .tile_calendar .calendar_amount td:last-child {
+            text-align: right;
+            padding-right: 13px; }
+        .tile_calendar .calendar_amount_pers {
+          border: 0 !important;
+          height: 27px !important;
+          width: 65px !important; }
+          .tile_calendar .calendar_amount_pers input {
+            min-height: 27px;
+            padding: 0px 18px !important; }
+          .tile_calendar .calendar_amount_pers button {
+            top: 5px !important;
+            left: 14px !important; }
+            .tile_calendar .calendar_amount_pers button:last-child {
+              left: auto !important;
+              right: 14px !important; }
+      .tile_calendar .calendar_form .input input {
+        height: 27px;
+        min-height: 27px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 9px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        background-color: #303030;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
+        .tile_calendar .calendar_form .input input:focus {
+          background: #fff; }
+        .tile_calendar .calendar_form .input input::-webkit-input-placeholder {
+          color: #fff; }
+        .tile_calendar .calendar_form .input input::-moz-placeholder {
+          color: #fff; }
+        .tile_calendar .calendar_form .input input:-moz-placeholder {
+          color: #fff; }
+        .tile_calendar .calendar_form .input input:-ms-input-placeholder {
+          color: #fff; }
+      .tile_calendar .calendar_form .input.is_correct::after {
+        color: #008b03;
+        right: 10px; }
+      .tile_calendar .calendar_form .input.is_correct input {
+        background-color: #fff; }
+      .tile_calendar .calendar_form .input.is_incorrect::after {
+        color: #d10000;
+        right: 12px; }
+      .tile_calendar .calendar_form .input.is_incorrect input {
+        color: #d10000;
+        background-color: #fff; }
+      .tile_calendar .calendar .is_inactive {
+        opacity: 0.5; }
+      .tile_calendar .calendar .is_selected {
+        color: #fff;
+        background-color: #303030; }
+        .tile_calendar .calendar .is_selected input {
+          color: #fff; }
   .tile_parking .tile_icon {
     background-color: #006cff; }
   .tile_parking a {
@@ -5581,6 +5767,11 @@ label {
 .is_incorrect {
   color: #aeaeae;
   position: relative; }
+  .is_incorrect.input::after {
+    font-size: 16px;
+    top: calc(50% - 8px); }
+  .is_incorrect.input input {
+    padding-right: 50px; }
   .is_incorrect::after {
     content: '';
     display: inline-block;
@@ -5803,12 +5994,12 @@ label {
         padding-top: 5px;
         padding-left: 0;
         padding-right: 15px; } }
-  .basket_item_amount {
+  .basket_item_amount, .tile_calendar .calendar_amount_pers {
     position: relative;
     width: 90px;
     height: 50px;
     border: 6px solid black; }
-    .basket_item_amount input {
+    .basket_item_amount input, .tile_calendar .calendar_amount_pers input {
       background: none !important;
       border: 0 !important;
       box-shadow: none !important;
@@ -5819,14 +6010,14 @@ label {
       font-weight: 700;
       height: 100%;
       letter-spacing: 1px; }
-    .basket_item_amount button {
+    .basket_item_amount button, .tile_calendar .calendar_amount_pers button {
       position: absolute;
       top: 10px;
       left: 16px;
       font-size: 15px;
       font-weight: 700;
       outline: none; }
-      .basket_item_amount button:last-child {
+      .basket_item_amount button:last-child, .tile_calendar .calendar_amount_pers button:last-child {
         left: auto;
         right: 16px; }
   .basket_item_size {
