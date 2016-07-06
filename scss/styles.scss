@@ -47,11 +47,10 @@ h2 {
     transition: all 0.25s ease-out, color 0.25s ease-out;
     color: $white;
     text-decoration: none !important;
-    line-height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     &.hollow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #303030;
         border-width: 2px;
         border: 6px solid #303030;
@@ -174,6 +173,7 @@ label{
 .select{
     display: table;
     position: relative;
+    z-index: 1;
     &::after {
         position: absolute;
         font-family: "fontello";
@@ -203,6 +203,54 @@ label{
         option:disabled{
             color: #aeaeae;
         }
+    }
+    &_white{
+        width: 100%;
+        margin-bottom: 30px;
+        @include breakpoint(small down) {
+            margin-bottom: 10px;
+        }
+        &::after {
+            font-size: 25px;
+            z-index: 2;
+            top: 20px;
+        }
+        select{
+            height: 74px;
+            font-size: 20px;
+            font-weight: 500;
+            background:#fff;
+            border-color:#fff;
+        }
+    }
+}
+
+.search{
+    margin-bottom: 30px;
+    @include breakpoint(small down) {
+        margin-bottom: 10px;
+    }
+    input{
+        background: none;
+        height: 74px;
+        border: 6px solid #fff !important;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        padding-right: 60px;
+        background-image: url(/img/search.svg);
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+        &:focus{
+            background: none;
+            background-image: url(/img/search.svg);
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+        }
+        &::-webkit-input-placeholder {color:#fff;}
+        &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:#fff;}
     }
 }
 
@@ -1172,6 +1220,27 @@ label{
             line-height: 66px;
         }
     }
+    &_listing{
+        font-size: 13px;
+        min-height: 300px;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding-bottom: 60px;
+        p{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            padding: 0 20px;
+            margin-top: 16px;
+            margin-bottom: 3px;
+            a{
+                padding: 0;
+            }
+        }
+        a{
+            padding: 0 20px;
+        }
+    }
     &_white {
         color: #fff;
         a {
@@ -1226,6 +1295,18 @@ label{
     &_content{
         overflow: hidden;
     }
+    &_caption{
+        position: absolute;
+        width: calc(100% - 40px);
+        bottom: 18px;
+        left: 20px;
+        color: #969696;
+        td{
+            &:last-child{
+                text-align: right;
+            }
+        }
+    }
     &_calendar{
         position: relative;
         padding: 36px;
@@ -1236,10 +1317,17 @@ label{
             padding: 0;
             margin-top: 0;
             a{
+                padding: 0 !important;
                 display: inline;
             }
             i{
                 font-size: 2rem;
+                @include breakpoint(840px down) {
+                    font-size: 25px;
+                }
+                @include breakpoint(350px down) {
+                    font-size: 22px;
+                }
             }
         }
         a{
@@ -1344,7 +1432,7 @@ label{
             }
             &_time{
                 margin-top: 15px;
-                overflow: hidden;
+                text-align: center;
                 &_t{
                     @extend .calendar_day;
                     display: inline-block;
@@ -1675,11 +1763,12 @@ label{
 }
 
 .stripe {
-    height: 195px;
     background-color: #006cff;
     color: #fff;
     &>.row {
         height: 100%;
+        min-height: 195px;
+        padding: 20px 0;
     }
     p {
         font-size: 2.4rem;
