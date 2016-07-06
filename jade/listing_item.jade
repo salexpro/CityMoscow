@@ -1,0 +1,177 @@
+doctype html
+html(lang='en')
+    include ./includes/head.jade
+    body
+        main.wrap
+            header.head.head_fix
+                include ./includes/header_top.jade
+                .row
+                    p.small-12.column.head_h1
+                        i.fa.icon-icons-set-01
+                        |  Рестораны и кафе
+                    .small-12.row.column.align-bottom
+                        .small-12.medium-6.large-4.column
+                            .select.select_white
+                                select
+                                    option(value="РЕСТОРАНЫ И КАФЕ") РЕСТОРАНЫ И КАФЕ
+                        .small-12.medium-6.large-4.column
+                            .select.select_white
+                                select
+                                    option(value="",disabled,selected) Строение
+                        .small-12.large-4.column
+                            .search
+                                input(type="text",placeholder="Поиск")
+            .carousel
+                .row.column
+                    .carousel_inner
+                        img(src="/img/listing.jpg", alt="Img 1")
+                        img(src="/img/listing_2.jpg", alt="Img 2")
+                        img(src="/img/listing.jpg", alt="Img 3")
+                    .carousel_controls
+                        a(href="#").carousel_controls_left
+                            i.fa.icon-icons-set-01
+                        a(href="#").carousel_controls_right
+                            i.fa.icon-icons-set-03
+            article.row.content.tiles.listing_item
+                .small-12.large-6.column
+                    .tile.tile_half.tile_info
+                        h1 Fornetto Бар&amp;Пицца
+                        | Приходя в Мисаду, посетители попадают в уютную, почти семейную атмосферу. В меню ресторана присутствуют блюда ашкеназской, сефардской, средиземноморской, кавказской  и ближневосточной кухни. Кондитеры делают на заказ торты и пирожные. Каждое изделие из теста, предлагаемое гостям, в своем роде уникально.
+                        br
+                        | Меню весьма богато и разнообразно. Здесь подают хумус с тхиной, с шампиньонами, хумус "Им басар" (с соусом болоньезе). Из ашкеназской части меню достойного внимания заслуживают гефилте фиш, домашний холодец из телячьих ножек, борщ с говядиной. Выше всяких похвал кошерная котлета по-киевски и стейки – мраморный стейк из аргентинской говядины, стейк-рибай ангус.
+                .small-12.large-6.column
+                    .tile.tile_slider
+                        img(src="/img/tiles/map.jpg", alt="Map")
+                    .tile.tile_half.tile_half_min.tile_info
+                        table
+                            tr
+                                td Адрес
+                                td Пресненская набережная, 6 стр.2
+                            tr
+                                td Cтроение
+                                td Башня на набережной
+                            tr
+                                td Этаж
+                                td -1
+                            tr
+                                td Телефон
+                                td 
+                                    a(href="tel:+7 495 123 45 67")
+                                        | +7 495 123 45 67
+                            tr
+                                td САЙТ
+                                td 
+                                    a(href="http://empire.ru",target="_blank")
+                                        | empire.ru
+                .small-12.medium-6.large-4.column
+                    .tile.tile_min.tile_shedule
+                        .tile_icon(style="background-color: #00afec")
+                            i.icon-icons-set-28
+                        .tile_shedule_sh
+                            | Пн 10:00 - 00:00
+                            br
+                            | Вт 10:00 - 00:00
+                            br
+                            | Ср 10:00 - 00:00
+                            br
+                            | Чт 10:00 - 00:00
+                            br
+                            | Пт 12:00 - 16:30
+                            br
+                            | Сб 21:00 - 00:00
+                            br
+                            | Вс 10:00 - 00:00
+                .small-6.medium-3.large-2.column
+                    .tile.tile_min.tile_digit(style="color: #006cff")
+                        span 600
+                        | Средний чек
+                .small-6.medium-3.large-2.column
+                    .tile.tile_min
+                        .tile_icon(style="background-color: #006cff")
+                            i.icon-icons-set-25
+                        | Есть свой
+                        br
+                        | Wi-Fi
+                .small-6.large-2.column
+                    .tile.tile_min
+                        .tile_icon.tile_icon_brown
+                            i.icon-icons-set-46
+                        | Visa
+                        br
+                        | Mastercard
+                .small-6.large-2.column
+                    .tile.tile_min
+                        .tile_icon(style="background-color: #355e94;margin-bottom:12px")
+                            i.fa.fa-thumbs-up
+                        img(src="/img/post_social.jpg", alt="social")
+            .stripe
+                .row.align-middle
+                    .small-12.medium-9.column
+                        p Скидка 10% на любой кофе с 12 до 14 с понедельника по пятницу
+                    .small-12.medium-3.column.stripe_arrow
+                        | Акция действует по кодовому
+                        br
+                        | слову I LOVE CITY
+                        br
+                        | с 10.06 по 20.06 во всех 
+                        br
+                        | ресторанах сети.
+            .content.row.column
+                .small-12.medium-9.large-10.column
+                    .tile.tile_expanded.tile_dark.tile_white.img_right
+                        p 
+                            | Если вы хотите что-то добавить или заметили
+                            br
+                            | ошибку в этом описании, напишите нам пожалуйста!
+                        a(href="#")
+                            | Заполнить форму
+                            i.icon-icons-set-03
+                .small-12.medium-3.large-2.column
+                    .tile.tile_min
+                        .tile_icon(style="background-color: #ef662f")
+                            i.icon-icons-set-41
+                        a(href="#")
+                            | Реклама в Сити
+                            i.icon-icons-set-03
+                h2.small-12.column.related_header Рядом
+                .small-12.medium-6.large-3.column
+                    .tile.tile_square.tile_listing
+                        img(src='/img/tiles/listing.jpg', alt='')
+                        p 
+                            a(href="#") Fornetto Бар&amp;Пицца
+                        a(href="#") Рестораны, кафе
+                        table.tile_caption
+                            tr
+                                td Башня на Набережной
+                                td - 1 этаж
+                .small-12.medium-6.large-3.column
+                    .tile.tile_square.tile_listing
+                        img(src='/img/tiles/listing.jpg', alt='')
+                        p 
+                            a(href="#") Fornetto Бар&amp;Пицца
+                        a(href="#") Рестораны, кафе
+                        table.tile_caption
+                            tr
+                                td Башня на Набережной
+                                td - 1 этаж
+                .small-12.medium-6.large-3.column
+                    .tile.tile_square.tile_listing
+                        img(src='/img/tiles/listing.jpg', alt='')
+                        p 
+                            a(href="#") Fornetto Бар&amp;Пицца
+                        a(href="#") Рестораны, кафе
+                        table.tile_caption
+                            tr
+                                td Башня на Набережной
+                                td - 1 этаж
+                .small-12.medium-6.large-3.column
+                    .tile.tile_square.tile_listing
+                        img(src='/img/tiles/listing.jpg', alt='')
+                        p 
+                            a(href="#") Fornetto Бар&amp;Пицца
+                        a(href="#") Рестораны, кафе
+                        table.tile_caption
+                            tr
+                                td Башня на Набережной
+                                td - 1 этаж
+            include ./includes/footer.jade

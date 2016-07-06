@@ -335,6 +335,11 @@ label{
     &_free {
         min-height: 460px;
         height: auto;
+        &.head_fix{
+            @include breakpoint(small down) {
+                height: auto;
+            }
+        }
     }
     &_fix {
         height: 460px;
@@ -970,16 +975,13 @@ label{
         }
     }
     &_min {
-        padding: 19px 23px;
+        padding: 19px 23px !important;
         padding-bottom: 20px;
-        // width: 195px;
         a {
             padding: 0;
         }
         @include breakpoint(435px down) {
-            // width: 150px !important;
-            // height: 150px;
-            padding: 3px 20px;
+            padding: 3px 20px !important;
         }
     }
     &_big {
@@ -1127,6 +1129,9 @@ label{
                         font-size: 16px;
                     }
                 }
+                a{
+                    color: #006cff;
+                }
             }
         }
     }
@@ -1135,6 +1140,7 @@ label{
         img {
             float: none;
             margin: 0;
+            width: 100%;
             height: 100%;
             @include breakpoint(small down) {
                 width: 100% !important;
@@ -1218,6 +1224,9 @@ label{
             margin-bottom: 10px;
             font-size: 66px;
             line-height: 66px;
+            @include breakpoint(350px down) {
+                font-size: 56px;
+            }
         }
     }
     &_listing{
@@ -1290,10 +1299,27 @@ label{
             &:before {
                 vertical-align: top;
             }
+            &.fa{
+                font-size: 60px;
+            }
         }
     }
     &_content{
         overflow: hidden;
+    }
+    &_shedule{
+        padding-right: 40px !important;
+        .tile_icon{
+            float: left;
+            margin-bottom: 20px;
+        }
+        &_sh{
+            float: right;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
     }
     &_caption{
         position: absolute;
@@ -2321,6 +2347,52 @@ label{
             @include breakpoint(435px down) {
                 min-width: 100%;
             }
+        }
+    }
+}
+.carousel{
+    overflow: hidden;
+    background: #000;
+    .row{
+        position: relative;
+        height: 300px;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+        }
+    }
+    &_inner{
+        position: absolute;
+        height: 300px;
+        width: 2000px;
+        img{
+            float: left;
+        }
+    }
+    &_controls{
+        position: absolute;
+        z-index: 3;
+        top: calc(50% - 20px);
+        left: 7.5px;
+        width: 100%;
+        &_left{
+            position: absolute;
+            left: 15px;
+            font-size: 38px;
+            color: #fff !important;
+            i{
+                vertical-align: top;
+            }
+        }
+        &_right{
+            @extend .carousel_controls_left;
+            left: auto;
+            right: 15px;
         }
     }
 }

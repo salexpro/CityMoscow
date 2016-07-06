@@ -3762,6 +3762,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/listing.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/listing.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/html\/main.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -3818,7 +3827,7 @@
 		"outputAbbreviatedPath": "\/img\/big_bread.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/img\/items\/backpack.jpg": {
 		"fileType": 16384,
@@ -3860,6 +3869,28 @@
 		"initialSize": 13159,
 		"inputAbbreviatedPath": "\/img\/items\/t-shirt.jpg",
 		"outputAbbreviatedPath": "\/img\/items\/t-shirt.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/listing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 251378,
+		"inputAbbreviatedPath": "\/img\/listing.jpg",
+		"outputAbbreviatedPath": "\/img\/listing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/listing_2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 235529,
+		"inputAbbreviatedPath": "\/img\/listing_2.jpg",
+		"outputAbbreviatedPath": "\/img\/listing_2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
