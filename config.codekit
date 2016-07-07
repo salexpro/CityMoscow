@@ -4023,6 +4023,105 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/img\/store\/backpack.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 147684,
+		"inputAbbreviatedPath": "\/img\/store\/backpack.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/backpack.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/backpack2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 113091,
+		"inputAbbreviatedPath": "\/img\/store\/backpack2.png",
+		"outputAbbreviatedPath": "\/img\/store\/backpack2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/cup.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48978,
+		"inputAbbreviatedPath": "\/img\/store\/cup.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/cup.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/cup2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66374,
+		"inputAbbreviatedPath": "\/img\/store\/cup2.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/cup2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/img.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 135065,
+		"inputAbbreviatedPath": "\/img\/store\/img.png",
+		"outputAbbreviatedPath": "\/img\/store\/img.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/img2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 143004,
+		"inputAbbreviatedPath": "\/img\/store\/img2.png",
+		"outputAbbreviatedPath": "\/img\/store\/img2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46754,
+		"inputAbbreviatedPath": "\/img\/store\/logo.png",
+		"outputAbbreviatedPath": "\/img\/store\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/t-shirt.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48787,
+		"inputAbbreviatedPath": "\/img\/store\/t-shirt.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/t-shirt.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/store\/t-shirt2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 75454,
+		"inputAbbreviatedPath": "\/img\/store\/t-shirt2.png",
+		"outputAbbreviatedPath": "\/img\/store\/t-shirt2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/tiles\/branding.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
