@@ -657,6 +657,14 @@ label{
         text-align: center;
         line-height: 53px;
         z-index: 1;
+        font-size: 30px;
+        line-height: 26px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include breakpoint(435px down) {
             width: calc(100% - 7px);
             padding: 0 10px;
@@ -675,6 +683,9 @@ label{
             @extend :before;
             left: auto;
             right: -11px;
+        }
+        a{
+            color: #000;
         }
     }
 }
@@ -851,6 +862,7 @@ label{
     &_popular {
         color: #fff;
         font-weight: 500;
+        padding-left: 9px;
         p {
             margin-bottom: .25rem;
         }
@@ -891,29 +903,47 @@ label{
 
 .towers {
     align-self: flex-end;
-    height: 137px;
-    margin-top: 150px;
-    img {
-        height: 137px;
-    }
     ul {
+        padding-top: 150px;
         list-style: none;
         margin: 0;
+        height: 287px;
+        overflow: hidden;
         li {
-            display: block;
-            min-width: 60px;
+            display: inline-block;
+            // width: 80px;
             height: 137px;
             position: relative;
             float: left;
             &.active {
                 .towers_hint {
-                    display: block;
+                    opacity: 1;
+                }
+                .towers_tower{
+                    fill:#fff;
+                }
+            }
+        }
+        a{
+            display: block;
+            height: 137px;
+            // overflow: hidden;
+            position: relative;
+            z-index: 2;
+            &:hover{
+                &+.towers_hint {
+                    opacity: 1;
+                }
+                .towers_tower{
+                    fill:#fff;
                 }
             }
         }
     }
     &_hint {
-        display: none;
+        opacity: 0;
+        transition:500ms;
+        display: block;
         text-align: center;
         font-weight: 300;
         line-height: 24px;
@@ -929,6 +959,14 @@ label{
             line-height: 24px;
             color: #fff;
         }
+    }
+    svg{
+        height: 100%;
+        margin-left: -30px;
+    }
+    &_tower{
+        transition:500ms;
+        fill:#0067ff;
     }
 }
 
