@@ -3891,6 +3891,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/store.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/store.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/img\/basket_map.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -4034,13 +4043,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/store\/backpack2.png": {
-		"fileType": 32768,
+	"\/img\/store\/backpack2.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 113091,
-		"inputAbbreviatedPath": "\/img\/store\/backpack2.png",
-		"outputAbbreviatedPath": "\/img\/store\/backpack2.png",
+		"initialSize": 83907,
+		"inputAbbreviatedPath": "\/img\/store\/backpack2.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/backpack2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4067,35 +4076,35 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/store\/img.png": {
-		"fileType": 32768,
+	"\/img\/store\/img.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 135065,
-		"inputAbbreviatedPath": "\/img\/store\/img.png",
-		"outputAbbreviatedPath": "\/img\/store\/img.png",
+		"initialSize": 86732,
+		"inputAbbreviatedPath": "\/img\/store\/img.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/img.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/store\/img2.png": {
-		"fileType": 32768,
+	"\/img\/store\/img2.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 143004,
-		"inputAbbreviatedPath": "\/img\/store\/img2.png",
-		"outputAbbreviatedPath": "\/img\/store\/img2.png",
+		"initialSize": 95973,
+		"inputAbbreviatedPath": "\/img\/store\/img2.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/img2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/store\/logo.png": {
-		"fileType": 32768,
+	"\/img\/store\/logo.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 46754,
-		"inputAbbreviatedPath": "\/img\/store\/logo.png",
-		"outputAbbreviatedPath": "\/img\/store\/logo.png",
+		"initialSize": 38737,
+		"inputAbbreviatedPath": "\/img\/store\/logo.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/logo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4111,13 +4120,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/store\/t-shirt2.png": {
-		"fileType": 32768,
+	"\/img\/store\/t-shirt2.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 75454,
-		"inputAbbreviatedPath": "\/img\/store\/t-shirt2.png",
-		"outputAbbreviatedPath": "\/img\/store\/t-shirt2.png",
+		"initialSize": 45502,
+		"inputAbbreviatedPath": "\/img\/store\/t-shirt2.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/t-shirt2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4676,7 +4685,7 @@
 		"outputAbbreviatedPath": "css\/app.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 1

@@ -361,6 +361,7 @@ label{
         &.head_fix{
             @include breakpoint(small down) {
                 height: auto;
+                min-height: auto;
             }
         }
     }
@@ -1307,6 +1308,49 @@ label{
             @include breakpoint(435px down) {
                 font-size: 40px;
                 line-height: 40px;
+            }
+        }
+    }
+    &_store{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 30px;
+        @include breakpoint(435px down) {
+            font-size: 16px;
+        }
+        img{
+            display: block;
+            margin: auto;
+            float: none;
+            @include breakpoint(435px down) {
+                width: auto;
+            }
+        }
+        &_content{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 0 20px;
+            padding-top: 10px;
+            font-weight: 300;
+            @include breakpoint(435px down) {
+                padding: 0;
+            }
+            .button{
+                width: 110px;
+                margin-left: 5px;
+            }
+        }
+        &_price{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &_like{
+            i{
+                font-size: 35px;
+                color: #ee1b30;
             }
         }
     }
@@ -2497,6 +2541,36 @@ label{
             @extend .carousel_controls_left;
             left: auto;
             right: 15px;
+        }
+    }
+}
+.purchases{
+    height: 74px;
+    border: 6px solid #fff;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 30px;
+    @include breakpoint(small down) {
+        margin-bottom: 10px;
+    }
+    a{
+        color: #fff;
+    }
+    i{
+        font-size: 45px;
+        margin-top: -18px;
+        margin-left: -11px;
+        display: block;
+        float: left;
+        // line-height: 47px;
+        height: 20px;
+        &:before{
+            vertical-align: top;
         }
     }
 }

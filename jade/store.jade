@@ -3,7 +3,7 @@ html(lang='en')
     include ./includes/head.jade
     body
         main.wrap
-            header.head.head_fix
+            header.head.head_fix.head_free
                 include ./includes/header_top.jade
                 .row
                     p.small-12.column.head_h1
@@ -17,15 +17,16 @@ html(lang='en')
                             .select.select_white
                                 select
                                     option(value="По популярности",disabled,selected) По популярности
-                        .small-12.large-4.column
+                        .small-12.large-4.column.large-offset-2
                             .purchases
                                 .purchases_header
-                                    i.icon-icons-set-23
-                                    | ПОКУПКИ
+                                    a(href="#")
+                                        i.icon-icons-set-23
+                                        | ПОКУПКИ
                                 .purchases_price
                                     | 4272 ₽
             article.row.content.tiles.store
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/cup.jpg", alt="Cup")
                         .tile_store_content
@@ -34,7 +35,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 1280
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/backpack.jpg", alt="Backpack")
                         .tile_store_content
@@ -44,9 +45,11 @@ html(lang='en')
                                 i.icon-icons-set-14
                                 | 42
                         .tile_store_content
-                            | Кружка для кофе с термо-рисунком
+                            | Кружка для кофе 
+                            br
+                            | с термо-рисунком
                             a.button.hollow(href="#") КУПИТЬ
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/t-shirt.jpg", alt="T-shirt")
                         .tile_store_content
@@ -55,7 +58,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 721
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/t-shirt2.jpg", alt="T-shirt")
                         .tile_store_content
@@ -64,7 +67,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 721
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/backpack2.jpg", alt="Backpack")
                         .tile_store_content
@@ -73,7 +76,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 42
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/logo.jpg", alt="Logo")
                         .tile_store_content
@@ -82,7 +85,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 1280
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/img.jpg", alt="Img")
                         .tile_store_content
@@ -91,7 +94,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 1280
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/img2.jpg", alt="Img")
                         .tile_store_content
@@ -100,7 +103,7 @@ html(lang='en')
                             .tile_store_like
                                 i.icon-icons-set-14
                                 | 1280
-                .large-4.column
+                .small-12.medium-6.large-4.column
                     .tile.tile_store
                         img(src="/img/store/cup2.jpg", alt="Cup")
                         .tile_store_content
