@@ -110,10 +110,10 @@ h2 {
         }
         &.blue {
             border-color: #006cff;
-            color: #006cff;
+            color: #006cff !important;
             &:hover,
             &:focus {
-                color: #fff;
+                color: #fff !important;
                 background-color: #006cff;
             }
         }
@@ -293,10 +293,10 @@ label{
                 }
                 .button {
                     border-color: #006cff;
-                    color: #006cff;
+                    color: #006cff !important;
                     &:hover,
                     &:focus {
-                        color: #fff;
+                        color: #fff !important;
                         background-color: #006cff;
                     }
                 }
@@ -315,10 +315,10 @@ label{
             color: #006cff;
             .button {
                 border-color: #006cff;
-                color: #006cff;
+                color: #006cff !important;
                 &:hover,
                 &:focus {
-                    color: #fff;
+                    color: #fff !important;
                     background-color: #006cff;
                 }
             }
