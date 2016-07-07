@@ -345,6 +345,33 @@ label{
     }
 }
 
+.tabs{
+    &-title{
+        padding-right: 45px;
+        &:last-child{
+            padding: 0;
+        }
+        a{
+            font-size: 20px;
+            color: #aeaeae !important;
+            font-weight: 500;
+            text-decoration: none !important;
+            padding-bottom: 8px !important;
+        }
+        &.is-active{
+            a{
+                color: #000 !important;
+                border-bottom: 3px solid #000;
+            }
+        }
+    }
+    &-content{
+        padding-top: 10px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+
 .head {
     height: 880px;
     background-color: #00afec;
@@ -1351,6 +1378,47 @@ label{
             i{
                 font-size: 35px;
                 color: #ee1b30;
+            }
+        }
+    }
+    &_item{
+        padding: 40px !important;
+        padding-right: 98px !important;
+        @include breakpoint(medium down) {
+            padding-right: 40px !important;
+        }
+        @include breakpoint(350px down) {
+            padding: 20px !important;
+        }
+        &>div{
+            padding: 0;
+            &:last-child{
+                padding-left: 80px;
+                @include breakpoint(medium down) {
+                    padding: 0;
+                    padding-top: 30px;
+                }
+            }
+        }
+        h1{
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 36px;
+        }
+        &_min{
+            padding: 0 !important;
+            padding-bottom: 78px !important;
+            border-bottom: 24px solid #fff;
+            overflow: hidden;
+            &:hover{
+                .item_min_content{
+                    bottom: 0px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+            }
+            img{
+                width: 100%;
+                margin: 0 !important;
             }
         }
     }
@@ -2571,6 +2639,107 @@ label{
         height: 20px;
         &:before{
             vertical-align: top;
+        }
+    }
+}
+.item{
+    &_img{
+        padding: 20px;
+        background-color: #f5f5f5;
+        margin-bottom: 40px;
+        @include breakpoint(small down) {
+            margin-bottom: 10px;
+        }
+        &_small{
+            align-items: flex-end;
+            flex-wrap: wrap;
+            a{
+                padding-left: 0 !important;
+            }
+            img{
+                vertical-align: bottom;
+            }
+        }
+    }
+    &_content{
+        padding-left: 0;
+        .tile_store_price{
+            color: #006cff;
+        }
+        i{
+            color: #d7d7d7;
+        }
+    }
+    &_params{
+        font-weight: 300;
+        margin-top: 15px;
+        .select{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    &_basket{
+        display: flex;
+        margin-top: 28px;
+        justify-content:space-between;
+        &_amount{
+            width: 108px;
+            position: relative;
+            input{
+                width: 50px;
+                height: 50px;
+                border: 6px solid #000 !important;
+                color: #000;
+                padding: 0;
+                text-align: center;
+                background-color: transparent !important;
+                font-size: 13px;
+                font-weight: 700;
+                margin: auto;
+            }
+            button{
+                position: absolute;
+                font-size: 36px;
+                font-weight: 700;
+                top: 3px;
+                outline: none;
+                &:last-child{
+                    right: 0;
+                }
+            }
+        }
+        .button{
+            width: calc(100% - 130px);
+        }
+    }
+    &_descr{
+        margin-top: 50px;
+    }
+    &_min{
+        &_content{
+            position: absolute;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 300;
+            width: 100%;
+            bottom: -70px;
+            left: 0;
+            padding: 23px;
+            padding-bottom: 0;
+            padding-top: 20px;
+            background:transparent;
+            transition:500ms;
+            span{
+                display: block;
+                font-size: 32px;
+                line-height: 32px;
+                font-weight: 500;
+                margin-bottom: 17px;
+            }
+            button{
+                width: 100%;
+                margin-top: 20px;
+            }
         }
     }
 }

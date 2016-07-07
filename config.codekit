@@ -4085,6 +4085,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/img\/store\/sticker.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21740,
+		"inputAbbreviatedPath": "\/img\/store\/sticker.jpg",
+		"outputAbbreviatedPath": "\/img\/store\/sticker.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/store\/t-shirt.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
