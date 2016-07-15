@@ -1001,6 +1001,9 @@ label{
     &:only-child {
         height: calc(100% - 15px);
     }
+    @include breakpoint(medium down) {
+        padding-right: 15px;
+    }
     @include breakpoint(840px down) {
         font-size: 16px;
     }
@@ -1012,8 +1015,8 @@ label{
     &>img {
         float: left;
         margin-right: 55px;
-        @include breakpoint(small down) {
-            margin-right: 30px;
+        @include breakpoint(medium down) {
+            margin-right: 20px;
         }
         @include breakpoint(435px down) {
             width: 150px;
@@ -1030,7 +1033,7 @@ label{
         &::before {
             vertical-align: top;
         }
-        @include breakpoint(435px down) {
+        @include breakpoint(medium down) {
             transform: scale(0.4);
             width: 162px;
             height: 215px;
@@ -1047,7 +1050,7 @@ label{
         }
         @include breakpoint(840px down) {
             font-size: 20px !important;
-            margin-top: 38px;
+            // margin-top: 38px;
             line-height: 24px;
         }
         @include breakpoint(435px down) {
@@ -1087,17 +1090,17 @@ label{
     }
     &_big {
         width: 100%;
-        min-height: 405px;
-        @include breakpoint(medium down) {
-            padding-bottom: 60px;
-            padding-right: 0;
-        }
-        @include breakpoint(435px down) {
+        // min-height: 405px;
+        @include breakpoint(small down) {
             min-height: 305px;
+            padding: 0;
             padding-bottom: 25px;
         }
         img {
             @include breakpoint(medium down) {
+                width: 50%;
+            }
+            @include breakpoint(small down) {
                 width: 100%;
                 float: none;
                 margin: 0;
@@ -1932,7 +1935,7 @@ label{
     padding-left: 250px;
     background-repeat: no-repeat;
     @include breakpoint(medium down) {
-        padding-left: 120px;
+        padding-left: 32px;
     }
 }
 
