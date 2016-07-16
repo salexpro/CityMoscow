@@ -1104,8 +1104,10 @@ label{
     &_big {
         width: 100%;
         min-height: 405px;
+        display: flex;
         @include breakpoint(small down) {
             padding: 0;
+            flex-direction:column;
         }
         @include breakpoint(420px down) {
             min-height: 300px;
@@ -1115,6 +1117,7 @@ label{
         img {
             @include breakpoint(medium down) {
                 width: 50%;
+                margin-right: 40px;
             }
             @include breakpoint(small down) {
                 width: 100%;
@@ -1126,10 +1129,17 @@ label{
             font-size: 3.3rem;
             line-height: 73px;
             margin-top: 20px;
+            @include breakpoint(medium down) {
+                font-size: 48px !important;
+                line-height: 55px;
+            }
             @include breakpoint(small down) {
-                font-size: 28px;
-                line-height: 36px;
+                margin-top: 8px;
+                font-size: 28px !important;
+                line-height: 30px;
                 margin-left: 40px;
+                margin-right: 40px;
+                margin-bottom: 12px;
             }
             @include breakpoint(420px down) {
                 margin-left: 20px;
@@ -1137,9 +1147,11 @@ label{
             }
         }
         a {
+            font-size: 20px;
             @include breakpoint(small down) {
                 display: block;
                 margin-left: 40px;
+                font-size: 16px !important;
             }
             @include breakpoint(420px down) {
                 margin-left: 20px;
@@ -1632,6 +1644,14 @@ label{
         p{
             padding: 0;
             margin-top: 0;
+            @include breakpoint(medium down) {
+                font-size: 1.6rem !important;
+                line-height: 36px !important;
+            }
+            @include breakpoint(420px down) {
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
             a{
                 padding: 0 !important;
                 display: inline;
@@ -1648,6 +1668,12 @@ label{
         }
         a{
             padding-left: 0;
+            @include breakpoint(medium down) {
+                font-size: 20px !important;
+            }
+            @include breakpoint(420px down) {
+                font-size: 16px !important;
+            }
         }
         .button{
             margin-left: 0;
@@ -1989,7 +2015,10 @@ label{
 .img_right {
     padding-left: 60px;
     @include breakpoint(small down) {
-        padding-left: 30px;
+        padding-left: 40px;
+    }
+    @include breakpoint(420px down) {
+        padding-left: 20px;
     }
     img {
         float: right;
