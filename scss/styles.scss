@@ -1245,6 +1245,10 @@ label{
             letter-spacing: 1px;
             td {
                 padding-right: 20px;
+                &:last-child{
+                    padding: 0;
+                    white-space: nowrap;
+                }
                 @include breakpoint(420px down) {
                     padding-right: 10px;
                 }
