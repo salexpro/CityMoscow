@@ -3679,6 +3679,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/styles.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/styles.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/fonts\/CitySans\/font.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -3812,6 +3821,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/html\/services.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/html\/skyline.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/skyline.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -4197,16 +4215,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/img\/tiles\/moscow24.jpg": {
-		"fileType": 16384,
+	"\/img\/tiles\/moscow24.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 15506,
-		"inputAbbreviatedPath": "\/img\/tiles\/moscow24.jpg",
-		"outputAbbreviatedPath": "\/img\/tiles\/moscow24.jpg",
+		"initialSize": 12273,
+		"inputAbbreviatedPath": "\/img\/tiles\/moscow24.png",
+		"outputAbbreviatedPath": "\/img\/tiles\/moscow24.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/img\/tiles\/news.jpg": {
 		"fileType": 16384,
@@ -4630,7 +4648,7 @@
 		"outputAbbreviatedPath": "css\/app.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
+		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 1

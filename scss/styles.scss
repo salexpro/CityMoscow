@@ -695,7 +695,7 @@ label{
             color: #000;
         }
         img{
-            width: 90%;
+            width: 250px;
             display: block;
             margin: auto;
         }
@@ -1004,6 +1004,7 @@ label{
     padding-right: 20px;
     background-size: cover;
     position: relative;
+    cursor: pointer;
     &:hover {
         background-color: #f7f7f7;
     }
@@ -1071,6 +1072,17 @@ label{
         display: table;
         color: #000;
         padding-bottom: 10px;
+        &:hover {
+            text-decoration: underline;
+            i.icon-icons-set-03::before{
+                animation-name: arrow;
+                animation-duration: 150ms;
+                animation-iteration-count: 1;
+                animation-timing-function: steps(1);
+                -webkit-animation-fill-mode:both;
+                animation-fill-mode:both;
+            }
+        }
         i {
             font-size: 1.25rem;
             vertical-align: top;
@@ -1078,10 +1090,49 @@ label{
             @include breakpoint(small down) {
                 font-size: 20px;
             }
+            &.icon-icons-set-03{
+                &::before{
+                    content:'';
+                    width: 25px;
+                    height: 25px;
+                    background: url('/img/arrow.svg') no-repeat;
+                    background-position: 0 0;
+                    background-size: 25px;
+                }
+            }
         }
-        &:hover {
-            text-decoration: underline;
-        }
+        @keyframes arrow {
+            10% {
+                background-position: 0 0
+            }
+            20% {
+                background-position: 0 -18px
+            }
+            30% {
+                background-position: 0 -39px
+            }
+            40% {
+                background-position: 0 -60px
+            }
+            50% {
+                background-position: 0 -81px
+            }
+            60% {
+                background-position: 0 -101px
+            }
+            70% {
+                background-position: 0 -122px
+            }
+            80% {
+                background-position: 0 -143px
+            }
+            90% {
+                background-position: 0 -164px
+            }
+            100% {
+                background-position: 0 -185px
+            }
+        }   
     }
     &_min {
         padding: 19px 23px !important;
@@ -1642,6 +1693,7 @@ label{
     &_calendar{
         position: relative;
         padding: 36px;
+        cursor: auto;
         @include breakpoint(small down) {
             padding: 20px;
         }
@@ -1887,6 +1939,9 @@ label{
         a {
             color: #006cff;
         }
+        .arrow{
+            fill: #006cff;
+        }
     }
     &_transport {
         .tile_icon {
@@ -1999,6 +2054,7 @@ label{
 }
 
 .wo_backlight{
+    cursor: auto;
     &:hover{
         background:#fff;
     }
