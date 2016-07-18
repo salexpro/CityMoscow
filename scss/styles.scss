@@ -1074,12 +1074,11 @@ label{
         padding-bottom: 10px;
         &:hover {
             text-decoration: underline;
-            i.icon-icons-set-03::before{
+            i.icon-icons-set-03{
                 animation-name: arrow;
                 animation-duration: 150ms;
                 animation-iteration-count: 1;
                 animation-timing-function: steps(1);
-                -webkit-animation-fill-mode:both;
                 animation-fill-mode:both;
             }
         }
@@ -1091,46 +1090,74 @@ label{
                 font-size: 20px;
             }
             &.icon-icons-set-03{
+                display: inline-block;
+                vertical-align: middle;
+                width: 25px;
+                height: 25px;
+                // background: url('/img/arrow.svg') no-repeat;
+                background-position: 0 0;
+                background-size: 25px;
+                -webkit-mask: url('/img/arrow.svg') no-repeat;
+                mask: url('/img/arrow.svg') no-repeat;
+                -webkit-mask-size:25px;
+                mask-size:25px;
+                background-color:#000;
+                margin-top: -2px;
                 &::before{
                     content:'';
-                    width: 25px;
-                    height: 25px;
-                    background: url('/img/arrow.svg') no-repeat;
-                    background-position: 0 0;
-                    background-size: 25px;
                 }
             }
         }
         @keyframes arrow {
             10% {
-                background-position: 0 0
+                background-position: 0 0;
+                -webkit-mask-position:0 0;
+                mask-position:0 0;
             }
             20% {
-                background-position: 0 -18px
+                background-position: 0 -18px;
+                -webkit-mask-position: 0 -18px;
+                mask-position: 0 -18px;
             }
             30% {
-                background-position: 0 -39px
+                background-position: 0 -39px;
+                -webkit-mask-position: 0 -39px;
+                mask-position: 0 -39px;
             }
             40% {
-                background-position: 0 -60px
+                background-position: 0 -60px;
+                -webkit-mask-position: 0 -60px;
+                mask-position: 0 -60px;
             }
             50% {
-                background-position: 0 -81px
+                background-position: 0 -81px;
+                -webkit-mask-position: 0 -81px;
+                mask-position: 0 -81px;
             }
             60% {
-                background-position: 0 -101px
+                background-position: 0 -101px;
+                -webkit-mask-position: 0 -101px;
+                mask-position: 0 -101px;
             }
             70% {
-                background-position: 0 -122px
+                background-position: 0 -122px;
+                -webkit-mask-position: 0 -122px;
+                mask-position: 0 -122px;
             }
             80% {
-                background-position: 0 -143px
+                background-position: 0 -143px;
+                -webkit-mask-position: 0 -143px;
+                mask-position: 0 -143px;
             }
             90% {
-                background-position: 0 -164px
+                background-position: 0 -164px;
+                -webkit-mask-position: 0 -164px;
+                mask-position: 0 -164px;
             }
             100% {
-                background-position: 0 -185px
+                background-position: 0 -185px;
+                -webkit-mask-position: 0 -185px;
+                mask-position: 0 -185px;
             }
         }   
     }
@@ -1611,6 +1638,9 @@ label{
         color: #fff;
         a {
             color: #fff;
+            i.icon-icons-set-03{
+                background: #fff;
+            }
         }
     }
     &_black {
@@ -1938,9 +1968,9 @@ label{
         }
         a {
             color: #006cff;
-        }
-        .arrow{
-            fill: #006cff;
+            i.icon-icons-set-03{
+                background:#006cff;
+            }
         }
     }
     &_transport {
@@ -1949,6 +1979,9 @@ label{
         }
         a {
             color: #00afec;
+            i.icon-icons-set-03{
+                background:#00afec;
+            }
         }
     }
     &_tours {
@@ -1958,6 +1991,9 @@ label{
         color: #006cff;
         a {
             color: #006cff;
+            i.icon-icons-set-03{
+                background: #006cff;
+            }
         }
     }
     &_shops {
@@ -1966,6 +2002,9 @@ label{
         }
         a {
             color: #744c28;
+            i.icon-icons-set-03{
+                background: #744c28;
+            }
         }
     }
     &_cafe {
@@ -1974,6 +2013,9 @@ label{
         }
         a {
             color: #006cff;
+            i.icon-icons-set-03{
+                background: #006cff;
+            }
         }
     }
     &_souvenirs {
@@ -2030,6 +2072,9 @@ label{
         }
         a {
             color: #345c97;
+            i.icon-icons-set-03{
+                background: #345c97;
+            }
         }
     }
     &_subs {
@@ -2038,6 +2083,9 @@ label{
         }
         a {
             color: #00afec;
+            i.icon-icons-set-03{
+                background: #00afec;
+            }
         }
     }
 }
@@ -2240,6 +2288,9 @@ label{
         a {
             display: inline;
             color: #aeaeae;
+            i.icon-icons-set-03{
+                background: #aeaeae;
+            }
         }
     }
     img {
