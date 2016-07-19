@@ -1023,6 +1023,7 @@ label{
     &>img {
         float: left;
         margin-right: 55px;
+        max-width: 195px;
         @include breakpoint(medium down) {
             margin-right: 20px;
         }
@@ -1193,6 +1194,7 @@ label{
             padding-bottom: 25px;
         }
         img {
+            max-width: 100%;
             @include breakpoint(medium down) {
                 width: 50%;
                 margin-right: 40px;
@@ -1252,6 +1254,7 @@ label{
             float: none;
             margin: 0;
             width: 100%;
+            max-width: 100%;
             @include breakpoint(420px down) {
                 width: 100%;
             }
@@ -1366,6 +1369,7 @@ label{
             float: none;
             margin: 0;
             height: 100%;
+            max-width: 100%;
             @include breakpoint(small down) {
                 width: 100%;
             }
@@ -1522,6 +1526,7 @@ label{
             display: block;
             margin: auto;
             float: none;
+            max-width: 100%;
             @include breakpoint(420px down) {
                 width: auto;
             }
