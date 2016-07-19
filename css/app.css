@@ -5937,7 +5937,7 @@ label {
     position: relative;
     padding: 36px;
     cursor: auto; }
-    @media screen and (max-width: 47.9375em) {
+    @media screen and (max-width: 26.25em) {
       .tile_calendar {
         padding: 20px; } }
     .tile_calendar p {
@@ -6015,6 +6015,9 @@ label {
       color: #303030;
       text-transform: uppercase;
       min-height: 200px; }
+      @media screen and (max-width: 26.25em) {
+        .tile_calendar .calendar {
+          min-height: 157px; } }
       .tile_calendar .calendar_header {
         text-align: center;
         line-height: 20px;
@@ -6159,18 +6162,32 @@ label {
       background: #006cff; }
   .tile_souvenirs {
     position: relative;
-    background-image: url(/img/tiles/souvenirs.jpg);
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    padding-left: 45px;
-    min-height: 405px; }
+    padding-left: 45px; }
+    @media screen and (max-width: 47.9375em) {
+      .tile_souvenirs {
+        padding-left: 30px;
+        padding-right: 30px; } }
+    @media screen and (max-width: 26.25em) {
+      .tile_souvenirs {
+        padding-left: 20px;
+        padding-right: 20px; } }
     .tile_souvenirs p {
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 25px; }
+      @media screen and (max-width: 26.25em) {
+        .tile_souvenirs p {
+          margin-top: 20px;
+          margin-bottom: 10px; } }
+    .tile_souvenirs img {
+      width: auto; }
     .tile_souvenirs a {
       position: absolute;
       bottom: 42px;
       line-height: 24px;
       padding: 0; }
+      @media screen and (max-width: 26.25em) {
+        .tile_souvenirs a {
+          bottom: 25px; } }
     .tile_souvenirs .button {
       position: absolute;
       width: 104px;
@@ -6182,9 +6199,9 @@ label {
       @media screen and (max-width: 47.9375em) {
         .tile_souvenirs .button {
           right: 30px; } }
-    @media screen and (max-width: 47.9375em) {
-      .tile_souvenirs {
-        padding-left: 30px; } }
+      @media screen and (max-width: 26.25em) {
+        .tile_souvenirs .button {
+          bottom: 20px; } }
   .tile_taxi .tile_icon {
     background-color: #ffc52a;
     color: #000; }

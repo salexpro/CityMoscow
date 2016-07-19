@@ -1729,7 +1729,7 @@ label{
         position: relative;
         padding: 36px;
         cursor: auto;
-        @include breakpoint(small down) {
+        @include breakpoint(420px down) {
             padding: 20px;
         }
         p{
@@ -1819,6 +1819,9 @@ label{
             color: #303030;
             text-transform: uppercase;
             min-height: 200px;
+            @include breakpoint(420px down) {
+                min-height: 157px;
+            }
             &_header{  
                 text-align: center;
                 line-height: 20px;
@@ -2025,19 +2028,34 @@ label{
     }
     &_souvenirs {
         position: relative;
-        background-image: url(/img/tiles/souvenirs.jpg);
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
         padding-left: 45px;
-        min-height: 405px;
+        @include breakpoint(small down) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include breakpoint(420px down) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
         p{
             padding: 0;
+            margin-bottom: 25px;
+            @include breakpoint(420px down) {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        img{
+            width: auto;
         }
         a {
             position: absolute;
             bottom: 42px;
             line-height: 24px;
-            padding: 0
+            padding: 0;
+            @include breakpoint(420px down) {
+                bottom: 25px;
+            }
         }
         .button {
             position: absolute;
@@ -2050,10 +2068,10 @@ label{
             @include breakpoint(small down) {
                 right: 30px;
             }
-        }
-        @include breakpoint(small down) {
-            padding-left: 30px;
-        }
+            @include breakpoint(420px down) {
+                bottom: 20px;
+            }
+        }     
     }
     &_taxi {
         .tile_icon {

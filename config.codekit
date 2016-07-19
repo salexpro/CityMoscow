@@ -4092,7 +4092,7 @@
 		"outputAbbreviatedPath": "\/img\/store\/sticker.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/store\/t-shirt.jpg": {
 		"fileType": 16384,
@@ -4116,13 +4116,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/img\/tiles\/branding.jpg": {
-		"fileType": 16384,
+	"\/img\/tiles\/branding.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 8781,
-		"inputAbbreviatedPath": "\/img\/tiles\/branding.jpg",
-		"outputAbbreviatedPath": "\/img\/tiles\/branding.jpg",
+		"initialSize": 22052,
+		"inputAbbreviatedPath": "\/img\/tiles\/branding.png",
+		"outputAbbreviatedPath": "\/img\/tiles\/branding.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
@@ -4224,7 +4224,7 @@
 		"outputAbbreviatedPath": "\/img\/tiles\/moscow24.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/img\/tiles\/news.jpg": {
 		"fileType": 16384,
@@ -4303,13 +4303,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/img\/tiles\/souvenirs.jpg": {
-		"fileType": 16384,
+	"\/img\/tiles\/souvenirs.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 37259,
-		"inputAbbreviatedPath": "\/img\/tiles\/souvenirs.jpg",
-		"outputAbbreviatedPath": "\/img\/tiles\/souvenirs.jpg",
+		"initialSize": 34856,
+		"inputAbbreviatedPath": "\/img\/tiles\/souvenirs.png",
+		"outputAbbreviatedPath": "\/img\/tiles\/souvenirs.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
