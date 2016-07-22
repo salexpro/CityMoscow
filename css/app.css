@@ -5279,8 +5279,7 @@ label {
     .towers ul li {
       display: inline-block;
       height: 137px;
-      position: relative;
-      float: left; }
+      position: relative; }
       .towers ul li.active .towers_hint {
         opacity: 1; }
       .towers ul li.active .towers_tower {
