@@ -1106,6 +1106,13 @@ label{
                     top: 0.15em;
                     transform: rotate(-45deg);
                 }
+                //Hack for Safari 9+ (include iOS)
+                _::-webkit-:not(:root:root), &::before{
+                    top: -0.13em;
+                }
+                _::-webkit-:not(:root:root), &::after{
+                    top: 0.19em;
+                }
             }
         }
     }

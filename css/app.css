@@ -5433,6 +5433,10 @@ label {
     .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
       top: 0.15em;
       transform: rotate(-45deg); }
+    .tile_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+      top: -0.13em; }
+    .tile_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile > a:hover i.icon-icons-set-03::after {
+      top: 0.19em; }
   .tile a {
     display: table;
     color: #000;
