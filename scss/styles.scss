@@ -533,12 +533,9 @@ label{
         position: absolute;
         transition: 500ms;
         width: 74px;
-        // max-height: 74px;
         &.is_open {
             width: 391px;
-            // max-height: 400px;
             @include breakpoint(420px down) {
-                // width: calc(100% - 15px);
                 width: 300px;
             }
             &::before {
@@ -1022,7 +1019,7 @@ label{
         font-size: 14px;
         padding-right: 10px;
     }
-    &>img {
+    > img {
         float: left;
         margin-right: 55px;
         max-width: 195px;
@@ -1034,7 +1031,7 @@ label{
             margin-right: 15px;
         }
     }
-    &>i {
+    > i {
         float: left;
         font-size: 15.25rem;
         height: 255px;
@@ -1071,98 +1068,62 @@ label{
             font-size: 17px !important;
         }
     }
+    
+    &_content a, &_big_content a, > a {    
+        i.icon-icons-set-03{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            vertical-align: middle;
+            margin-top: -2px;
+            border-bottom: 0.1em solid;
+            margin-left: 5px;
+            position: relative;
+            &::before{
+                content: '';
+                border-top: 0.1em solid;
+                width: 0;
+                position: absolute;
+                top: 0;
+                right: -2px;
+            }
+            &::after{
+                @extend ::before;
+            }
+        }
+        &:hover {
+            i.icon-icons-set-03{
+                transition: 200ms;
+                width: 0.7em;
+                &::before{
+                    transition: 200ms;
+                    width: 69%;
+                    top: -0.15em;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    @extend ::before;
+                    top: 0.15em;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
     a {
         display: table;
         color: #000;
         padding-bottom: 10px;
-        &:hover {
+        &:hover{
             text-decoration: underline;
-            i.icon-icons-set-03{
-                animation-name: arrow;
-                animation-duration: 150ms;
-                animation-iteration-count: 1;
-                animation-timing-function: steps(1);
-                animation-fill-mode:both;
-            }
         }
-        i {
+        i{
             font-size: 1.25rem;
             vertical-align: top;
             line-height: 1rem;
             @include breakpoint(small down) {
                 font-size: 20px;
             }
-            &.icon-icons-set-03{
-                display: inline-block;
-                vertical-align: middle;
-                width: 25px;
-                height: 25px;
-                // background: url('/img/arrow.svg') no-repeat;
-                background-position: 0 0;
-                background-size: 25px;
-                -webkit-mask: url('/img/arrow.svg') no-repeat;
-                mask: url('/img/arrow.svg') no-repeat;
-                -webkit-mask-size:25px;
-                mask-size:25px;
-                background-color:#000;
-                margin-top: -2px;
-                &::before{
-                    content:'';
-                }
-            }
         }
-        @keyframes arrow {
-            10% {
-                background-position: 0 0;
-                -webkit-mask-position:0 0;
-                mask-position:0 0;
-            }
-            20% {
-                background-position: 0 -18px;
-                -webkit-mask-position: 0 -18px;
-                mask-position: 0 -18px;
-            }
-            30% {
-                background-position: 0 -39px;
-                -webkit-mask-position: 0 -39px;
-                mask-position: 0 -39px;
-            }
-            40% {
-                background-position: 0 -60px;
-                -webkit-mask-position: 0 -60px;
-                mask-position: 0 -60px;
-            }
-            50% {
-                background-position: 0 -81px;
-                -webkit-mask-position: 0 -81px;
-                mask-position: 0 -81px;
-            }
-            60% {
-                background-position: 0 -101px;
-                -webkit-mask-position: 0 -101px;
-                mask-position: 0 -101px;
-            }
-            70% {
-                background-position: 0 -122px;
-                -webkit-mask-position: 0 -122px;
-                mask-position: 0 -122px;
-            }
-            80% {
-                background-position: 0 -143px;
-                -webkit-mask-position: 0 -143px;
-                mask-position: 0 -143px;
-            }
-            90% {
-                background-position: 0 -164px;
-                -webkit-mask-position: 0 -164px;
-                mask-position: 0 -164px;
-            }
-            100% {
-                background-position: 0 -185px;
-                -webkit-mask-position: 0 -185px;
-                mask-position: 0 -185px;
-            }
-        }   
     }
     &_min {
         padding: 19px 23px !important;
@@ -1481,7 +1442,7 @@ label{
                 flex-direction:column;
             }
             a{
-                display: flex;
+                display: table;
                 margin: 0 !important;
                 @include breakpoint(large down) {
                     margin-top: 10px !important;     
@@ -1646,9 +1607,6 @@ label{
         color: #fff;
         a {
             color: #fff;
-            i.icon-icons-set-03{
-                background: #fff;
-            }
         }
     }
     &_black {
@@ -1979,9 +1937,6 @@ label{
         }
         a {
             color: #006cff;
-            i.icon-icons-set-03{
-                background:#006cff;
-            }
         }
     }
     &_transport {
@@ -1990,9 +1945,6 @@ label{
         }
         a {
             color: #00afec;
-            i.icon-icons-set-03{
-                background:#00afec;
-            }
         }
     }
     &_tours {
@@ -2002,9 +1954,6 @@ label{
         color: #006cff;
         a {
             color: #006cff;
-            i.icon-icons-set-03{
-                background: #006cff;
-            }
         }
     }
     &_shops {
@@ -2013,9 +1962,6 @@ label{
         }
         a {
             color: #744c28;
-            i.icon-icons-set-03{
-                background: #744c28;
-            }
         }
     }
     &_cafe {
@@ -2024,9 +1970,6 @@ label{
         }
         a {
             color: #006cff;
-            i.icon-icons-set-03{
-                background: #006cff;
-            }
         }
     }
     &_souvenirs {

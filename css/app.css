@@ -3042,6 +3042,12 @@ html {
 
 *,
 *::before,
+.tile_content a i.icon-icons-set-03::after,
+.tile_big_content a i.icon-icons-set-03::after,
+.tile > a i.icon-icons-set-03::after,
+.tile_content a:hover i.icon-icons-set-03::after,
+.tile_big_content a:hover i.icon-icons-set-03::after,
+.tile > a:hover i.icon-icons-set-03::after,
 *::after {
   box-sizing: inherit; }
 
@@ -4382,7 +4388,7 @@ select {
   list-style-type: none;
   background: #fefefe;
   border: 1px solid 0; }
-  .tabs::before, .tabs::after {
+  .tabs::before, .tile_content a i.tabs.icon-icons-set-03::after, .tile_big_content a i.tabs.icon-icons-set-03::after, .tile > a i.tabs.icon-icons-set-03::after, .tabs::after {
     content: ' ';
     display: table;
     flex-basis: 0;
@@ -4446,7 +4452,7 @@ select {
   margin-left: auto;
   margin-right: auto; }
 
-.clearfix::before, .clearfix::after {
+.clearfix::before, .tile_content a i.clearfix.icon-icons-set-03::after, .tile_big_content a i.clearfix.icon-icons-set-03::after, .tile > a i.clearfix.icon-icons-set-03::after, .clearfix::after {
   content: ' ';
   display: table;
   flex-basis: 0;
@@ -4882,11 +4888,11 @@ label {
     @media screen and (max-width: 78.6875em) {
       .head_map {
         overflow: visible; } }
-    .head_map .nav_menu.is_open::before {
+    .head_map .nav_menu.is_open::before, .head_map .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.is_open.icon-icons-set-03::after {
       box-shadow: -160px -160px 0px 153px #7bafd2; }
     .head_map .nav_menu.is_open::after {
       box-shadow: -132px 137px 0px 133px #7bafd2; }
-    .head_map .nav_menu::before {
+    .head_map .nav_menu::before, .head_map .tile_content a i.nav_menu.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.icon-icons-set-03::after {
       box-shadow: -40px -50px 0px 43px #7bafd2; }
     .head_map .nav_menu::after {
       box-shadow: -52px 47px 0px 43px #7bafd2; }
@@ -4975,7 +4981,7 @@ label {
       @media screen and (max-width: 26.25em) {
         .nav_menu.is_open {
           width: 300px; } }
-      .nav_menu.is_open::before {
+      .nav_menu.is_open::before, .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a i.nav_menu.is_open.icon-icons-set-03::after {
         box-shadow: -160px -160px 0px 153px #00afec; }
       .nav_menu.is_open::after {
         box-shadow: -132px 137px 0px 133px #00afec; }
@@ -5374,7 +5380,7 @@ label {
     margin-top: -65px;
     margin-left: -39px;
     width: 289px; }
-    .tile > i::before {
+    .tile > i::before, .tile_content a .tile > i.icon-icons-set-03::after, .tile_big_content a .tile > i.icon-icons-set-03::after, .tile > a .tile > i.icon-icons-set-03::after {
       vertical-align: top; }
     @media screen and (max-width: 78.6875em) {
       .tile > i {
@@ -5400,18 +5406,39 @@ label {
     @media screen and (max-width: 26.25em) {
       .tile p {
         font-size: 17px !important; } }
+  .tile_content a i.icon-icons-set-03, .tile_big_content a i.icon-icons-set-03, .tile > a i.icon-icons-set-03 {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    margin-top: -2px;
+    border-bottom: 0.1em solid;
+    margin-left: 5px;
+    position: relative; }
+    .tile_content a i.icon-icons-set-03::before, .tile_content a i.icon-icons-set-03::after, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a i.icon-icons-set-03::before, .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::before, .tile_content .tile > a i.icon-icons-set-03::after, .tile_big_content .tile > a i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::after, .tile > a .tile_content a:hover i.icon-icons-set-03::after, .tile_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+      content: '';
+      border-top: 0.1em solid;
+      width: 0;
+      position: absolute;
+      top: 0;
+      right: -2px; }
+  .tile_content a:hover i.icon-icons-set-03, .tile_big_content a:hover i.icon-icons-set-03, .tile > a:hover i.icon-icons-set-03 {
+    transition: 200ms;
+    width: 0.7em; }
+    .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+      transition: 200ms;
+      width: 69%;
+      top: -0.15em;
+      transform: rotate(45deg); }
+    .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+      top: 0.15em;
+      transform: rotate(-45deg); }
   .tile a {
     display: table;
     color: #000;
     padding-bottom: 10px; }
     .tile a:hover {
       text-decoration: underline; }
-      .tile a:hover i.icon-icons-set-03 {
-        animation-name: arrow;
-        animation-duration: 150ms;
-        animation-iteration-count: 1;
-        animation-timing-function: steps(1);
-        animation-fill-mode: both; }
     .tile a i {
       font-size: 1.25rem;
       vertical-align: top;
@@ -5419,63 +5446,6 @@ label {
       @media screen and (max-width: 47.9375em) {
         .tile a i {
           font-size: 20px; } }
-      .tile a i.icon-icons-set-03 {
-        display: inline-block;
-        vertical-align: middle;
-        width: 25px;
-        height: 25px;
-        background-position: 0 0;
-        background-size: 25px;
-        -webkit-mask: url("/img/arrow.svg") no-repeat;
-        mask: url("/img/arrow.svg") no-repeat;
-        -webkit-mask-size: 25px;
-        mask-size: 25px;
-        background-color: #000;
-        margin-top: -2px; }
-        .tile a i.icon-icons-set-03::before {
-          content: ''; }
-
-@keyframes arrow {
-  10% {
-    background-position: 0 0;
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0; }
-  20% {
-    background-position: 0 -18px;
-    -webkit-mask-position: 0 -18px;
-    mask-position: 0 -18px; }
-  30% {
-    background-position: 0 -39px;
-    -webkit-mask-position: 0 -39px;
-    mask-position: 0 -39px; }
-  40% {
-    background-position: 0 -60px;
-    -webkit-mask-position: 0 -60px;
-    mask-position: 0 -60px; }
-  50% {
-    background-position: 0 -81px;
-    -webkit-mask-position: 0 -81px;
-    mask-position: 0 -81px; }
-  60% {
-    background-position: 0 -101px;
-    -webkit-mask-position: 0 -101px;
-    mask-position: 0 -101px; }
-  70% {
-    background-position: 0 -122px;
-    -webkit-mask-position: 0 -122px;
-    mask-position: 0 -122px; }
-  80% {
-    background-position: 0 -143px;
-    -webkit-mask-position: 0 -143px;
-    mask-position: 0 -143px; }
-  90% {
-    background-position: 0 -164px;
-    -webkit-mask-position: 0 -164px;
-    mask-position: 0 -164px; }
-  100% {
-    background-position: 0 -185px;
-    -webkit-mask-position: 0 -185px;
-    mask-position: 0 -185px; } }
   .tile_min {
     padding: 19px 23px !important;
     padding-bottom: 20px; }
@@ -5743,7 +5713,7 @@ label {
         .tile_services_content {
           flex-direction: column; } }
       .tile_services_content a {
-        display: flex;
+        display: table;
         margin: 0 !important; }
         @media screen and (max-width: 77.75em) {
           .tile_services_content a {
@@ -5877,8 +5847,6 @@ label {
     color: #fff; }
     .tile_white a {
       color: #fff; }
-      .tile_white a i.icon-icons-set-03 {
-        background: #fff; }
   .tile_black {
     background-color: #000; }
     .tile_black:hover {
@@ -6135,34 +6103,24 @@ label {
     background-color: #006cff; }
   .tile_parking a {
     color: #006cff; }
-    .tile_parking a i.icon-icons-set-03 {
-      background: #006cff; }
   .tile_transport .tile_icon {
     background-color: #00afec; }
   .tile_transport a {
     color: #00afec; }
-    .tile_transport a i.icon-icons-set-03 {
-      background: #00afec; }
   .tile_tours {
     background-image: url(/img/tiles/tours.jpg); }
   .tile_faq {
     color: #006cff; }
     .tile_faq a {
       color: #006cff; }
-      .tile_faq a i.icon-icons-set-03 {
-        background: #006cff; }
   .tile_shops .tile_icon {
     background-color: #744c28; }
   .tile_shops a {
     color: #744c28; }
-    .tile_shops a i.icon-icons-set-03 {
-      background: #744c28; }
   .tile_cafe .tile_icon {
     background-color: #006cff; }
   .tile_cafe a {
     color: #006cff; }
-    .tile_cafe a i.icon-icons-set-03 {
-      background: #006cff; }
   .tile_souvenirs {
     position: relative;
     padding-left: 45px; }
@@ -6360,7 +6318,7 @@ label {
     display: block;
     font-size: 100px;
     margin-left: -15px; }
-    .stripe_arrow i::before {
+    .stripe_arrow i::before, .stripe_arrow .tile_content a i.icon-icons-set-03::after, .tile_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile > a i.icon-icons-set-03::after, .tile > a .stripe_arrow i.icon-icons-set-03::after {
       vertical-align: top; }
   .stripe_arrow a {
     color: #fff;
@@ -6706,7 +6664,7 @@ label {
       font-size: 36px;
       height: 24px;
       vertical-align: top; }
-      .delivery_options i::before {
+      .delivery_options i::before, .delivery_options .tile_content a i.icon-icons-set-03::after, .tile_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile > a i.icon-icons-set-03::after, .tile > a .delivery_options i.icon-icons-set-03::after {
         vertical-align: top;
         margin-top: -6px; }
   .delivery textarea {
@@ -6759,7 +6717,7 @@ label {
     font-size: 25px;
     vertical-align: top;
     height: 25px; }
-    .faq_icon_min i::before {
+    .faq_icon_min i::before, .faq_icon_min .tile_content a i.icon-icons-set-03::after, .tile_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile > a i.icon-icons-set-03::after, .tile > a .faq_icon_min i.icon-icons-set-03::after {
       vertical-align: top; }
 
 @media screen and (max-width: 26.25em) {
@@ -6793,7 +6751,7 @@ label {
   .carousel .row {
     position: relative;
     height: 300px; }
-    .carousel .row::before {
+    .carousel .row::before, .carousel .tile_content a i.row.icon-icons-set-03::after, .tile_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile_big_content a i.row.icon-icons-set-03::after, .tile_big_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile > a i.row.icon-icons-set-03::after, .tile > a .carousel i.row.icon-icons-set-03::after {
       content: '';
       display: block;
       position: absolute;
