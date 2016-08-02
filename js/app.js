@@ -9,3 +9,4 @@ $('.search_input').focus(function() {
     $('.search_popular').show();
     $('.search_results').hide();
 })
+$('.select select').select2();

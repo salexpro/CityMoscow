@@ -12,6 +12,7 @@
 /* FONT PATH
  * -------------------------- */
 @import url(/scss/fontello.css);
+@import url(../bower_components/select2/dist/css/select2.min.css);
 @font-face {
   font-family: 'FontAwesome';
   src: url("//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts/fontawesome-webfont.eot?v=4.6.3");
@@ -3048,6 +3049,8 @@ html {
 .tile_content a:hover i.icon-icons-set-03::after,
 .tile_big_content a:hover i.icon-icons-set-03::after,
 .tile > a:hover i.icon-icons-set-03::after,
+.footer_menu ul a i.icon-icons-set-03::after,
+.footer_menu ul a:hover i.icon-icons-set-03::after,
 *::after {
   box-sizing: inherit; }
 
@@ -4388,7 +4391,7 @@ select {
   list-style-type: none;
   background: #fefefe;
   border: 1px solid 0; }
-  .tabs::before, .tile_content a i.tabs.icon-icons-set-03::after, .tile_big_content a i.tabs.icon-icons-set-03::after, .tile > a i.tabs.icon-icons-set-03::after, .tabs::after {
+  .tabs::before, .tile_content a i.tabs.icon-icons-set-03::after, .tile_big_content a i.tabs.icon-icons-set-03::after, .tile > a i.tabs.icon-icons-set-03::after, .footer_menu ul a i.tabs.icon-icons-set-03::after, .tabs::after {
     content: ' ';
     display: table;
     flex-basis: 0;
@@ -4452,7 +4455,7 @@ select {
   margin-left: auto;
   margin-right: auto; }
 
-.clearfix::before, .tile_content a i.clearfix.icon-icons-set-03::after, .tile_big_content a i.clearfix.icon-icons-set-03::after, .tile > a i.clearfix.icon-icons-set-03::after, .clearfix::after {
+.clearfix::before, .tile_content a i.clearfix.icon-icons-set-03::after, .tile_big_content a i.clearfix.icon-icons-set-03::after, .tile > a i.clearfix.icon-icons-set-03::after, .footer_menu ul a i.clearfix.icon-icons-set-03::after, .clearfix::after {
   content: ' ';
   display: table;
   flex-basis: 0;
@@ -4713,49 +4716,91 @@ label {
   display: table;
   position: relative;
   z-index: 1; }
-  .select::after {
-    position: absolute;
-    font-family: "fontello";
-    content: '\e813';
-    top: 12px;
-    right: 25px;
-    font-size: 18px;
-    z-index: 1; }
-  .select select {
+  .select .select2-selection {
     width: 100%;
-    height: 50px;
-    border: 6px solid black;
     outline: none;
     background: none;
-    position: relative;
+    height: 50px;
+    border: 6px solid black;
     font-size: 13px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 50px;
-    z-index: 2;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: inherit; }
-    .select select option:disabled {
-      color: #aeaeae; }
+    border-radius: 0;
+    font-weight: 700;
+    color: #0a0a0a;
+    padding-left: 17px; }
+    .select .select2-selection[aria-expanded="true"] .select2-selection__arrow::before, .select .select2-selection[aria-expanded="true"] .tile_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_content a .select .select2-selection[aria-expanded="true"] i.select2-selection__arrow.icon-icons-set-03::after, .select .select2-selection[aria-expanded="true"] .tile_big_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_big_content a .select .select2-selection[aria-expanded="true"] i.select2-selection__arrow.icon-icons-set-03::after, .select .select2-selection[aria-expanded="true"] .tile > a i.select2-selection__arrow.icon-icons-set-03::after, .tile > a .select .select2-selection[aria-expanded="true"] i.select2-selection__arrow.icon-icons-set-03::after, .select .select2-selection[aria-expanded="true"] .footer_menu ul a i.select2-selection__arrow.icon-icons-set-03::after, .footer_menu ul a .select .select2-selection[aria-expanded="true"] i.select2-selection__arrow.icon-icons-set-03::after {
+      transform: rotate(180deg); }
+    .select .select2-selection__rendered {
+      color: #0a0a0a !important;
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center;
+      height: 100%; }
+    .select .select2-selection__arrow {
+      width: auto !important;
+      top: 14px !important;
+      right: 17px !important; }
+      .select .select2-selection__arrow::before, .select .tile_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_content a .select i.select2-selection__arrow.icon-icons-set-03::after, .select .tile_big_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_big_content a .select i.select2-selection__arrow.icon-icons-set-03::after, .select .tile > a i.select2-selection__arrow.icon-icons-set-03::after, .tile > a .select i.select2-selection__arrow.icon-icons-set-03::after, .select .footer_menu ul a i.select2-selection__arrow.icon-icons-set-03::after, .footer_menu ul a .select i.select2-selection__arrow.icon-icons-set-03::after {
+        transition: transform 500ms;
+        display: block;
+        font-family: "fontello";
+        content: '\e813';
+        font-size: 18px;
+        height: 25px; }
+      .select .select2-selection__arrow b {
+        display: none; }
   .select_white {
     width: 100%;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    background: #fff; }
     @media screen and (max-width: 47.9375em) {
       .select_white {
         margin-bottom: 10px; } }
     .select_white::after {
       font-size: 25px;
-      z-index: 2;
       top: 20px; }
-    .select_white select {
-      height: 74px;
-      font-size: 20px;
-      font-weight: 500;
-      background: #fff;
-      border-color: #fff; }
+    .select_white .select2 {
+      width: 100% !important; }
+      .select_white .select2-selection {
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 50px;
+        z-index: 2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: inherit;
+        border-color: #fefefe;
+        height: 74px;
+        font-size: 20px; }
+        .select_white .select2-selection__rendered {
+          color: #0a0a0a !important;
+          padding: 0 !important;
+          display: flex !important;
+          align-items: center;
+          height: 100%; }
+        .select_white .select2-selection__arrow {
+          top: 19px !important;
+          right: 29px !important; }
+          .select_white .select2-selection__arrow::before, .select_white .tile_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_content a .select_white i.select2-selection__arrow.icon-icons-set-03::after, .select_white .tile_big_content a i.select2-selection__arrow.icon-icons-set-03::after, .tile_big_content a .select_white i.select2-selection__arrow.icon-icons-set-03::after, .select_white .tile > a i.select2-selection__arrow.icon-icons-set-03::after, .tile > a .select_white i.select2-selection__arrow.icon-icons-set-03::after, .select_white .footer_menu ul a i.select2-selection__arrow.icon-icons-set-03::after, .footer_menu ul a .select_white i.select2-selection__arrow.icon-icons-set-03::after {
+            font-size: 25px;
+            height: auto; }
+          .select_white .select2-selection__arrow b {
+            display: none; }
+
+.select2-results__option {
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  padding-left: 20px; }
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: #006cff !important; }
+
+.select2-dropdown {
+  border: 0; }
+
+.select2-search {
+  display: none; }
 
 .search {
   margin-bottom: 30px; }
@@ -4888,11 +4933,11 @@ label {
     @media screen and (max-width: 78.6875em) {
       .head_map {
         overflow: visible; } }
-    .head_map .nav_menu.is_open::before, .head_map .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.is_open.icon-icons-set-03::after {
+    .head_map .nav_menu.is_open::before, .head_map .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.is_open.icon-icons-set-03::after, .head_map .footer_menu ul a i.nav_menu.is_open.icon-icons-set-03::after, .footer_menu ul a .head_map i.nav_menu.is_open.icon-icons-set-03::after {
       box-shadow: -160px -160px 0px 153px #7bafd2; }
     .head_map .nav_menu.is_open::after {
       box-shadow: -132px 137px 0px 133px #7bafd2; }
-    .head_map .nav_menu::before, .head_map .tile_content a i.nav_menu.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.icon-icons-set-03::after {
+    .head_map .nav_menu::before, .head_map .tile_content a i.nav_menu.icon-icons-set-03::after, .tile_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile_big_content a i.nav_menu.icon-icons-set-03::after, .tile_big_content a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .tile > a i.nav_menu.icon-icons-set-03::after, .tile > a .head_map i.nav_menu.icon-icons-set-03::after, .head_map .footer_menu ul a i.nav_menu.icon-icons-set-03::after, .footer_menu ul a .head_map i.nav_menu.icon-icons-set-03::after {
       box-shadow: -40px -50px 0px 43px #7bafd2; }
     .head_map .nav_menu::after {
       box-shadow: -52px 47px 0px 43px #7bafd2; }
@@ -4981,7 +5026,7 @@ label {
       @media screen and (max-width: 26.25em) {
         .nav_menu.is_open {
           width: 300px; } }
-      .nav_menu.is_open::before, .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a i.nav_menu.is_open.icon-icons-set-03::after {
+      .nav_menu.is_open::before, .tile_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile_big_content a i.nav_menu.is_open.icon-icons-set-03::after, .tile > a i.nav_menu.is_open.icon-icons-set-03::after, .footer_menu ul a i.nav_menu.is_open.icon-icons-set-03::after {
         box-shadow: -160px -160px 0px 153px #00afec; }
       .nav_menu.is_open::after {
         box-shadow: -132px 137px 0px 133px #00afec; }
@@ -4991,9 +5036,9 @@ label {
         .nav_menu.is_open .nav_hamb:after, .nav_menu.is_open .nav_hamb:before, .nav_menu.is_open .nav_hamb:after {
           transition-delay: .125s; }
         .nav_menu.is_open .nav_hamb:before, .nav_menu.is_open .nav_hamb:after {
-          transform: translateY(7px) rotate(135deg); }
+          transform: translateY(9px) rotate(135deg); }
         .nav_menu.is_open .nav_hamb:after {
-          transform: translateY(-11px) rotate(-135deg); }
+          transform: translateY(-9px) rotate(-135deg); }
       .nav_menu.is_open .nav_list {
         padding-top: 0.6rem;
         padding-bottom: 1.2rem;
@@ -5022,11 +5067,12 @@ label {
     height: 23px;
     background-color: #000;
     box-shadow: inset 0 9px 0 0 #fff, inset 0 -9px 0 0 #fff;
-    margin: 18px;
     outline: none;
     position: relative;
     width: 24px;
-    transition-duration: .25s; }
+    transition-duration: .25s;
+    box-sizing: content-box;
+    border: 18px solid #fefefe; }
     .nav_hamb:before, .nav_hamb:after {
       transition-property: transform, border-color;
       transition-duration: .25s;
@@ -5110,7 +5156,11 @@ label {
       left: auto;
       right: -11px; }
     .logo_inner a {
-      color: #000; }
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%; }
     .logo_inner img {
       width: 250px;
       display: block; }
@@ -5283,8 +5333,7 @@ label {
     padding-top: 150px;
     list-style: none;
     margin: 0;
-    height: 287px;
-    overflow: hidden; }
+    height: 287px; }
     .towers ul li {
       display: inline-block;
       height: 137px;
@@ -5380,7 +5429,7 @@ label {
     margin-top: -65px;
     margin-left: -39px;
     width: 289px; }
-    .tile > i::before, .tile_content a .tile > i.icon-icons-set-03::after, .tile_big_content a .tile > i.icon-icons-set-03::after, .tile > a .tile > i.icon-icons-set-03::after {
+    .tile > i::before, .tile_content a .tile > i.icon-icons-set-03::after, .tile_big_content a .tile > i.icon-icons-set-03::after, .tile > a .tile > i.icon-icons-set-03::after, .footer_menu ul a .tile > i.icon-icons-set-03::after {
       vertical-align: top; }
     @media screen and (max-width: 78.6875em) {
       .tile > i {
@@ -5415,7 +5464,7 @@ label {
     border-bottom: 0.1em solid;
     margin-left: 5px;
     position: relative; }
-    .tile_content a i.icon-icons-set-03::before, .tile_content a i.icon-icons-set-03::after, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a i.icon-icons-set-03::before, .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::before, .tile_content .tile > a i.icon-icons-set-03::after, .tile_big_content .tile > a i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::after, .tile > a .tile_content a:hover i.icon-icons-set-03::after, .tile_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+    .tile_content a i.icon-icons-set-03::before, .tile_content a i.icon-icons-set-03::after, .tile_content a:hover i.icon-icons-set-03::after, .tile_content .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul .tile_content a i.icon-icons-set-03::after, .tile_big_content a i.icon-icons-set-03::before, .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul .tile_big_content a i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::before, .tile_content .tile > a i.icon-icons-set-03::after, .tile_big_content .tile > a i.icon-icons-set-03::after, .tile > a i.icon-icons-set-03::after, .tile > a .tile_content a:hover i.icon-icons-set-03::after, .tile_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover .tile > a i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after, .footer_menu ul .tile > a i.icon-icons-set-03::after, .tile > a .footer_menu ul a:hover i.icon-icons-set-03::after, .footer_menu ul a:hover .tile > a i.icon-icons-set-03::after {
       content: '';
       border-top: 0.1em solid;
       width: 0;
@@ -5425,7 +5474,7 @@ label {
   .tile_content a:hover i.icon-icons-set-03, .tile_big_content a:hover i.icon-icons-set-03, .tile > a:hover i.icon-icons-set-03 {
     transition: 200ms;
     width: 0.7em; }
-    .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+    .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_content .footer_menu ul a:hover i.icon-icons-set-03::after, .footer_menu ul .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content .footer_menu ul a:hover i.icon-icons-set-03::after, .footer_menu ul .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after, .footer_menu ul .tile > a:hover i.icon-icons-set-03::after {
       transition: 200ms;
       width: 69%;
       top: -0.15em;
@@ -5433,7 +5482,7 @@ label {
     .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
       top: 0.15em;
       transform: rotate(-45deg); }
-    .tile_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after {
+    .tile_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_content a:hover i.icon-icons-set-03::before, .tile_content a:hover i.icon-icons-set-03::after, .tile_content .footer_menu ul a:hover i.icon-icons-set-03::after, .footer_menu ul .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_big_content a:hover i.icon-icons-set-03::before, .tile_big_content a:hover i.icon-icons-set-03::after, .tile_big_content .footer_menu ul a:hover i.icon-icons-set-03::after, .footer_menu ul .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile > a:hover i.icon-icons-set-03::before, .tile_content .tile > a:hover i.icon-icons-set-03::after, .tile_big_content .tile > a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03::after, .footer_menu ul .tile > a:hover i.icon-icons-set-03::after {
       top: -0.13em; }
     .tile_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_content a:hover i.icon-icons-set-03::after, .tile_big_content a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile_big_content a:hover i.icon-icons-set-03::after, .tile > a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .tile > a:hover i.icon-icons-set-03::after {
       top: 0.19em; }
@@ -5441,8 +5490,6 @@ label {
     display: table;
     color: #000;
     padding-bottom: 10px; }
-    .tile a:hover {
-      text-decoration: underline; }
     .tile a i {
       font-size: 1.25rem;
       vertical-align: top;
@@ -5680,6 +5727,9 @@ label {
       margin-right: 15px; }
       .tile_clear > .tile:last-child {
         margin: 0; }
+  @media screen and (max-width: 78.6875em) {
+    .tile_address table td:first-child {
+      display: none; } }
   .tile_services {
     min-height: 405px !important;
     display: flex;
@@ -6322,7 +6372,7 @@ label {
     display: block;
     font-size: 100px;
     margin-left: -15px; }
-    .stripe_arrow i::before, .stripe_arrow .tile_content a i.icon-icons-set-03::after, .tile_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile > a i.icon-icons-set-03::after, .tile > a .stripe_arrow i.icon-icons-set-03::after {
+    .stripe_arrow i::before, .stripe_arrow .tile_content a i.icon-icons-set-03::after, .tile_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .tile > a i.icon-icons-set-03::after, .tile > a .stripe_arrow i.icon-icons-set-03::after, .stripe_arrow .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul a .stripe_arrow i.icon-icons-set-03::after {
       vertical-align: top; }
   .stripe_arrow a {
     color: #fff;
@@ -6429,6 +6479,7 @@ label {
   margin-top: 33px; }
 
 .official_employee {
+  font-size: 16px;
   line-height: 20px;
   margin-bottom: 40px; }
   .official_employee p {
@@ -6668,7 +6719,7 @@ label {
       font-size: 36px;
       height: 24px;
       vertical-align: top; }
-      .delivery_options i::before, .delivery_options .tile_content a i.icon-icons-set-03::after, .tile_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile > a i.icon-icons-set-03::after, .tile > a .delivery_options i.icon-icons-set-03::after {
+      .delivery_options i::before, .delivery_options .tile_content a i.icon-icons-set-03::after, .tile_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .delivery_options i.icon-icons-set-03::after, .delivery_options .tile > a i.icon-icons-set-03::after, .tile > a .delivery_options i.icon-icons-set-03::after, .delivery_options .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul a .delivery_options i.icon-icons-set-03::after {
         vertical-align: top;
         margin-top: -6px; }
   .delivery textarea {
@@ -6721,7 +6772,7 @@ label {
     font-size: 25px;
     vertical-align: top;
     height: 25px; }
-    .faq_icon_min i::before, .faq_icon_min .tile_content a i.icon-icons-set-03::after, .tile_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile > a i.icon-icons-set-03::after, .tile > a .faq_icon_min i.icon-icons-set-03::after {
+    .faq_icon_min i::before, .faq_icon_min .tile_content a i.icon-icons-set-03::after, .tile_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile_big_content a i.icon-icons-set-03::after, .tile_big_content a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .tile > a i.icon-icons-set-03::after, .tile > a .faq_icon_min i.icon-icons-set-03::after, .faq_icon_min .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul a .faq_icon_min i.icon-icons-set-03::after {
       vertical-align: top; }
 
 @media screen and (max-width: 26.25em) {
@@ -6755,7 +6806,7 @@ label {
   .carousel .row {
     position: relative;
     height: 300px; }
-    .carousel .row::before, .carousel .tile_content a i.row.icon-icons-set-03::after, .tile_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile_big_content a i.row.icon-icons-set-03::after, .tile_big_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile > a i.row.icon-icons-set-03::after, .tile > a .carousel i.row.icon-icons-set-03::after {
+    .carousel .row::before, .carousel .tile_content a i.row.icon-icons-set-03::after, .tile_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile_big_content a i.row.icon-icons-set-03::after, .tile_big_content a .carousel i.row.icon-icons-set-03::after, .carousel .tile > a i.row.icon-icons-set-03::after, .tile > a .carousel i.row.icon-icons-set-03::after, .carousel .footer_menu ul a i.row.icon-icons-set-03::after, .footer_menu ul a .carousel i.row.icon-icons-set-03::after {
       content: '';
       display: block;
       position: absolute;
@@ -6814,8 +6865,8 @@ label {
 
 .item_img {
   padding: 20px;
-  background-color: #f5f5f5;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-align: center; }
   @media screen and (max-width: 47.9375em) {
     .item_img {
       margin-bottom: 10px; } }
@@ -6927,9 +6978,37 @@ label {
           padding-left: 20px; } }
       .footer_menu ul a {
         color: #454545; }
-        .footer_menu ul a:hover {
-          text-decoration: underline; }
+        .footer_menu ul a i.icon-icons-set-03 {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          vertical-align: middle;
+          margin-top: -2px;
+          border-bottom: 0.1em solid;
+          margin-left: 5px;
+          position: relative; }
+          .footer_menu ul a i.icon-icons-set-03::before, .footer_menu ul a i.icon-icons-set-03::after, .footer_menu ul a:hover i.icon-icons-set-03::after {
+            content: '';
+            border-top: 0.1em solid;
+            width: 0;
+            position: absolute;
+            top: 0;
+            right: -2px; }
+        .footer_menu ul a:hover i.icon-icons-set-03 {
+          transition: 200ms;
+          width: 0.7em; }
+          .footer_menu ul a:hover i.icon-icons-set-03::before, .footer_menu ul a:hover i.icon-icons-set-03::after {
+            transition: 200ms;
+            width: 69%;
+            top: -0.15em;
+            transform: rotate(45deg); }
+          .footer_menu ul a:hover i.icon-icons-set-03::after {
+            top: 0.15em;
+            transform: rotate(-45deg); }
+          .footer_menu ul a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .footer_menu ul a:hover i.icon-icons-set-03::before, .footer_menu ul a:hover i.icon-icons-set-03::after {
+            top: -0.13em; }
+          .footer_menu ul a:hover i.icon-icons-set-03 _::-webkit-:not(:root:root), .footer_menu ul a:hover i.icon-icons-set-03::after {
+            top: 0.19em; }
   .footer .copyright {
     margin-bottom: 45px;
-    font-weight: 300;
-    text-align: center; }
+    font-weight: 300; }

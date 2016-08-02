@@ -200,56 +200,120 @@ label{
     display: table;
     position: relative;
     z-index: 1;
-    &::after {
-        position: absolute;
-        font-family: "fontello";
-        content: '\e813';
-        top: 12px;
-        right: 25px;
-        font-size: 18px;
-        z-index: 1;
-    }
-    select {
-        width: 100%;
-        height: 50px;
-        border: 6px solid black;
-        outline: none;
-        background: none;
-        position: relative;
-        font-size: 13px;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
-        padding-left: 20px;
-        padding-right: 50px;
-        z-index: 2;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: inherit;
-        option:disabled{
-            color: #aeaeae;
+    .select2{
+        &-selection {
+            width: 100%;      
+            outline: none;
+            background: none;
+            height: 50px;
+            border: 6px solid black;
+            font-size: 13px;
+            text-transform: uppercase;
+            border-radius: 0;
+            font-weight: 700;
+            color: $black;
+            padding-left: 17px;
+            &[aria-expanded="true"]{
+                .select2-selection__arrow{
+                    &::before{
+                        transform: rotate(180deg)
+                    }
+                }
+            }
+            &__rendered{
+                color: $black !important;
+                padding: 0 !important;
+                display: flex !important;
+                align-items: center;
+                height: 100%;
+            }
+            &__arrow{
+                width: auto !important;
+                top: 14px !important;
+                right: 17px !important;
+                &::before{
+                    transition: transform 500ms;
+                    display: block;
+                    font-family: "fontello";
+                    content: '\e813';      
+                    font-size: 18px;
+                    height: 25px;
+                }
+                b{
+                    display: none;
+                }
+            }
         }
     }
     &_white{
         width: 100%;
         margin-bottom: 30px;
+        background:#fff;
         @include breakpoint(small down) {
             margin-bottom: 10px;
         }
         &::after {
             font-size: 25px;
-            z-index: 2;
             top: 20px;
         }
-        select{
-            height: 74px;
-            font-size: 20px;
-            font-weight: 500;
-            background:#fff;
-            border-color:#fff;
+        .select2{
+            width: 100% !important;
+            &-selection {
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+                padding-left: 20px;
+                padding-right: 50px;
+                z-index: 2;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: inherit;
+                border-color: $white;
+                height: 74px;
+                font-size: 20px;
+                &__rendered{
+                    color: $black !important;
+                    padding: 0 !important;
+                    display: flex !important;
+                    align-items: center;
+                    height: 100%;
+                }
+                &__arrow{
+                    top: 19px !important;
+                    right: 29px !important;
+                    &::before{     
+                        font-size: 25px;
+                        height: auto;
+                    }
+                    b{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
+
+.select2{
+    &-results{
+        &__option{
+            text-transform: uppercase;
+            font-weight: 700 !important;
+            padding-left: 20px;
+            &--highlighted[aria-selected]{
+                background-color: #006cff !important;
+            }
+        }
+    }
+    &-dropdown{
+        border: 0;
+    }
+    &-search{
+        display: none;
+    }
+
+}
+
 
 .search{
     margin-bottom: 30px;
@@ -552,10 +616,10 @@ label{
                     transition-delay: .125s;
                 }
                 &:before {
-                    transform: translateY(7px) rotate(135deg);
+                    transform: translateY(9px) rotate(135deg);
                 }
                 &:after {
-                    transform: translateY(-11px) rotate(-135deg);
+                    transform: translateY(-9px) rotate(-135deg);
                 }
             }
             .nav_list {
@@ -592,11 +656,12 @@ label{
         height: 23px;
         background-color: #000;
         box-shadow: inset 0 9px 0 0 #fff, inset 0 -9px 0 0 #fff;
-        margin: 18px;
         outline: none;
         position: relative;
         width: 24px;
         transition-duration: .25s;
+        box-sizing: content-box;
+        border: 18px solid $white;
         &:before {
             transition-property: transform, border-color;
             transition-duration: .25s;
@@ -694,6 +759,10 @@ label{
         }
         a{
             color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
         img{
             width: 250px;
@@ -920,7 +989,6 @@ label{
         list-style: none;
         margin: 0;
         height: 287px;
-        overflow: hidden;
         li {
             display: inline-block;
             // width: 80px;
@@ -1120,9 +1188,6 @@ label{
         display: table;
         color: #000;
         padding-bottom: 10px;
-        &:hover{
-            text-decoration: underline;
-        }
         i{
             font-size: 1.25rem;
             vertical-align: top;
@@ -1405,6 +1470,13 @@ label{
             margin-right: 15px;
             &:last-child {
                 margin: 0;
+            }
+        }
+    }
+    &_address{
+        @include breakpoint(medium down) {
+            table td:first-child{
+                display: none;
             }
         }
     }
@@ -2371,6 +2443,7 @@ label{
         }
     }
     &_employee {
+        font-size: 16px;
         line-height: 20px;
         margin-bottom: 40px;
         p {
@@ -2836,8 +2909,9 @@ label{
 .item{
     &_img{
         padding: 20px;
-        background-color: #f5f5f5;
+        // background-color: #f5f5f5;
         margin-bottom: 40px;
+        text-align: center;
         @include breakpoint(small down) {
             margin-bottom: 10px;
         }
@@ -2969,8 +3043,50 @@ label{
             }
             a {
                 color: #454545;
+                i.icon-icons-set-03{
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    margin-top: -2px;
+                    border-bottom: 0.1em solid;
+                    margin-left: 5px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        border-top: 0.1em solid;
+                        width: 0;
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+                    &::after{
+                        @extend ::before;
+                    }
+                }
                 &:hover {
-                    text-decoration: underline;
+                    i.icon-icons-set-03{
+                        transition: 200ms;
+                        width: 0.7em;
+                        &::before{
+                            transition: 200ms;
+                            width: 69%;
+                            top: -0.15em;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            @extend ::before;
+                            top: 0.15em;
+                            transform: rotate(-45deg);
+                        }
+                        //Hack for Safari 9+ (include iOS)
+                        _::-webkit-:not(:root:root), &::before{
+                            top: -0.13em;
+                        }
+                        _::-webkit-:not(:root:root), &::after{
+                            top: 0.19em;
+                        }
+                    }
                 }
             }
         }
@@ -2978,6 +3094,5 @@ label{
     .copyright {
         margin-bottom: 45px;
         font-weight: 300;
-        text-align: center;
     }
 }
