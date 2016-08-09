@@ -828,7 +828,6 @@ label{
 }
 
 .social {
-    width: 254px;
     height: 74px;
     border: 7px solid black;
     float: right;
@@ -868,6 +867,7 @@ label{
         list-style: none;
         margin: 0;
         padding: 0;
+        display: flex;
         li {
             &:first-child {
                 a {
@@ -895,7 +895,6 @@ label{
         width: 60px;
         height: 60px;
         display: block;
-        float: left;
         line-height: 60px;
         color: #fff;
         font-size: 1.25rem;
