@@ -1,0 +1,145 @@
+doctype html
+html(lang='ru')
+    include ./includes/head.jade
+    body
+        main.wrap
+            header.head.head_free
+                include ./includes/header_top.jade
+                .row
+                    p.small-12.column.head_h1 Афиша
+                    p.small-12.column.align-bottom.head_h2
+                        | Все самое свежее в нашем канале 
+                        a(href='#') Telegram
+                        |  и группе на 
+                        a(href='#') Facebook
+            article.row.content.tiles
+                .small-12.column
+                    .tile.tile_big.tile_white.wo_img.w_blackout(style="background-image:url('./img/tiles/prop2.jpg')")
+                        .tile_content
+                            p Большой банер c картинкой и затемнением
+                            a(href='#')
+                                | Цвет текста либо черный либо белый, обязательно нужно    менять процент затемнения картинки
+                                i.icon-icons-set-03
+                .small-12.medium-6.large-8.column
+                    .tile.tile_white.tile_black.wo_img.w_blackout(style='background-image: url(./img/tiles/celebrate.jpg);')
+                        p Длинный банер с фоновой картинкой и затемнением
+                        a(href='#')
+                            | Подзаголовок
+                            i.icon-icons-set-03
+                .small-6.medium-3.large-2.column
+                    .tile.tile_min.tile_facebook
+                        .tile_icon
+                            i.fa.fa-facebook
+                        a(href='#')
+                            | Наша группа facebook
+                            i.icon-icons-set-03
+                .small-6.medium-3.large-2.column
+                    .tile.tile_min.tile_subs
+                        .tile_icon
+                            i.icon-icons-set-47
+                        a(href='#')
+                            | Подписаться на новости
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-8.column
+                    .tile.tile_faq
+                        i.icon-icons-set-29
+                        p Длинный банер с белым фоном и цветной пиктограммой
+                        a(href='#')
+                            | Подзаголовок
+                            i.icon-icons-set-03
+                    .tile.tile_white.tile_dark
+                        img(src='./img/tiles/official.jpg', alt='Official')
+                        p Длинный банер с черным фоном и фотографией
+                        a(href='#')
+                            | Подзаголовок
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square
+                        img(src='./img/tiles/news.jpg', alt='')
+                        p Квадратный банер с белым фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03      
+            .stripe
+                .row.align-middle
+                    .small-9.column
+                        p Все актуальные новости читайте в нашем боте в Telegram и группе в FB
+                    .small-3.column.stripe_arrow
+                        i.fa.icon-icons-set-03
+                        a(href='#')
+                            | facebook/
+                            br
+                            | moscowcityofficial
+            article.row.content.tiles
+                h3.small-12.column Все события
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.wo_img.w_blackout.text_bottom(style="background-image:url('./img/tiles/flowers.jpg')")
+                        p Квадратный банер с фоновой картинкой
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.tile_dark
+                        img(src='./img/tiles/bread.jpg', alt='Bread')
+                        p Квадратный банер с черным фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square
+                        img(src='./img/tiles/news.jpg', alt='')
+                        p Квадратный банер с белым фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.wo-img(style="background-image:url('./img/tiles/march.jpg')")
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.wo_img.w_blackout.text_bottom(style="background-image:url('./img/tiles/flowers.jpg')")
+                        p Квадратный банер с фоновой картинкой
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.tile_dark
+                        img(src='./img/tiles/bread.jpg', alt='Bread')
+                        p Квадратный банер с черным фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.wo_img.w_blackout.text_bottom(style="background-image:url('./img/tiles/flowers.jpg')")
+                        p Квадратный банер с фоновой картинкой
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.tile_dark
+                        img(src='./img/tiles/bread.jpg', alt='Bread')
+                        p Квадратный банер с черным фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square
+                        img(src='./img/tiles/news.jpg', alt='')
+                        p Квадратный банер с белым фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.wo-img(style="background-image:url('./img/tiles/march.jpg')")
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.wo_img.w_blackout.text_bottom(style="background-image:url('./img/tiles/flowers.jpg')")
+                        p Квадратный банер с фоновой картинкой
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+                .small-12.medium-6.large-4.column
+                    .tile.tile_square.tile_white.tile_dark
+                        img(src='./img/tiles/bread.jpg', alt='Bread')
+                        p Квадратный банер с черным фоном
+                        a(href='#')
+                            | Подзаголовок может быть в две строки
+                            i.icon-icons-set-03
+    script(src='./js/app.min.js')

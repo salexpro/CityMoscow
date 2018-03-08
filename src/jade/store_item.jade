@@ -1,0 +1,163 @@
+doctype html
+html(lang='ru')
+    include ./includes/head
+    body
+        main.wrap
+            header.head.head_fix.head_free
+                include ./includes/header_top
+                .row
+                    p.small-12.column.head_h1
+                        | Сувенирная лавка
+                    .small-12.row.column.align-bottom
+                        .small-12.medium-6.large-2.column
+                            .select.select_white
+                                select
+                                    option(value="По цене") По цене
+                        .small-12.medium-6.large-4.column
+                            .select.select_white
+                                select
+                                    option(value="По популярности",disabled,selected) По популярности
+                        .small-12.large-4.column.large-offset-2
+                            .purchases
+                                .purchases_header
+                                    a(href="#")
+                                        i.icon-icons-set-23
+                                        | ПОКУПКИ
+                                .purchases_price
+                                    | 4272 ₽
+            article.row.content.tiles
+                .small-12.column
+                    .row.column.tile.tile_item.wo_backlight
+                        .small-12.large-7.column
+                            .item_img
+                                img(src="./img/store/item_img.png", alt="T-shirt")
+                            ul.menu.item_img_small
+                                li
+                                    a(href="#")
+                                        img(src="./img/store/small_img1.png", alt="T-shirt")
+                                li
+                                    a(href="#")
+                                        img(src="./img/store/small_img2.png", alt="T-shirt")
+                                li
+                                    a(href="#")
+                                        img(src="./img/store/small_img1.png", alt="T-shirt")
+                                li
+                                    a(href="#")
+                                        img(src="./img/store/small_img2.png", alt="T-shirt")
+                        .small-12.large-5.column
+                            h1 
+                                | Футболка с логотипом
+                                br
+                                | Москва-Сити
+                            .tile_store_content.item_content
+                                .tile_store_price
+                                    | 399 ₽
+                                .tile_store_like
+                                    i.icon-icons-set-14
+                                    | 1280
+                            .row.item_params
+                                .large-6.column.item_params_size
+                                    | Размер
+                                    .select
+                                        select
+                                            option(value="XS") XS
+                                            option(value="S") S
+                                            option(value="M") M
+                                            option(value="L") L
+                                .large-6.column.item_params_color
+                                    | Цвет
+                                    .select
+                                        select
+                                            option(value="Black") Black
+                                            option(value="Red") Red
+                                            option(value="Green") Green
+                                            option(value="Yellow") Yellow
+                            .item_basket
+                                .item_basket_amount
+                                    button -
+                                    input(type="text",value="1",readonly)
+                                    button +
+                                button.button.blue В КОРЗИНУ
+                            .item_descr
+                                ul#item_descr.tabs(data-tabs='')
+                                      li.tabs-title.is-active
+                                        a(href='#descr', aria-selected='true') Описание
+                                      li.tabs-title
+                                        a(href='#sizes') Таблица размеров
+                                .tabs-content(data-tabs-content='item_descr')
+                                      #descr.tabs-panel.is-active
+                                          | Классическая футболка с коротким рукавом и круглым воротом, отделанным трикотажной резинкой. Хлопок высокой плотности (от 155 гр/м2 до 200 гр/м2) и прочное крашение гарантирует устойчивость к стиркам, выцветанию и потере формы. Качественный материал обеспечивает комфортную носку и не вызывает аллергических реакций.
+                                      #sizes.tabs-panel
+                                          | Таблица размеров
+                            .post_social
+                                img(src="./img/post_social.jpg", alt="Social")
+                .small-6.medium-4.large-2.column
+                    .tile.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-6.medium-4.large-2.column
+                    .tile.tile_min.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-6.medium-4.large-2.column
+                    .tile.tile_min.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-6.medium-4.large-2.column
+                    .tile.tile_min.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-6.medium-4.large-2.column
+                    .tile.tile_min.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-6.medium-4.large-2.column
+                    .tile.tile_min.tile_item_min
+                        img(src="./img/store/sticker.jpg", alt="Sticker")
+                        .item_min_content
+                            span 199 ₽
+                            | Выпуклая наклейка на телефон
+                            button.button.blue В КОРЗИНУ
+                .small-12.medium-6.large-4.column
+                    .tile.tile_store
+                        img(src="./img/store/cup.jpg", alt="Cup")
+                        .tile_store_content
+                            .tile_store_price
+                                | 399 ₽
+                            .tile_store_like
+                                i.icon-icons-set-14
+                                | 1280
+                .small-12.medium-6.large-4.column
+                    .tile.tile_store
+                        img(src="./img/store/img.jpg", alt="Img")
+                        .tile_store_content
+                            .tile_store_price
+                                | 59 ₽
+                            .tile_store_like
+                                i.icon-icons-set-14
+                                | 1280
+                .small-12.medium-6.large-4.column
+                    .tile.tile_store
+                        img(src="./img/store/cup2.jpg", alt="Cup")
+                        .tile_store_content
+                            .tile_store_price
+                                | 399 ₽
+                            .tile_store_like
+                                i.icon-icons-set-14
+                                | 1280
+            include ./includes/footer

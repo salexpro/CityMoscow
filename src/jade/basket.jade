@@ -1,0 +1,151 @@
+doctype html
+html(lang='ru')
+    include ./includes/head
+    body
+        main.wrap
+            header.head.head_fix
+                include ./includes/header_top
+                .row
+                    p.small-12.column.head_h1
+                        i.icon-icons-set-01
+                        |  Сувенирная лавка
+                    p.small-12.column.align-bottom.head_h2
+                        | Заказ №97023
+            article.row.content.basket
+                .small-12.column.basket_items
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
+                            img(src="./img/items/cup.jpg", alt="Cup")
+                        .small-12.medium-6.column.basket_item_content
+                            p 
+                                | Кружка с терморисунком
+                                button.basket_item_close х
+                            | Кружка-хамелеон, меняет цвет при нагревании
+                        .column.basket_item_options
+                            .basket_item_amount
+                                button -
+                                input(type="text",value="2",readonly)
+                                button +
+                        .shrink.column.basket_item_price
+                            | 399 ₽
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
+                            img(src="./img/items/sticker.jpg", alt="Sticker")
+                        .small-12.medium-6.column.basket_item_content
+                            p
+                                | Наклейка
+                                button.basket_item_close х
+                            | Сердце-наклейка, эпоксидная основа
+                        .column.basket_item_options
+                            .basket_item_amount
+                                button -
+                                input(type="text",value="15",readonly)
+                                button +
+                        .shrink.column.basket_item_price
+                            | 199 ₽
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
+                            img(src="./img/items/t-shirt.jpg", alt="T-shirt")
+                        .small-12.medium-4.column.basket_item_content
+                            p 
+                                | Футболка
+                                button.basket_item_close х
+                            | Серая хлопковая футболка
+                        .column.basket_item_options
+                            .basket_item_size
+                                select
+                                    option(value="S") S
+                                    option(value="M") M
+                                    option(value="L") L
+                            .basket_item_amount
+                                button -
+                                input(type="text",value="2",readonly)
+                                button +
+                        .shrink.column.basket_item_price
+                            | 1199 ₽
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
+                            img(src="./img/items/t-shirt.jpg", alt="T-shirt")
+                        .small-12.medium-4.column.basket_item_content
+                            p 
+                                | Футболка
+                                button.basket_item_close х
+                            | Серая хлопковая футболка
+                        .column.basket_item_options
+                            .basket_item_size
+                                select
+                                    option(value="S") S
+                                    option(value="M") M
+                                    option(value="L",selected) L
+                            .basket_item_amount
+                                button -
+                                input(type="text",value="1",readonly)
+                                button +
+                        .shrink.column.basket_item_price
+                            | 599 ₽
+                    .row.column.basket_item
+                        .small-12.medium-2.column.basket_item_img
+                            img(src="./img/items/backpack.jpg", alt="Backpack")
+                        .small-12.medium-6.column.basket_item_content
+                            p
+                                | Рюкзак
+                                button.basket_item_close х
+                            | Холщёвый рюкзак для пикников и учёбы
+                        .column.basket_item_options
+                            .basket_item_amount
+                                button -
+                                input(type="text",value="2",readonly)
+                                button +
+                        .shrink.column.basket_item_price
+                            | 1599 ₽
+                .small-12.row.column.basket_delivery
+                    .small-12.medium-3.large-2.column.basket_header Доставка
+                    .small-12.medium-9.large-10.column.row.basket_delivery_content
+                        .small-12.medium-6.column
+                            input(type="text",value="Константин Константинопольский")
+                            input(type="text",value="konstantinopolsky@konstantin.ru")
+                            input(type="text",value="+7 ххх ххх хх хх")
+                        .small-12.medium-6.column.basket_delivery_options
+                            p Опции
+                            table
+                                tr
+                                    td
+                                        input(type="radio",id="delivery_type1",name="delivery_type",checked)
+                                        label(for="delivery_type1") Самовывоз (Москва, м.Выставочная, Пресненская набережная д.6, к.2)
+                                    td 0₽
+                                tr
+                                    td
+                                        input(type="radio",id="delivery_type2",name="delivery_type")
+                                        label(for="delivery_type2") Курьером в пределах МКАД
+                                    td 100₽
+                                tr
+                                    td
+                                        input(type="radio",id="delivery_type3",name="delivery_type")
+                                        label(for="delivery_type3") Почтой России
+                                    td 200₽
+                        .small-12.column
+                            input(type="text",value="г. Москва, Бульвар Петра Алексеева 23к2")
+                            .basket_delivery_map
+                                img(src="./img/basket_map.jpg", alt="Map")
+                .small-12.row.column.basket_payment
+                    .small-12.medium-3.large-2.column.basket_header Оплата
+                    .small-12.medium-9.large-10.column.row.align-justify
+                        .medium-6.column.basket_payment_method
+                            input(type="radio",id="payment_method1",name="payment_method",checked)
+                            label(for="payment_method1") Наличными курьеру
+                            
+                            input(type="radio",id="payment_method2",name="payment_method")
+                            label(for="payment_method2") Картой Visa/MasterCard
+                            
+                            input(type="radio",id="payment_method3",name="payment_method")
+                            label(for="payment_method3") WebMoney
+                            
+                            input(type="radio",id="payment_method4",name="payment_method")
+                            label(for="payment_method4") PayPal
+                            
+                            input(type="radio",id="payment_method5",name="payment_method")
+                            label(for="payment_method5") Яндекс.Деньгами
+                        .column.shrink.basket_payment_price
+                            span 4272 ₽
+                            button.button.hollow.blue.filled Заказать
+            include ./includes/footer
