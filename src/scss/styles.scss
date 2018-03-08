@@ -996,9 +996,8 @@ label{
     flex: 1 1 auto;
     max-width: none;
     -webkit-overflow-scrolling: touch;
-    @include breakpoint(small down){
+    @include breakpoint(medium down){
         width: 100%;
-        // margin-right: -35px;
         margin: 0;
     }
     ul {

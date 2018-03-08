@@ -9,19 +9,12 @@
 	],
 "creatorBuild": "26330",
 "files": {
-	"\/.bowerrc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/docs\/.bowerrc",
-		"oF": 0
-		},
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/.gitignore",
-		"oF": 0
+		"oF": 1
 		},
 	"\/bower.json": {
 		"ft": 524288,
@@ -6189,11 +6182,12 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/docs": {
-		"ft": 65536,
+	"\/CNAME": {
+		"cB": 0,
+		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/docs\/docs",
-		"oF": 0
+		"oAP": "\/docs\/CNAME",
+		"oF": 1
 		},
 	"\/src\/fonts\/CitySans\/CitySans-Bold_web.eot": {
 		"cB": 0,
@@ -7361,7 +7355,7 @@
 	"displayValue": "CityMoscow",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-archer",
-	"lastBuiltDate": 542198227
+	"lastBuiltDate": 542227506
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -7612,10 +7606,10 @@
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
+	"bowerInstallDevDependencies": 1,
 	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
-	"bowerUseExactVersion": 0,
+	"bowerSaveDevDependencies": 1,
+	"bowerUseExactVersion": 1,
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 1,
 	"buildFolderName": "docs",
