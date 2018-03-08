@@ -6189,6 +6189,12 @@
 		"oAP": "\/docs\/CNAME",
 		"oF": 1
 		},
+	"\/docs": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/docs\/docs",
+		"oF": 0
+		},
 	"\/src\/fonts\/CitySans\/CitySans-Bold_web.eot": {
 		"cB": 0,
 		"ft": 8192,
